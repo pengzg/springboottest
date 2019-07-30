@@ -3,8 +3,8 @@ package com.demo.xianghuan.admin.sys.service;
 import com.demo.xianghuan.admin.sys.model.SysMenu;
 import com.demo.xianghuan.admin.sys.vo.MenusListVO;
 import com.demo.xianghuan.admin.sys.vo.SysMenuVO;
-import com.sqhz.web.model.DataGrid;
-import com.sqhz.web.model.Query;
+import com.demo.xianghuan.utils.DataGrid;
+import com.demo.xianghuan.utils.Query;
 
 import java.util.List;
 import java.util.Map;

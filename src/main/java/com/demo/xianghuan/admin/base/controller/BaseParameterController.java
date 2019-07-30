@@ -3,10 +3,10 @@ package com.demo.xianghuan.admin.base.controller;
 
 import com.demo.xianghuan.admin.base.model.BaseParameter;
 import com.demo.xianghuan.admin.base.service.IBaseParameterService;
-import com.sqhz.common.result.Result;
-import com.sqhz.web.model.HttpCode;
-import com.sqhz.web.model.Pager;
-import com.sqhz.web.model.Query;
+import com.demo.xianghuan.utils.Result;
+import com.demo.xianghuan.utils.HttpCode;
+import com.demo.xianghuan.utils.Pager;
+import com.demo.xianghuan.utils.Query;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -2,7 +2,7 @@ package com.demo.xianghuan.admin.sys.dao;
 
 import com.demo.xianghuan.admin.sys.model.SysRoleMenu;
 import com.sqhz.jdbc.framework.third.mybatis.IGenericDao;
-import com.sqhz.web.model.Query;
+import com.demo.xianghuan.utils.Query;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

@@ -3,7 +3,7 @@ package com.demo.xianghuan.admin.base.cache;
 import com.demo.xianghuan.admin.base.model.BaseData;
 import com.demo.xianghuan.admin.base.service.IBaseDataService;
 import com.sqhz.common.base.GlobalConstants;
-import com.sqhz.jdbc.framework.exception.BusinessException;
+import com.demo.xianghuan.utils.BusinessException;
 import com.sqhz.redis.RedisUtil;
 import com.sqhz.util.OnlineListener;
 import org.apache.commons.lang.StringUtils;

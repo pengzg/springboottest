@@ -1,12 +1,12 @@
 package com.demo.xianghuan.utils;
 
-import com.sqhz.web.model.Pager;
+import com.demo.xianghuan.utils.Pager;
 
 import java.util.Map;
 
 public class Query {
     private Map<String, Object> queryParams;
-    private com.sqhz.web.model.Pager pager;
+    private com.demo.xianghuan.utils.Pager pager;
 
     public Query() {
     }
@@ -19,7 +19,7 @@ public class Query {
         this.queryParams = queryParams;
     }
 
-    public com.sqhz.web.model.Pager getPager() {
+    public com.demo.xianghuan.utils.Pager getPager() {
         return this.pager;
     }
 

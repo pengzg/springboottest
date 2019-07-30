@@ -6,9 +6,10 @@ import java.util.Map;
 
 import com.demo.xianghuan.admin.base.model.BaseData;
 import com.demo.xianghuan.admin.base.service.IBaseDataService;
-import com.sqhz.common.base.GlobalConstants;
-import com.sqhz.redis.RedisUtil;
-import com.sqhz.util.OnlineListener;
+import com.demo.xianghuan.component.RedisDao;
+import com.demo.xianghuan.component.SpringUtils;
+import com.demo.xianghuan.utils.BusinessException;
+import com.demo.xianghuan.utils.GlobalConstants;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,6 +30,7 @@ public class BaseDataDetailValueCache  {
 	private static final long serialVersionUID = -4397192926052141162L;
 
 	private static BaseDataDetailValueCache instance = null;
+	private RedisDao redisDao = (RedisDao) SpringUtils.getBean("redisDao");
 
 	private static Object lock = new Object();
 
@@ -59,30 +61,27 @@ public class BaseDataDetailValueCache  {
 	// 添加被缓存的对象;
 	public void put(String dataType,String code, Object value) {
 		this.setKeyValue(GlobalConstants.ORG_FAULT_VALUE,dataType,code);
-		RedisUtil.getInstance().put(this.key, value);
+		redisDao.setObj(this.key, value);
 	}
 	
 	
 	// 添加被缓存的对象;
 		public void put(String orgid,String dataType,String code, Object value) {
 			this.setKeyValue(orgid,dataType,code);
-			RedisUtil.getInstance().put(this.key, value);
+			redisDao.setObj(this.key, value);
 		}
 
 	// 删除被缓存的对象;
 	public void remove(String dataType,String code ) {
 		this.setKeyValue(dataType,code);
-		RedisUtil.getInstance().remove(this.key);
+		redisDao.del(this.key);
 	}
 	
 	public void remove(String orgid,String dataType,String code ) {
 		this.setKeyValue(orgid,dataType,code);
-		RedisUtil.getInstance().remove(this.key);
+		redisDao.del(this.key);
 	}
 
-	public void removeAll() {
-		RedisUtil.getInstance().removeAll();
-	}
 	
 	public String getName(String datatype, String code) {
 		try {
@@ -110,10 +109,10 @@ public class BaseDataDetailValueCache  {
 	// 获取被缓存的对象;
 	public BaseData get(String orgid,String datatype, String code) throws BusinessException {
 		this.setKeyValue(orgid,datatype,code);
-		IBaseDataService baseDataService = (IBaseDataService) OnlineListener.ctx.getBean("baseDataService");
+		IBaseDataService baseDataService = (IBaseDataService) SpringUtils.getBean("baseDataService");
 		BaseData vo = null;
 		try {
-			vo = (BaseData)RedisUtil.getInstance().getObj(this.key);
+			vo = (BaseData)redisDao.getObj(this.key);
 			if (vo == null) {
 				throw new BusinessException("SYS_E998", "cache not find");
 			}

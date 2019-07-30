@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.sqhz.common.result.Result;
-import com.sqhz.web.model.HttpCode;
-import com.sqhz.web.model.Pager;
-import com.sqhz.web.model.Query;
+import com.demo.xianghuan.utils.Result;
+import com.demo.xianghuan.utils.HttpCode;
+import com.demo.xianghuan.utils.Pager;
+import com.demo.xianghuan.utils.Query;
 
 import com.demo.xianghuan.admin.base.service.IBaseAttachmentService;
 import com.demo.xianghuan.admin.base.model.BaseAttachment;

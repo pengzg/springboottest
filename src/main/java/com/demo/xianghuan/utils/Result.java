@@ -1,24 +1,24 @@
 package com.demo.xianghuan.utils;
 
-import com.sqhz.web.model.HttpCode;
+import com.demo.xianghuan.utils.HttpCode;
 
 import java.io.Serializable;
 
 public class Result implements Serializable {
     private static final long serialVersionUID = 1188275509308264519L;
     private int code;
-    private com.sqhz.web.model.HttpCode httpCode;
+    private HttpCode httpCode;
     private String desc;
     private Object data;
 
     public Result() {
     }
 
-    public com.sqhz.web.model.HttpCode getHttpCode() {
+    public HttpCode getHttpCode() {
         return this.httpCode;
     }
 
-    public void setHttpCode(com.sqhz.web.model.HttpCode httpCode) {
+    public void setHttpCode(com.demo.xianghuan.utils.HttpCode httpCode) {
         this.httpCode = httpCode;
     }
 
@@ -30,23 +30,23 @@ public class Result implements Serializable {
         return this.data;
     }
 
-    public void setData(com.sqhz.web.model.HttpCode httpCode, Object data, String desc) {
+    public void setData(HttpCode httpCode, Object data, String desc) {
         this.data = data;
         this.setHttpCode(httpCode);
         this.desc = desc;
     }
 
-    public void setData(com.sqhz.web.model.HttpCode httpCode, Object data) {
+    public void setData(HttpCode httpCode, Object data) {
         this.data = data;
         this.setHttpCode(httpCode);
     }
 
     public void setSuccess(String desc) {
-        this.setHttpCode(com.sqhz.web.model.HttpCode.OK);
+        this.setHttpCode(com.demo.xianghuan.utils.HttpCode.OK);
         this.desc = desc;
     }
 
-    public void setError(com.sqhz.web.model.HttpCode httpCode, String desc) {
+    public void setError(HttpCode httpCode, String desc) {
         this.setHttpCode(httpCode);
         this.desc = desc;
     }

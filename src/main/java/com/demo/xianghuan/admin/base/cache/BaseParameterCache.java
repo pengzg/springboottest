@@ -3,9 +3,10 @@ package com.demo.xianghuan.admin.base.cache;
 
 import com.demo.xianghuan.admin.base.model.BaseParameter;
 import com.demo.xianghuan.admin.base.service.IBaseParameterService;
-import com.sqhz.jdbc.framework.exception.BusinessException;
-import com.sqhz.redis.RedisUtil;
-import com.sqhz.util.OnlineListener;
+import com.demo.xianghuan.component.RedisDao;
+import com.demo.xianghuan.component.SpringUtils;
+
+import com.demo.xianghuan.utils.BusinessException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +23,7 @@ public class BaseParameterCache  {
 	private static BaseParameterCache instance = null;
 
 	private static Object lock = new Object();
+	private RedisDao redisDao = (RedisDao) SpringUtils.getBean("redisDao");
 
 	public static BaseParameterCache getInstance() {
 		if (instance == null) {
@@ -49,24 +51,22 @@ public class BaseParameterCache  {
 
 	//把缓存里放值
 	public void put(String id,Object obj) {
-		RedisUtil.getInstance().put(this.keyPrefix + "_" + id, obj);
+		redisDao.setObj(this.keyPrefix + "_" + id, obj);
 	}
 	// 删除被缓存的对象;
 	public void remove(String key) {
-		RedisUtil.getInstance().remove(this.keyPrefix + "_" + key);
+		redisDao.del(this.keyPrefix + "_" + key);
 	}
 
-	public void removeAll() {
-		RedisUtil.getInstance().removeAll();
-	}
+
 
 	// 获取被缓存的对象;
 	public BaseParameter get(String key) throws BusinessException {
-		IBaseParameterService BaseParameterService = (IBaseParameterService) OnlineListener.ctx
+		IBaseParameterService BaseParameterService = (IBaseParameterService) SpringUtils
 				.getBean("baseParameterService");
 		BaseParameter vo = null;
 		try {
-			vo = (BaseParameter) RedisUtil.getInstance().getObj(
+			vo = (BaseParameter) redisDao.getObj(
 					this.keyPrefix + "_" + key);
 			if (vo == null) {
 				throw new BusinessException("SYS_E998", "cache not find");
@@ -77,19 +77,19 @@ public class BaseParameterCache  {
 			if (vo == null) {
 				 logger.error("多渠道参数配置缓存异常："+this.keyPrefix + "_" + key+"data not find");
 			} else {
-				RedisUtil.getInstance().put(this.keyPrefix + "_" + key, vo);
+				redisDao.setObj(this.keyPrefix + "_" + key, vo);
 			}
 		}
 		return vo;
 	}
 	// 获取被缓存的值;
 	public String getKeyValue(String key) throws BusinessException {
-		IBaseParameterService BaseParameterService = (IBaseParameterService) OnlineListener.ctx
+		IBaseParameterService BaseParameterService = (IBaseParameterService) SpringUtils
 				.getBean("baseParameterService");
 		BaseParameter vo = null;
 		String keyValue="";
 		try {
-			vo = (BaseParameter) RedisUtil.getInstance().getObj(
+			vo = (BaseParameter) redisDao.getObj(
 					this.keyPrefix + "_" + key);
 
 			if (vo == null) {
@@ -101,7 +101,7 @@ public class BaseParameterCache  {
 			if (vo == null) {
 				logger.error("多渠道参数配置缓存异常："+this.keyPrefix + "_" + key+"data not find");
 			} else {
-				RedisUtil.getInstance().put(this.keyPrefix + "_" + key, vo);
+				redisDao.setObj(this.keyPrefix + "_" + key, vo);
 			}
 		}
 		if(vo == null)

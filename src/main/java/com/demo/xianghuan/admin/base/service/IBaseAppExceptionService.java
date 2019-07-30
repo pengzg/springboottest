@@ -1,8 +1,8 @@
 package com.demo.xianghuan.admin.base.service;
 
 import com.demo.xianghuan.admin.base.model.BaseAppException;
-import com.sqhz.web.model.DataGrid;
-import com.sqhz.web.model.Query;
+import com.demo.xianghuan.utils.DataGrid;
+import com.demo.xianghuan.utils.Query;
 
 import java.util.List;
 import java.util.Map;
