@@ -1,7 +1,7 @@
 package com.demo.xianghuan.admin.base.dao;
 
 import com.demo.xianghuan.admin.base.model.BaseParameter;
-import com.sqhz.jdbc.framework.third.mybatis.IGenericDao;
+
 import com.demo.xianghuan.utils.Query;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -15,7 +15,7 @@ import java.util.Map;
  */
 
 @Mapper
-public interface IBaseParameterDao extends IGenericDao<BaseParameter, String> {
+public interface IBaseParameterDao {
 	/**
 	 * 插入单条记录，用id作主键，把null全替换为""
 	 * @param vo 用于添加的VO对象
@@ -55,7 +55,6 @@ public interface IBaseParameterDao extends IGenericDao<BaseParameter, String> {
 
 	/**
 	 * 根据Id进行查询
-	 * @param id 用于查找的id
 	 * @return 查询到的VO对象
 	 */
 	public BaseParameter find(String bp_id);
@@ -69,7 +68,6 @@ public interface IBaseParameterDao extends IGenericDao<BaseParameter, String> {
 
 	/**
 	 * 功能: 通过查询条件获得所有的VO对象列表，带翻页，带排序字符
-	 * @param param包含queryCondition
 	 *            查询条件, queryCondition等于null或""时查询全部，orderStr 排序字符
 	 * @return 查询到的VO列表
 	 */
@@ -77,7 +75,6 @@ public interface IBaseParameterDao extends IGenericDao<BaseParameter, String> {
 	
 	/**
 	 * 功能: 通过查询条件获得所有的VO对象列表 
-	 * @param param 包含 queryParams
 	 *        查询条件, select 等于null或""时查询全部，orderStr 排序字符
 	 * @return 查询到的VO列表
 	 */

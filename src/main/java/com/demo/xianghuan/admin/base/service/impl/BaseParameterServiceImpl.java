@@ -6,7 +6,9 @@ import com.demo.xianghuan.admin.base.service.IBaseParameterService;
 import com.demo.xianghuan.admin.base.vo.BaseParameterVO;
 
 
-
+import com.demo.xianghuan.utils.BusinessException;
+import com.demo.xianghuan.utils.DataGrid;
+import com.demo.xianghuan.utils.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
@@ -102,7 +104,7 @@ public class BaseParameterServiceImpl implements IBaseParameterService {
 	public int update(BaseParameter vo) {
 		BaseParameter temp = find(vo.getBp_id());
 		if(temp == null) {
-			throw new  BusinessException("数据异常");
+			throw new BusinessException("数据异常");
 		}
 		BeanUtils.copyProperties(vo, temp,new String[]{""});
 		//todo增加版本号 

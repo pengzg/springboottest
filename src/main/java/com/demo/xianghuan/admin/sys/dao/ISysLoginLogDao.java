@@ -1,7 +1,6 @@
 package com.demo.xianghuan.admin.sys.dao;
 
 import com.demo.xianghuan.admin.sys.model.SysLoginLog;
-import com.sqhz.jdbc.framework.third.mybatis.IGenericDao;
 import com.demo.xianghuan.utils.Query;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -15,7 +14,7 @@ import java.util.Map;
  */
 
 @Mapper
-public interface ISysLoginLogDao extends IGenericDao<SysLoginLog, String> {
+public interface ISysLoginLogDao {
 	/**
 	 * 插入单条记录，用id作主键，把null全替换为""
 	 * @param vo 用于添加的VO对象

@@ -6,12 +6,10 @@ import com.demo.xianghuan.admin.sys.model.SysUser;
 import com.demo.xianghuan.admin.sys.service.ISysMenuService;
 import com.demo.xianghuan.admin.sys.service.ISysUserService;
 import com.demo.xianghuan.admin.sys.vo.SysUserVO;
-import com.demo.xianghuan.utils.Result;
 import com.demo.xianghuan.utils.BusinessException;
-import com.sqhz.web.controller.BaseController;
 import com.demo.xianghuan.utils.HttpCode;
+import com.demo.xianghuan.utils.Result;
 import com.demo.xianghuan.utils.SessionInfo;
-import com.sqhz.web.util.UserSessionUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +31,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/system/loginController")
-public class LoginController extends BaseController {
+public class LoginController {
 
     private static final Logger log = LoggerFactory.getLogger(SysLoginLogController.class);
 
@@ -80,15 +78,15 @@ public class LoginController extends BaseController {
             SysUserVO suVO = sysUserService.login(map);
             if (suVO != null) {
                 SessionInfo sessionInfo = new SessionInfo();
-                sessionInfo.setId(suVO.getSu_id());
-                sessionInfo.setLogincode(suVO.getSu_loginname());
-                sessionInfo.setName(suVO.getSu_name());
+//                sessionInfo.setId(suVO.getSu_id());
+//                sessionInfo.setLogincode(suVO.getSu_loginname());
+//                sessionInfo.setName(suVO.getSu_name());
                 
 
                 //取可以访问的菜单信息
                 setMenuPrivValue(sessionInfo,suVO);
 
-                UserSessionUtil.setSession(request, sessionInfo);
+//                UserSessionUtil.setSession(request, sessionInfo);
                 result.setData(HttpCode.OK, null, "登录成功！");
             } else {
                 result.setData(HttpCode.INTERNAL_SERVER_ERROR, null, "登录失败！");
@@ -112,7 +110,7 @@ public class LoginController extends BaseController {
         for(SysMenu t:list){
             menusList.add(t.getSm_url());
         }
-        sessionInfo.setMenusList(menusList);
+       // sessionInfo.setMenusList(menusList);
     }
 
     /**
@@ -140,7 +138,6 @@ public class LoginController extends BaseController {
 
   
 
-    @Override
     public Map<?, ?> getQueryCondition(HttpServletRequest request) {
         // TODO Auto-generated method stub
         return null;

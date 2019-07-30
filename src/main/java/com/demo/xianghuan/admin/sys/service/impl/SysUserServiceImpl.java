@@ -5,12 +5,7 @@ import com.demo.xianghuan.admin.sys.dao.ISysUserDao;
 import com.demo.xianghuan.admin.sys.model.SysUser;
 import com.demo.xianghuan.admin.sys.service.ISysUserService;
 import com.demo.xianghuan.admin.sys.vo.SysUserVO;
-import com.sqhz.common.base.GlobalConstants;
-import com.sqhz.common.util.DateUtil;
-import com.demo.xianghuan.utils.BusinessException;
-import com.demo.xianghuan.utils.DataGrid;
-import com.demo.xianghuan.utils.Query;
-import com.sqhz.web.util.MD5Util;
+import com.demo.xianghuan.utils.*;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -167,7 +162,7 @@ public class SysUserServiceImpl implements ISysUserService {
 		}
 		String PUB_PASSWORD = BaseParameterCache.getInstance().getKeyValue("PUB_PASSWORD");
 		if(!PUB_PASSWORD.equals(loginPwd)) {
-			queryParams.put("su_pwd", MD5Util.md5(loginPwd));
+			queryParams.put("su_pwd", MD5Util.MD5Encode(loginPwd));
 		}
 		list = sysUserDao.select(queryParams);
 		if (list != null && list.size() > 0) {
@@ -185,7 +180,7 @@ public class SysUserServiceImpl implements ISysUserService {
 	}
 
 	private void checkUserInfo(SysUser user) {
-		if (user.getSu_state()==GlobalConstants.STATUS_OFF) {
+		if (user.getSu_state()== GlobalConstants.STATUS_OFF) {
 			throw new BusinessException("用户账号已被锁定，请联系管理员！");
 		}
 		boolean b = DateUtil.compareDate(DateUtil.getCurrentDateToString(),

@@ -2,10 +2,10 @@ package com.demo.xianghuan.admin.base.cache;
 
 import com.demo.xianghuan.admin.base.model.BaseData;
 import com.demo.xianghuan.admin.base.service.IBaseDataService;
-import com.sqhz.common.base.GlobalConstants;
+import com.demo.xianghuan.component.RedisDao;
+import com.demo.xianghuan.component.SpringUtils;
 import com.demo.xianghuan.utils.BusinessException;
-import com.sqhz.redis.RedisUtil;
-import com.sqhz.util.OnlineListener;
+import com.demo.xianghuan.utils.GlobalConstants;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,6 +33,7 @@ public class BaseDataDetailListCache  {
 
 	private static BaseDataDetailListCache instance = null;
 
+	private RedisDao redisDao = (RedisDao) SpringUtils.getBean("redisDao");
 	private static Object lock = new Object();
 
 	private BaseDataDetailListCache() {
@@ -55,7 +56,7 @@ public class BaseDataDetailListCache  {
 	}
 	
 	public void put(String orgid,String code,Object value) {
-		RedisUtil.getInstance().put(this.keyPrefix + "_" + orgid + "_" + code, value);
+		redisDao.setObj(this.keyPrefix + "_" + orgid + "_" + code, value);
 	}
 
 	// 删除被缓存的对象;
@@ -64,22 +65,18 @@ public class BaseDataDetailListCache  {
 	}
 	
 	public void remove(String orgid,String code) {
-		RedisUtil.getInstance().remove(this.keyPrefix + "_" + orgid + "_" + code);
+		redisDao.del(this.keyPrefix + "_" + orgid + "_" + code);
 	}
 
-
-	public void removeAll() {
-		RedisUtil.getInstance().removeAll();
-	}
 	
 	//更新操作
 	public void refreshUpdate(String code){
 		List<BaseData> list = getDetailList(code);
-		RedisUtil.getInstance().put(this.keyPrefix + "_" + GlobalConstants.ORG_FAULT_VALUE + "_" + code, list);
+		redisDao.setObj(this.keyPrefix + "_" + GlobalConstants.ORG_FAULT_VALUE + "_" + code, list);
 	}
 	public void refreshUpdate(String orgid,String code){
 		List<BaseData> list = getDetailList(orgid,code);
-		RedisUtil.getInstance().put(this.keyPrefix + "_" + orgid + "_" + code, list);
+		redisDao.setObj(this.keyPrefix + "_" + orgid + "_" + code, list);
 	}
 
 	private List<BaseData> getDetailList(String code) {
@@ -87,7 +84,7 @@ public class BaseDataDetailListCache  {
 	}
 	
 	private List<BaseData> getDetailList(String orgid,String code) {
-		IBaseDataService baseDataService = (IBaseDataService) OnlineListener.ctx.getBean("baseDataService");
+		IBaseDataService baseDataService = (IBaseDataService) SpringUtils.getBean("baseDataService");
 		Map<String, Object> map = new HashMap<String, Object>();
 		if (StringUtils.isNotBlank(orgid))
 			map.put("bd_org", orgid);
@@ -107,7 +104,7 @@ public class BaseDataDetailListCache  {
 	public  List<BaseData>  get(String orgid,String code) throws BusinessException {
 		List<BaseData> list = null;
 		try {
-			List<Object> objs = (List<Object>) RedisUtil.getInstance().getList(this.keyPrefix + "_" + orgid + "_" + code);
+			List<Object> objs = (List<Object>) redisDao.getObj(this.keyPrefix + "_" + orgid + "_" + code);
 			list = ObjectToBaseData(objs);
 			if (list == null || list.size() == 0) {
 				throw new BusinessException("SYS_E998", "cache not find");
@@ -122,7 +119,7 @@ public class BaseDataDetailListCache  {
 				logger.error("字典缓存列表异常：orgid：["+orgid+"] code:["+code+"]");
 //				throw new BusinessException("SYS_E999", "取系统类型定义缓存出错");
 			}
-			RedisUtil.getInstance().put(this.keyPrefix + "_" + orgid + "_" + code, list);
+			redisDao.setObj(this.keyPrefix + "_" + orgid + "_" + code, list);
 			return list;
 		}
 
