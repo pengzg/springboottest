@@ -2,145 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f0dda74-e29d-4f37-bb9a-4e991e02a37d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/DateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/MD5Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/SessionInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/cache/BaseDataDetailListCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/cache/BaseDataDetailListCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseAppExceptionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseAppExceptionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseAppVersionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseAppVersionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseAttachmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseAttachmentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseAttachmentRelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseAttachmentRelDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseDataDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseDataDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseDataTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseDataTypeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseParameterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseParameterDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseIdServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseIdServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseParameterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseParameterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/XianghuanApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/XianghuanApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAppExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAppExceptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAppVersionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAppVersionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAttachmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAttachmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAttachmentRelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAttachmentRelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseDataTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseDataTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseParameterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseParameterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysLoginLogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysLoginLogDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysMenuDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysMenuDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysRoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysRoleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysRoleMenuDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysRoleMenuDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysSmsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysSmsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysUserRoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysUserRoleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysMenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysMenuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/XianghuanApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/cache/BaseDataDetailListCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/cache/BaseDataDetailValueCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/cache/BaseParameterCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/controller/BaseAppExceptionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/controller/BaseAppVersionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/controller/BaseAttachmentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/controller/BaseAttachmentRelController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/controller/BaseDataController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/controller/BaseDataTypeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/controller/BaseParameterController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseAppExceptionDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseAppVersionDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseAttachmentDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseAttachmentRelDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseDataDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseDataTypeDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseIdDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseParameterDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/model/BaseAppException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/model/BaseAppVersion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/model/BaseAttachment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/model/BaseAttachmentRel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/model/BaseData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/model/BaseDataType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/model/BaseParameter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseAppExceptionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseAppVersionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseAttachmentRelService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseAttachmentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseDataService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseDataTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseIdService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseParameterService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseAppExceptionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseAppVersionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseAttachmentRelServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseAttachmentServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseDataServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseDataTypeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseIdServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseParameterServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/vo/BaseAppExceptionVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/vo/BaseAppVersionVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/vo/BaseAttachmentRelVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/vo/BaseAttachmentVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/vo/BaseDataTypeVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/vo/BaseDataVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/vo/BaseParameterVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/controller/SysLoginLogController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/controller/SysMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/controller/SysRoleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/controller/SysRoleMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/controller/SysUserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/controller/SysUserRoleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/dao/ISysLoginLogDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/dao/ISysMenuDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/dao/ISysRoleDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/dao/ISysRoleMenuDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/dao/ISysSmsDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/dao/ISysUserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/dao/ISysUserRoleDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/model/SysLoginLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/model/SysMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/model/SysRole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/model/SysRoleMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/model/SysSms.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/model/SysUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/model/SysUserRole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/ISysLoginLogService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/ISysMenuService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/ISysRoleMenuService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/ISysRoleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/ISysSmsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/ISysUserRoleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/ISysUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/impl/SysLoginLogServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/impl/SysMenuServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/impl/SysRoleMenuServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/impl/SysRoleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/impl/SysSmsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/impl/SysUserRoleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/impl/SysUserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/MenusListVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/SysLoginLogVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/SysMenuVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/SysRoleMenuVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/SysRoleVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/SysSmsVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/SysUserRoleVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/SysUserVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/user/cache/UserCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/user/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/user/controller/UserGradeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/user/dao/IUserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/user/dao/IUserGradeDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/user/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/user/model/UserGrade.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/user/service/IUserGradeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/user/service/IUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/user/service/impl/UserGradeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/user/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/user/vo/UserGradeVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/user/vo/UserVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/component/QuartzService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/component/RedisDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/component/SpringUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/configuration/FilterConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/configuration/RestConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/configuration/WebConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/filter/UrlFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/interceptor/MyInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/utils/RepBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xianghuan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xianghuan.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysLoginLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysLoginLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysRoleMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysRoleMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysUserRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysUserRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/user/controller/UserGradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/user/controller/UserGradeController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -157,104 +34,19 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/LoginController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseDataController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1688">
-              <caret line="139" selection-start-line="139" selection-end-line="139" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysLoginLogController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2751">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="75">
+              <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseIdServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/user/controller/UserGradeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="38" column="23" lean-forward="true" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/SessionInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/ISysLoginLogService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysUserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-735">
-              <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/MD5Util.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-500">
-              <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysMenuServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="179" column="33" selection-start-line="179" selection-start-column="33" selection-end-line="179" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/DateUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-              <folding>
-                <element signature="e#2141#2142#0" expanded="true" />
-                <element signature="e#2205#2206#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/HttpCode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            <state relative-caret-position="180">
+              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -275,12 +67,14 @@
       <find>com.sqhz.jdbc.framework.exception</find>
       <find>extends IGenericDao&lt;SysRole, String&gt;</find>
       <find>import com.sqhz.jdbc.framework.third.mybatis.IGenericDao;</find>
+      <find>@Controller</find>
     </findStrings>
     <replaceStrings>
       <replace>com.demo.xianghuan.utils</replace>
       <replace />
       <replace />
       <replace />
+      <replace>@RestController</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -302,9 +96,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/GlobalConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/cache/BaseDataDetailValueCache.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/cache/BaseParameterCache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAppExceptionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/Result.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAttachmentRelController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseAppExceptionServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseParameterServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysMenuDao.java" />
@@ -326,8 +118,23 @@
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysMenuServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/MD5Util.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysUserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseIdServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/XianghuanApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAppVersionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAppExceptionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAttachmentRelController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAttachmentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseDataTypeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseParameterController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysLoginLogController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysMenuController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysRoleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysRoleMenuController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysUserRoleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseDataController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/user/controller/UserGradeController.java" />
       </list>
     </option>
   </component>
@@ -437,47 +244,7 @@
               <item name="xianghuan" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="base" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xianghuan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboottest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="xianghuan" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xianghuan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboottest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="xianghuan" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xianghuan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboottest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="xianghuan" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xianghuan" type="b2602c69:ProjectViewProjectNode" />
@@ -514,46 +281,6 @@
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="xianghuan" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="sys" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xianghuan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboottest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="xianghuan" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="sys" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xianghuan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboottest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="xianghuan" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="sys" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xianghuan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboottest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="xianghuan" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -567,7 +294,20 @@
               <item name="xianghuan" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xianghuan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboottest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="xianghuan" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xianghuan" type="b2602c69:ProjectViewProjectNode" />
@@ -659,15 +399,15 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.4408867" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4408867" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Version Control" weight="0.32928944" />
       <window_info anchor="bottom" id="Terminal" weight="0.32928944" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32928944" />
+      <window_info anchor="bottom" id="Messages" visible="true" weight="0.32928944" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.16637781" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.57885617" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -711,89 +451,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseAttachmentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseDataServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/vo/BaseAppVersionVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/vo/BaseAppExceptionVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../common/box-common-1.0.0.jar!/com/sqhz/jdbc/framework/exception/BusinessException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="79" column="3" selection-start-line="7" selection-end-line="79" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../common/box-common-1.0.0.jar!/com/sqhz/web/model/DataGrid.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" selection-start-line="10" selection-end-line="41" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/DataGrid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../common/box-common-1.0.0.jar!/com/sqhz/redis/RedisUtil.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../common/box-common-1.0.0.jar!/com/sqhz/redis/AbstractBaseRedis.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/user/cache/UserCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../common/box_common_util-0.0.1.0-SNAPSHOT.jar!/com/sqhz/common/base/GlobalConstants.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6420">
-          <caret line="431" column="2" selection-start-line="9" selection-end-line="431" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/GlobalConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -812,13 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAppExceptionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/BusinessException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -826,24 +476,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseParameterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/Pager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
           <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseDataTypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -864,13 +500,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAttachmentRelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2450">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1045,7 +674,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/DateUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
           <folding>
             <element signature="e#2141#2142#0" expanded="true" />
             <element signature="e#2205#2206#0" expanded="true" />
@@ -1087,41 +716,161 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysUserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-735">
-          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/SessionInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysLoginLogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2751">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1688">
-          <caret line="139" selection-start-line="139" selection-end-line="139" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseIdServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="38" column="23" lean-forward="true" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+        <state relative-caret-position="540">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/XianghuanApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/user/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAppExceptionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAppVersionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAttachmentRelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAttachmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseDataTypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseParameterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysLoginLogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysMenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysRoleMenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysUserRoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysRoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseDataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/user/controller/UserGradeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
         </state>
       </provider>
     </entry>

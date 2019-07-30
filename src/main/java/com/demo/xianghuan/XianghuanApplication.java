@@ -14,7 +14,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @ServletComponentScan
 @EnableCaching
 @EnableScheduling
-//@MapperScan("com.demo.xianghuan.*")
+@MapperScan("com.demo.xianghuan.*")
 public class XianghuanApplication extends SpringBootServletInitializer{
 
 	

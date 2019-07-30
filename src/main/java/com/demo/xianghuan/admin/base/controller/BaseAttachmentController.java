@@ -1,28 +1,26 @@
 
 package com.demo.xianghuan.admin.base.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.commons.lang.StringUtils;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import com.demo.xianghuan.utils.Result;
+import com.demo.xianghuan.admin.base.model.BaseAttachment;
+import com.demo.xianghuan.admin.base.service.IBaseAttachmentService;
+import com.demo.xianghuan.admin.base.vo.BaseAttachmentVO;
 import com.demo.xianghuan.utils.HttpCode;
 import com.demo.xianghuan.utils.Pager;
 import com.demo.xianghuan.utils.Query;
+import com.demo.xianghuan.utils.Result;
+import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.xianghuan.admin.base.service.IBaseAttachmentService;
-import com.demo.xianghuan.admin.base.model.BaseAttachment;
-import com.demo.xianghuan.admin.base.vo.BaseAttachmentVO;
+import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
-@Controller
+@RestController
 @RequestMapping("/admin/base/baseAttachmentControl")
 public class BaseAttachmentController{
 	private static final Logger log = LoggerFactory.getLogger(BaseAttachmentController.class);

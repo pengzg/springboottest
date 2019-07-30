@@ -4,23 +4,23 @@ package com.demo.xianghuan.admin.sys.controller;
 import com.demo.xianghuan.admin.sys.model.SysLoginLog;
 import com.demo.xianghuan.admin.sys.service.ISysLoginLogService;
 import com.demo.xianghuan.admin.sys.vo.SysLoginLogVO;
-import com.demo.xianghuan.utils.Result;
 import com.demo.xianghuan.utils.HttpCode;
 import com.demo.xianghuan.utils.Pager;
 import com.demo.xianghuan.utils.Query;
+import com.demo.xianghuan.utils.Result;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-@Controller
+@RestController
 @RequestMapping("/admin/base/sysLoginLogControl")
 public class SysLoginLogController{
 	private static final Logger log = LoggerFactory.getLogger(SysLoginLogController.class);
