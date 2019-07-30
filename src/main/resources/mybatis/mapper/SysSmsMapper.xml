@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 不使用namespace的话sql搜索定位会比较方便 -->
+<mapper namespace="com.demo.xianghuan.admin.sys.dao.ISysSmsDao">
+	<sql id="Base_Column_List">
+		ss_id,ss_source_id,ss_source_type,ss_mobile,ss_code,ss_type,ss_content,ss_state,ss_msg,ss_send_time,ss_add_time
+	</sql>
+	<sql id="Base_Column_insert">
+        	#{ss_id,jdbcType=VARCHAR},
+        	#{ss_source_id,jdbcType=INTEGER},
+        	#{ss_source_type,jdbcType=VARCHAR},
+        	#{ss_mobile,jdbcType=VARCHAR},
+        	#{ss_code,jdbcType=VARCHAR},
+        	#{ss_type,jdbcType=VARCHAR},
+        	#{ss_content,jdbcType=VARCHAR},
+        	#{ss_state,jdbcType=INTEGER},
+        	#{ss_msg,jdbcType=VARCHAR},
+        	#{ss_send_time,jdbcType=BIGINT},
+        	#{ss_add_time,jdbcType=TIMESTAMP}
+	</sql>
+	<sql id="Base_query_column">
+		ss_id,ss_source_id,ss_source_type,ss_mobile,ss_code,ss_type,ss_content,ss_state,ss_msg,ss_send_time,ss_add_time
+	</sql>
+	<sql id="Base_query_where">
+		 	<if test="ss_source_id != null and ss_source_id != ''">
+	          and ss_source_id = #{ss_source_id}
+	         </if>
+		 	<if test="ss_source_type != null and ss_source_type != ''">
+	          and ss_source_type = #{ss_source_type}
+	         </if>
+		 	<if test="ss_mobile != null and ss_mobile != ''">
+	          and ss_mobile = #{ss_mobile}
+	         </if>
+		 	<if test="ss_code != null and ss_code != ''">
+	          and ss_code = #{ss_code}
+	         </if>
+		 	<if test="ss_type != null and ss_type != ''">
+	          and ss_type = #{ss_type}
+	         </if>
+		 	<if test="ss_content != null and ss_content != ''">
+	          and ss_content = #{ss_content}
+	         </if>
+		 	<if test="ss_state != null and ss_state != ''">
+	          and ss_state = #{ss_state}
+	         </if>
+		 	<if test="ss_msg != null and ss_msg != ''">
+	          and ss_msg = #{ss_msg}
+	         </if>
+		 	<if test="ss_send_time != null and ss_send_time != ''">
+	          and ss_send_time = #{ss_send_time}
+	         </if>
+		 	<if test="ss_add_time != null and ss_add_time != ''">
+	          and ss_add_time = #{ss_add_time}
+	         </if>
+	</sql>
+	
+	<insert id="insert" parameterType="com.demo.xianghuan.admin.sys.model.SysSms" keyProperty="ss_id" >
+        INSERT INTO sys_sms ( <include refid="Base_Column_List" /> )  VALUES (
+            <include refid="Base_Column_insert" /> 
+        )
+	</insert>
+	
+	<insert id="insertBatch" keyProperty="ss_id">
+		insert into sys_sms  ( <include refid="Base_Column_List" /> )   values
+		<foreach collection="array" item="item" index="index" separator=",">
+		   (
+        	#{item.ss_id,jdbcType=VARCHAR},
+        	#{item.ss_source_id,jdbcType=INTEGER},
+        	#{item.ss_source_type,jdbcType=VARCHAR},
+        	#{item.ss_mobile,jdbcType=VARCHAR},
+        	#{item.ss_code,jdbcType=VARCHAR},
+        	#{item.ss_type,jdbcType=VARCHAR},
+        	#{item.ss_content,jdbcType=VARCHAR},
+        	#{item.ss_state,jdbcType=INTEGER},
+        	#{item.ss_msg,jdbcType=VARCHAR},
+        	#{item.ss_send_time,jdbcType=BIGINT},
+        	#{item.ss_add_time,jdbcType=TIMESTAMP}
+		   )
+        </foreach>
+	</insert>
+
+	<update id="update" parameterType="com.demo.xianghuan.admin.sys.model.SysSms" flushCache="true">
+        UPDATE sys_sms SET
+	        ss_source_id = #{ss_source_id,jdbcType=INTEGER} ,
+	        ss_source_type = #{ss_source_type,jdbcType=VARCHAR} ,
+	        ss_mobile = #{ss_mobile,jdbcType=VARCHAR} ,
+	        ss_code = #{ss_code,jdbcType=VARCHAR} ,
+	        ss_type = #{ss_type,jdbcType=VARCHAR} ,
+	        ss_content = #{ss_content,jdbcType=VARCHAR} ,
+	        ss_state = #{ss_state,jdbcType=INTEGER} ,
+	        ss_msg = #{ss_msg,jdbcType=VARCHAR} ,
+	        ss_send_time = #{ss_send_time,jdbcType=BIGINT} ,
+	        ss_add_time = #{ss_add_time,jdbcType=TIMESTAMP} 
+        WHERE 
+	        ss_id = #{ss_id,jdbcType=VARCHAR} 
+	</update> 
+	
+	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.sys.model.SysSms" flushCache="true">
+        UPDATE sys_sms SET
+	        	<if test=" ss_source_id != null  and ss_source_id != ''">
+	        		ss_source_id = #{ss_source_id,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" ss_source_type != null  and ss_source_type != ''">
+	        		ss_source_type = #{ss_source_type,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ss_mobile != null  and ss_mobile != ''">
+	        		ss_mobile = #{ss_mobile,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ss_code != null  and ss_code != ''">
+	        		ss_code = #{ss_code,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ss_type != null  and ss_type != ''">
+	        		ss_type = #{ss_type,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ss_content != null  and ss_content != ''">
+	        		ss_content = #{ss_content,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ss_state != null  and ss_state != ''">
+	        		ss_state = #{ss_state,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" ss_msg != null  and ss_msg != ''">
+	        		ss_msg = #{ss_msg,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ss_send_time != null  and ss_send_time != ''">
+	        		ss_send_time = #{ss_send_time,jdbcType=BIGINT} ,
+	        	</if>
+	        	<if test=" ss_add_time != null  and ss_add_time != ''">
+	        		ss_add_time = #{ss_add_time,jdbcType=TIMESTAMP} 
+	        	</if>
+        WHERE 
+	        ss_id = #{ss_id,jdbcType=VARCHAR} 
+	</update>   
+	
+	<update id="updateBatch" flushCache="true">
+	    <foreach collection="array" item="item" open="" separator=";" close=";">
+		        UPDATE sys_sms SET
+			        ss_source_id = #{item.ss_source_id,jdbcType=INTEGER} ,
+			        ss_source_type = #{item.ss_source_type,jdbcType=VARCHAR} ,
+			        ss_mobile = #{item.ss_mobile,jdbcType=VARCHAR} ,
+			        ss_code = #{item.ss_code,jdbcType=VARCHAR} ,
+			        ss_type = #{item.ss_type,jdbcType=VARCHAR} ,
+			        ss_content = #{item.ss_content,jdbcType=VARCHAR} ,
+			        ss_state = #{item.ss_state,jdbcType=INTEGER} ,
+			        ss_msg = #{item.ss_msg,jdbcType=VARCHAR} ,
+			        ss_send_time = #{item.ss_send_time,jdbcType=BIGINT} ,
+			        ss_add_time = #{item.ss_add_time,jdbcType=TIMESTAMP} 
+		        WHERE 
+			        ss_id = #{item.ss_id,jdbcType=VARCHAR} 
+		</foreach>
+	</update>
+
+	<!-- <delete id="remove" parameterType="java.util.Map">
+	    update sys_sms set 1=1
+	    set dr = 0 
+	    where ss_id= #{ss_id}
+	</delete>
+	
+	<delete id="removeBatch">
+	    update sys_sms where ss_id in
+	    <foreach collection="array" item="item"  open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+	</delete> -->
+	
+	<select id="find" resultType="com.demo.xianghuan.admin.sys.model.SysSms" parameterType="String">
+		select
+		<include refid="Base_query_column" />
+		from sys_sms where ss_id= #{ss_id}
+	</select>
+
+	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.sys.model.SysSms" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from sys_sms where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="getRecordCount" resultType="int" parameterType="java.util.Map">
+		select count(1) from sys_sms where 1 = 1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="select" resultType="com.demo.xianghuan.admin.sys.model.SysSms" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from sys_sms where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+</mapper>

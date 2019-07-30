@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 不使用namespace的话sql搜索定位会比较方便 -->
+<mapper namespace="com.demo.xianghuan.admin.sys.dao.ISysUserDao">
+	<sql id="Base_Column_List">
+		su_id,su_img,su_loginname,su_name,su_querycode,su_pwd,su_orgid,su_startdate,su_enddate,su_usertype,su_role,su_state,su_lastlogin,su_addtime,su_updatetime,su_dr,su_ts,su_hash,su_unionid,su_mobile
+	</sql>
+	<sql id="Base_Column_insert">
+        	#{su_id,jdbcType=VARCHAR},
+        	#{su_img,jdbcType=VARCHAR},
+        	#{su_loginname,jdbcType=VARCHAR},
+        	#{su_name,jdbcType=VARCHAR},
+        	#{su_querycode,jdbcType=VARCHAR},
+        	#{su_pwd,jdbcType=VARCHAR},
+        	#{su_orgid,jdbcType=BIGINT},
+        	#{su_startdate,jdbcType=VARCHAR},
+        	#{su_enddate,jdbcType=VARCHAR},
+        	#{su_usertype,jdbcType=TINYINT},
+        	#{su_role,jdbcType=TINYINT},
+        	#{su_state,jdbcType=INTEGER},
+        	#{su_lastlogin,jdbcType=VARCHAR},
+        	#{su_addtime,jdbcType=VARCHAR},
+        	#{su_updatetime,jdbcType=VARCHAR},
+        	#{su_dr,jdbcType=INTEGER},
+        	#{su_ts,jdbcType=VARCHAR},
+        	#{su_hash,jdbcType=VARCHAR},
+        	#{su_unionid,jdbcType=VARCHAR},
+        	#{su_mobile,jdbcType=VARCHAR}
+	</sql>
+	<sql id="Base_query_column">
+		su_id,su_img,su_loginname,su_name,su_querycode,su_pwd,su_orgid,su_startdate,su_enddate,su_usertype,su_role,su_state,su_lastlogin,su_addtime,su_updatetime,su_dr,su_ts,su_hash,su_unionid,su_mobile
+	</sql>
+	<sql id="Base_query_where">
+		 	<if test="su_img != null and su_img != ''">
+	          and su_img = #{su_img}
+	         </if>
+		 	<if test="su_loginname != null and su_loginname != ''">
+	          and su_loginname = #{su_loginname}
+	         </if>
+		 	<if test="su_name != null and su_name != ''">
+	          and su_name = #{su_name}
+	         </if>
+		 	<if test="su_querycode != null and su_querycode != ''">
+	          and su_querycode = #{su_querycode}
+	         </if>
+		 	<if test="su_pwd != null and su_pwd != ''">
+	          and su_pwd = #{su_pwd}
+	         </if>
+		 	<if test="su_orgid != null and su_orgid != ''">
+	          and su_orgid = #{su_orgid}
+	         </if>
+		 	<if test="su_startdate != null and su_startdate != ''">
+	          and su_startdate = #{su_startdate}
+	         </if>
+		 	<if test="su_enddate != null and su_enddate != ''">
+	          and su_enddate = #{su_enddate}
+	         </if>
+		 	<if test="su_usertype != null and su_usertype != ''">
+	          and su_usertype = #{su_usertype}
+	         </if>
+		 	<if test="su_role != null and su_role != ''">
+	          and su_role = #{su_role}
+	         </if>
+		 	<if test="su_state != null and su_state != ''">
+	          and su_state = #{su_state}
+	         </if>
+		 	<if test="su_lastlogin != null and su_lastlogin != ''">
+	          and su_lastlogin = #{su_lastlogin}
+	         </if>
+		 	<if test="su_addtime != null and su_addtime != ''">
+	          and su_addtime = #{su_addtime}
+	         </if>
+		 	<if test="su_updatetime != null and su_updatetime != ''">
+	          and su_updatetime = #{su_updatetime}
+	         </if>
+		 	<if test="su_dr != null and su_dr != ''">
+	          and su_dr = #{su_dr}
+	         </if>
+		 	<if test="su_ts != null and su_ts != ''">
+	          and su_ts = #{su_ts}
+	         </if>
+		 	<if test="su_hash != null and su_hash != ''">
+	          and su_hash = #{su_hash}
+	         </if>
+		 	<if test="su_unionid != null and su_unionid != ''">
+	          and su_unionid = #{su_unionid}
+	         </if>
+	</sql>
+	
+	<insert id="insert" parameterType="com.demo.xianghuan.admin.sys.model.SysUser" keyProperty="su_id" >
+        INSERT INTO sys_user ( <include refid="Base_Column_List" /> )  VALUES (
+            <include refid="Base_Column_insert" /> 
+        )
+	</insert>
+	
+	<insert id="insertBatch" keyProperty="su_id">
+		insert into sys_user  ( <include refid="Base_Column_List" /> )   values
+		<foreach collection="array" item="item" index="index" separator=",">
+		   (
+        	#{item.su_id,jdbcType=VARCHAR},
+        	#{item.su_img,jdbcType=VARCHAR},
+        	#{item.su_loginname,jdbcType=VARCHAR},
+        	#{item.su_name,jdbcType=VARCHAR},
+        	#{item.su_querycode,jdbcType=VARCHAR},
+        	#{item.su_pwd,jdbcType=VARCHAR},
+        	#{item.su_orgid,jdbcType=BIGINT},
+        	#{item.su_startdate,jdbcType=VARCHAR},
+        	#{item.su_enddate,jdbcType=VARCHAR},
+        	#{item.su_usertype,jdbcType=TINYINT},
+        	#{item.su_role,jdbcType=TINYINT},
+        	#{item.su_state,jdbcType=INTEGER},
+        	#{item.su_lastlogin,jdbcType=VARCHAR},
+        	#{item.su_addtime,jdbcType=VARCHAR},
+        	#{item.su_updatetime,jdbcType=VARCHAR},
+        	#{item.su_dr,jdbcType=INTEGER},
+        	#{item.su_ts,jdbcType=VARCHAR},
+        	#{item.su_hash,jdbcType=VARCHAR},
+        	#{item.su_unionid,jdbcType=VARCHAR},
+        	#{item.su_mobile,jdbcType=VARCHAR}
+		   )
+        </foreach>
+	</insert>
+
+	<update id="update" parameterType="com.demo.xianghuan.admin.sys.model.SysUser" flushCache="true">
+        UPDATE sys_user SET
+	        su_img = #{su_img,jdbcType=VARCHAR} ,
+	        su_loginname = #{su_loginname,jdbcType=VARCHAR} ,
+	        su_name = #{su_name,jdbcType=VARCHAR} ,
+	        su_querycode = #{su_querycode,jdbcType=VARCHAR} ,
+	        su_pwd = #{su_pwd,jdbcType=VARCHAR} ,
+	        su_orgid = #{su_orgid,jdbcType=BIGINT} ,
+	        su_startdate = #{su_startdate,jdbcType=VARCHAR} ,
+	        su_enddate = #{su_enddate,jdbcType=VARCHAR} ,
+	        su_usertype = #{su_usertype,jdbcType=TINYINT} ,
+	        su_role = #{su_role,jdbcType=TINYINT} ,
+	        su_state = #{su_state,jdbcType=INTEGER} ,
+	        su_lastlogin = #{su_lastlogin,jdbcType=VARCHAR} ,
+	        su_addtime = #{su_addtime,jdbcType=VARCHAR} ,
+	        su_updatetime = #{su_updatetime,jdbcType=VARCHAR} ,
+	        su_dr = #{su_dr,jdbcType=INTEGER} ,
+	        su_ts = #{su_ts,jdbcType=VARCHAR} ,
+	        su_hash = #{su_hash,jdbcType=VARCHAR} ,
+	        su_unionid = #{su_unionid,jdbcType=VARCHAR} ,
+			su_mobile = #{su_mobile,jdbcType=VARCHAR}
+        WHERE
+	        su_id = #{su_id,jdbcType=VARCHAR} 
+	</update> 
+	
+	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.sys.model.SysUser" flushCache="true">
+        UPDATE sys_user SET
+	        	<if test=" su_img != null  and su_img != ''">
+	        		su_img = #{su_img,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" su_loginname != null  and su_loginname != ''">
+	        		su_loginname = #{su_loginname,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" su_name != null  and su_name != ''">
+	        		su_name = #{su_name,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" su_querycode != null  and su_querycode != ''">
+	        		su_querycode = #{su_querycode,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" su_pwd != null  and su_pwd != ''">
+	        		su_pwd = #{su_pwd,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" su_orgid != null  and su_orgid != ''">
+	        		su_orgid = #{su_orgid,jdbcType=BIGINT} ,
+	        	</if>
+	        	<if test=" su_startdate != null  and su_startdate != ''">
+	        		su_startdate = #{su_startdate,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" su_enddate != null  and su_enddate != ''">
+	        		su_enddate = #{su_enddate,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" su_usertype != null  and su_usertype != ''">
+	        		su_usertype = #{su_usertype,jdbcType=TINYINT} ,
+	        	</if>
+	        	<if test=" su_role != null  and su_role != ''">
+	        		su_role = #{su_role,jdbcType=TINYINT} ,
+	        	</if>
+	        	<if test=" su_state != null  and su_state != ''">
+	        		su_state = #{su_state,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" su_lastlogin != null  and su_lastlogin != ''">
+	        		su_lastlogin = #{su_lastlogin,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" su_addtime != null  and su_addtime != ''">
+	        		su_addtime = #{su_addtime,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" su_updatetime != null  and su_updatetime != ''">
+	        		su_updatetime = #{su_updatetime,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" su_dr != null  and su_dr != ''">
+	        		su_dr = #{su_dr,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" su_ts != null  and su_ts != ''">
+	        		su_ts = #{su_ts,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" su_hash != null  and su_hash != ''">
+	        		su_hash = #{su_hash,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" su_unionid != null  and su_unionid != ''">
+	        		su_unionid = #{su_unionid,jdbcType=VARCHAR} 
+	        	</if>
+        WHERE 
+	        su_id = #{su_id,jdbcType=VARCHAR} 
+	</update>   
+	
+	<update id="updateBatch" flushCache="true">
+	    <foreach collection="array" item="item" open="" separator=";" close=";">
+		        UPDATE sys_user SET
+			        su_img = #{item.su_img,jdbcType=VARCHAR} ,
+			        su_loginname = #{item.su_loginname,jdbcType=VARCHAR} ,
+			        su_name = #{item.su_name,jdbcType=VARCHAR} ,
+			        su_querycode = #{item.su_querycode,jdbcType=VARCHAR} ,
+			        su_pwd = #{item.su_pwd,jdbcType=VARCHAR} ,
+			        su_orgid = #{item.su_orgid,jdbcType=BIGINT} ,
+			        su_startdate = #{item.su_startdate,jdbcType=VARCHAR} ,
+			        su_enddate = #{item.su_enddate,jdbcType=VARCHAR} ,
+			        su_usertype = #{item.su_usertype,jdbcType=TINYINT} ,
+			        su_role = #{item.su_role,jdbcType=TINYINT} ,
+			        su_state = #{item.su_state,jdbcType=INTEGER} ,
+			        su_lastlogin = #{item.su_lastlogin,jdbcType=VARCHAR} ,
+			        su_addtime = #{item.su_addtime,jdbcType=VARCHAR} ,
+			        su_updatetime = #{item.su_updatetime,jdbcType=VARCHAR} ,
+			        su_dr = #{item.su_dr,jdbcType=INTEGER} ,
+			        su_ts = #{item.su_ts,jdbcType=VARCHAR} ,
+			        su_hash = #{item.su_hash,jdbcType=VARCHAR} ,
+			        su_unionid = #{item.su_unionid,jdbcType=VARCHAR}  ,
+					su_mobile = #{item.su_mobile,jdbcType=VARCHAR}
+		        WHERE
+			        su_id = #{item.su_id,jdbcType=VARCHAR} 
+		</foreach>
+	</update>
+
+	<!-- <delete id="remove" parameterType="java.util.Map">
+	    update sys_user set 1=1
+	    set dr = 0 
+	    where su_id= #{su_id}
+	</delete>
+	
+	<delete id="removeBatch">
+	    update sys_user where su_id in
+	    <foreach collection="array" item="item"  open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+	</delete> -->
+	
+	<select id="find" resultType="com.demo.xianghuan.admin.sys.model.SysUser" parameterType="String">
+		select
+		<include refid="Base_query_column" />
+		from sys_user where su_id= #{su_id}
+	</select>
+
+	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.sys.model.SysUser" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from sys_user where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="getRecordCount" resultType="int" parameterType="java.util.Map">
+		select count(1) from sys_user where 1 = 1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="select" resultType="com.demo.xianghuan.admin.sys.model.SysUser" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from sys_user where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+</mapper>

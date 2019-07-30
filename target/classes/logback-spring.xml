@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- 文件输出格式 -->
+	<property name="PATTERN"
+			  value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n" />
+	<!-- test文件路径 -->
+	<property name="TEST_FILE_PATH" value="/Users/pengzongge/Downloads/9200/" />
+	<!-- pro文件路径 -->
+	<!--<property name="PRO_FILE_PATH" value="/data/log/springboot/xianghuan/8092/logs.log" />-->
+	<property name="PROD_FILE_PATH" value="/data/log/springboot/xianghuan/9201/" />
+	<!-- proddb文件路径 -->
+	<property name="PRODDB_FILE_PATH" value="/Users/pengzongge/Downloads/9202/" />
+	<!-- dev文件路径 -->
+	<property name="DEV_FILE_PATH" value="/Users/pengzongge/Downloads/8090/" />
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${PATTERN}</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="com.light.springboot" level="debug" />
+	<logger name="dao" level="DEBUG"/>
+	<logger name="org.mybatis">
+		<level value="TRACE" />
+	</logger>
+	<logger name="java.sql">
+		<level value="WARN" />
+	</logger>
+	<root level="INFO">
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+
+	<!-- 开发环境 -->
+	<springProfile name="dev">
+		<!-- 每天产生一个文件 -->
+		<appender name="TEST-FILE"
+				  class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<!-- 文件路径 -->
+			<!--<file>${DEV_FILE_PATH}</file>-->
+			<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+				<!-- 文件名称 -->
+				<fileNamePattern>${DEV_FILE_PATH}/info.%d{yyyy-MM-dd}%i.log</fileNamePattern>
+				<!-- 文件最大保存历史数量 -->
+				<MaxHistory>100</MaxHistory>
+				<totalSizeCap>1GB</totalSizeCap>
+				<MaxFileSize>10MB</MaxFileSize>
+			</rollingPolicy>
+			<layout class="ch.qos.logback.classic.PatternLayout">
+				<pattern>${PATTERN}</pattern>
+			</layout>
+		</appender>
+		<root level="info">
+			<appender-ref ref="TEST-FILE" />
+		</root>
+	</springProfile>
+
+	<!-- 测试环境 -->
+	<springProfile name="test">
+		<!-- 每天产生一个文件 -->
+		<appender name="TEST-FILE"
+				  class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<!-- 文件路径 -->
+			<!--<file>${TEST_FILE_PATH}</file>-->
+			<!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+			<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+				<!-- 文件名称 -->
+				<fileNamePattern>${TEST_FILE_PATH}/info.%d{yyyy-MM-dd}%i.log</fileNamePattern>
+				<!-- 文件最大保存历史数量 -->
+				<MaxHistory>100</MaxHistory>
+				<totalSizeCap>1GB</totalSizeCap>
+				<MaxFileSize>10MB</MaxFileSize>
+			</rollingPolicy>
+			<layout class="ch.qos.logback.classic.PatternLayout">
+				<pattern>${PATTERN}</pattern>
+			</layout>
+		</appender>
+		<root level="info">
+			<appender-ref ref="TEST-FILE" />
+		</root>
+	</springProfile>
+
+	<!-- prod环境 -->
+	<springProfile name="prod">
+		<!-- 每天产生一个文件 -->
+		<appender name="TEST-FILE"
+				  class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<!-- 文件路径 -->
+			<!--<file>${PROD_FILE_PATH}</file>-->
+			<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+				<!-- 文件名称 -->
+				<fileNamePattern>${PROD_FILE_PATH}/info.%d{yyyy-MM-dd}%i.log</fileNamePattern>
+				<!-- 文件最大保存历史数量 -->
+				<MaxHistory>100</MaxHistory>
+				<totalSizeCap>1GB</totalSizeCap>
+				<MaxFileSize>10MB</MaxFileSize>
+			</rollingPolicy>
+			<layout class="ch.qos.logback.classic.PatternLayout">
+				<pattern>${PATTERN}</pattern>
+			</layout>
+		</appender>
+		<root level="info">
+			<appender-ref ref="TEST-FILE" />
+		</root>
+	</springProfile>
+
+	<!-- proddb环境 -->
+	<springProfile name="proddb">
+		<!-- 每天产生一个文件 -->
+		<appender name="TEST-FILE"
+				  class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<!-- 文件路径 -->
+			<!--<file>${PRODDB_FILE_PATH}</file>-->
+			<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+				<!-- 文件名称 -->
+				<fileNamePattern>${PRODDB_FILE_PATH}/info.%d{yyyy-MM-dd}%i.log</fileNamePattern>
+				<!-- 文件最大保存历史数量 -->
+				<MaxHistory>100</MaxHistory>
+				<totalSizeCap>1GB</totalSizeCap>
+				<MaxFileSize>10MB</MaxFileSize>
+			</rollingPolicy>
+			<layout class="ch.qos.logback.classic.PatternLayout">
+				<pattern>${PATTERN}</pattern>
+			</layout>
+		</appender>
+		<root level="info">
+			<appender-ref ref="TEST-FILE" />
+		</root>
+	</springProfile>
+</configuration>

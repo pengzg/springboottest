@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 不使用namespace的话sql搜索定位会比较方便 -->
+<mapper namespace="com.demo.xianghuan.admin.user.dao.IUserGradeDao">
+	<sql id="Base_Column_List">
+		ug_id,ug_title,ug_scale,ug_amount,ug_icon,ug_desc,ug_status,ug_dr,ug_addtime,ug_adduser,ug_updatetime,ug_growth_low,ug_growth_top,ug_decrease,ug_discount_little,ug_discount_middle,ug_discount_max
+	</sql>
+	<sql id="Base_Column_insert">
+        	#{ug_id,jdbcType=INTEGER},
+        	#{ug_title,jdbcType=VARCHAR},
+        	#{ug_scale,jdbcType=DECIMAL},
+        	#{ug_amount,jdbcType=DECIMAL},
+        	#{ug_icon,jdbcType=VARCHAR},
+        	#{ug_desc,jdbcType=LONGVARCHAR},
+        	#{ug_status,jdbcType=INTEGER},
+        	#{ug_dr,jdbcType=TINYINT},
+        	#{ug_addtime,jdbcType=VARCHAR},
+        	#{ug_adduser,jdbcType=BIGINT},
+        	#{ug_updatetime,jdbcType=VARCHAR},
+        	#{ug_growth_low,jdbcType=INTEGER},
+        	#{ug_growth_top,jdbcType=INTEGER},
+        	#{ug_decrease,jdbcType=INTEGER},
+        	#{ug_discount_little,jdbcType=DECIMAL},
+        	#{ug_discount_middle,jdbcType=DECIMAL},
+        	#{ug_discount_max,jdbcType=DECIMAL}
+	</sql>
+	<sql id="Base_query_column">
+		ug_id,ug_title,ug_scale,ug_amount,ug_icon,ug_desc,ug_status,ug_dr,ug_addtime,ug_adduser,ug_updatetime,ug_growth_low,ug_growth_top,ug_decrease,ug_discount_little,ug_discount_middle,ug_discount_max
+	</sql>
+	<sql id="Base_query_where">
+		 	<if test="ug_title != null and ug_title != ''">
+	          and ug_title = #{ug_title}
+	         </if>
+		 	<if test="ug_scale != null and ug_scale != ''">
+	          and ug_scale = #{ug_scale}
+	         </if>
+		 	<if test="ug_amount != null and ug_amount != ''">
+	          and ug_amount = #{ug_amount}
+	         </if>
+		 	<if test="ug_icon != null and ug_icon != ''">
+	          and ug_icon = #{ug_icon}
+	         </if>
+		 	<if test="ug_desc != null and ug_desc != ''">
+	          and ug_desc = #{ug_desc}
+	         </if>
+		 	<if test="ug_status != null and ug_status != ''">
+	          and ug_status = #{ug_status}
+	         </if>
+		 	<if test="ug_dr != null and ug_dr != ''">
+	          and ug_dr = #{ug_dr}
+	         </if>
+		 	<if test="ug_addtime != null and ug_addtime != ''">
+	          and ug_addtime = #{ug_addtime}
+	         </if>
+		 	<if test="ug_adduser != null and ug_adduser != ''">
+	          and ug_adduser = #{ug_adduser}
+	         </if>
+		 	<if test="ug_updatetime != null and ug_updatetime != ''">
+	          and ug_updatetime = #{ug_updatetime}
+	         </if>
+		 	<if test="ug_growth_low != null and ug_growth_low != ''">
+	          and ug_growth_low = #{ug_growth_low}
+	         </if>
+		 	<if test="ug_growth_top != null and ug_growth_top != ''">
+	          and ug_growth_top = #{ug_growth_top}
+	         </if>
+		 	<if test="ug_decrease != null and ug_decrease != ''">
+	          and ug_decrease = #{ug_decrease}
+	         </if>
+		 	<if test="ug_discount_little != null and ug_discount_little != ''">
+	          and ug_discount_little = #{ug_discount_little}
+	         </if>
+		 	<if test="ug_discount_middle != null and ug_discount_middle != ''">
+	          and ug_discount_middle = #{ug_discount_middle}
+	         </if>
+		 	<if test="ug_discount_max != null and ug_discount_max != ''">
+	          and ug_discount_max = #{ug_discount_max}
+	         </if>
+	</sql>
+	
+	<insert id="insert" parameterType="com.demo.xianghuan.admin.user.model.UserGrade" keyProperty="ug_id" >
+        INSERT INTO user_grade ( <include refid="Base_Column_List" /> )  VALUES (
+            <include refid="Base_Column_insert" /> 
+        )
+	</insert>
+	
+	<insert id="insertBatch" keyProperty="ug_id">
+		insert into user_grade  ( <include refid="Base_Column_List" /> )   values
+		<foreach collection="array" item="item" index="index" separator=",">
+		   <include refid="Base_Column_insert" /> 
+        </foreach>
+	</insert>
+
+	<update id="update" parameterType="com.demo.xianghuan.admin.user.model.UserGrade" flushCache="true">
+        UPDATE user_grade SET
+	        ug_title = #{ug_title,jdbcType=VARCHAR} ,
+	        ug_scale = #{ug_scale,jdbcType=DECIMAL} ,
+	        ug_amount = #{ug_amount,jdbcType=DECIMAL} ,
+	        ug_icon = #{ug_icon,jdbcType=VARCHAR} ,
+	        ug_desc = #{ug_desc,jdbcType=LONGVARCHAR} ,
+	        ug_status = #{ug_status,jdbcType=INTEGER} ,
+	        ug_dr = #{ug_dr,jdbcType=TINYINT} ,
+	        ug_addtime = #{ug_addtime,jdbcType=VARCHAR} ,
+	        ug_adduser = #{ug_adduser,jdbcType=BIGINT} ,
+	        ug_updatetime = #{ug_updatetime,jdbcType=VARCHAR} ,
+	        ug_growth_low = #{ug_growth_low,jdbcType=INTEGER} ,
+	        ug_growth_top = #{ug_growth_top,jdbcType=INTEGER} ,
+	        ug_decrease = #{ug_decrease,jdbcType=INTEGER} ,
+	        ug_discount_little = #{ug_discount_little,jdbcType=DECIMAL} ,
+	        ug_discount_middle = #{ug_discount_middle,jdbcType=DECIMAL} ,
+	        ug_discount_max = #{ug_discount_max,jdbcType=DECIMAL} 
+        WHERE 
+	        ug_id = #{ug_id,jdbcType=INTEGER} 
+	</update> 
+	
+	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.user.model.UserGrade" flushCache="true">
+        UPDATE user_grade SET
+	        	<if test=" ug_title != null  and ug_title != ''">
+	        		ug_title = #{ug_title,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ug_scale != null  and ug_scale != ''">
+	        		ug_scale = #{ug_scale,jdbcType=DECIMAL} ,
+	        	</if>
+	        	<if test=" ug_amount != null  and ug_amount != ''">
+	        		ug_amount = #{ug_amount,jdbcType=DECIMAL} ,
+	        	</if>
+	        	<if test=" ug_icon != null  and ug_icon != ''">
+	        		ug_icon = #{ug_icon,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ug_desc != null  and ug_desc != ''">
+	        		ug_desc = #{ug_desc,jdbcType=LONGVARCHAR} ,
+	        	</if>
+	        	<if test=" ug_status != null  and ug_status != ''">
+	        		ug_status = #{ug_status,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" ug_dr != null  and ug_dr != ''">
+	        		ug_dr = #{ug_dr,jdbcType=TINYINT} ,
+	        	</if>
+	        	<if test=" ug_addtime != null  and ug_addtime != ''">
+	        		ug_addtime = #{ug_addtime,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ug_adduser != null  and ug_adduser != ''">
+	        		ug_adduser = #{ug_adduser,jdbcType=BIGINT} ,
+	        	</if>
+	        	<if test=" ug_updatetime != null  and ug_updatetime != ''">
+	        		ug_updatetime = #{ug_updatetime,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ug_growth_low != null  and ug_growth_low != ''">
+	        		ug_growth_low = #{ug_growth_low,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" ug_growth_top != null  and ug_growth_top != ''">
+	        		ug_growth_top = #{ug_growth_top,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" ug_decrease != null  and ug_decrease != ''">
+	        		ug_decrease = #{ug_decrease,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" ug_discount_little != null  and ug_discount_little != ''">
+	        		ug_discount_little = #{ug_discount_little,jdbcType=DECIMAL} ,
+	        	</if>
+	        	<if test=" ug_discount_middle != null  and ug_discount_middle != ''">
+	        		ug_discount_middle = #{ug_discount_middle,jdbcType=DECIMAL} ,
+	        	</if>
+	        	<if test=" ug_discount_max != null  and ug_discount_max != ''">
+	        		ug_discount_max = #{ug_discount_max,jdbcType=DECIMAL} 
+	        	</if>
+        WHERE 
+	        ug_id = #{ug_id,jdbcType=INTEGER} 
+	</update>   
+	
+	<update id="updateBatch" flushCache="true">
+	    <foreach collection="array" item="item" open="" separator=";" close=";">
+		          UPDATE user_grade SET
+			        ug_title = #{item.ug_title,jdbcType=VARCHAR} ,
+			        ug_scale = #{item.ug_scale,jdbcType=DECIMAL} ,
+			        ug_amount = #{item.ug_amount,jdbcType=DECIMAL} ,
+			        ug_icon = #{item.ug_icon,jdbcType=VARCHAR} ,
+			        ug_desc = #{item.ug_desc,jdbcType=LONGVARCHAR} ,
+			        ug_status = #{item.ug_status,jdbcType=INTEGER} ,
+			        ug_dr = #{item.ug_dr,jdbcType=TINYINT} ,
+			        ug_addtime = #{item.ug_addtime,jdbcType=VARCHAR} ,
+			        ug_adduser = #{item.ug_adduser,jdbcType=BIGINT} ,
+			        ug_updatetime = #{item.ug_updatetime,jdbcType=VARCHAR} ,
+			        ug_growth_low = #{item.ug_growth_low,jdbcType=INTEGER} ,
+			        ug_growth_top = #{item.ug_growth_top,jdbcType=INTEGER} ,
+			        ug_decrease = #{item.ug_decrease,jdbcType=INTEGER} ,
+			        ug_discount_little = #{item.ug_discount_little,jdbcType=DECIMAL} ,
+			        ug_discount_middle = #{item.ug_discount_middle,jdbcType=DECIMAL} ,
+			        ug_discount_max = #{item.ug_discount_max,jdbcType=DECIMAL} 
+		        WHERE 
+			        ug_id = #{item.ug_id,jdbcType=INTEGER} 
+		</foreach>
+	</update>
+
+	<delete id="remove" parameterType="java.util.Map">
+	    update user_grade set 1=1
+	    <!-- set dr = 0  -->
+	    where ug_id= #{ug_id}
+	</delete>
+	
+	<delete id="removeBatch">
+	    update user_grade where ug_id in
+	    <foreach collection="array" item="item"  open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+	</delete>
+	
+	<delete id="delete" parameterType="string">
+	    delete from user_grade where ug_id=#ug_id
+	</delete>
+	
+	<delete id="deleteBatch">
+	    delete from user_grade where ug_id in
+	    <foreach collection="array" item="item"  open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+	</delete>
+	
+	<select id="find" resultType="com.demo.xianghuan.admin.user.model.UserGrade" parameterType="string">
+		select
+		<include refid="Base_query_column" />
+		from user_grade where ug_id= #{ug_id}
+	</select>
+
+	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.user.model.UserGrade" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from user_grade where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="getRecordCount" resultType="int" parameterType="java.util.Map">
+		select count(1) from user_grade where 1 = 1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="select" resultType="com.demo.xianghuan.admin.user.model.UserGrade" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from user_grade where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+</mapper>

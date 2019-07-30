@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 不使用namespace的话sql搜索定位会比较方便 -->
+<mapper namespace="com.demo.xianghuan.admin.sys.dao.ISysRoleMenuDao">
+	<sql id="Base_Column_List">
+		srm_id,srm_roleid,srm_menuid,srm_state,srm_dr,srm_addtime,srm_updatetime,srm_ts
+	</sql>
+	<sql id="Base_Column_insert">
+        	#{srm_id,jdbcType=VARCHAR},
+        	#{srm_roleid,jdbcType=VARCHAR},
+        	#{srm_menuid,jdbcType=VARCHAR},
+        	#{srm_state,jdbcType=INTEGER},
+        	#{srm_dr,jdbcType=INTEGER},
+        	#{srm_addtime,jdbcType=VARCHAR},
+        	#{srm_updatetime,jdbcType=VARCHAR},
+        	#{srm_ts,jdbcType=VARCHAR}
+	</sql>
+	<sql id="Base_query_column">
+		srm_id,srm_roleid,srm_menuid,srm_state,srm_dr,srm_addtime,srm_updatetime,srm_ts
+	</sql>
+	<sql id="Base_query_where">
+		 	<if test="srm_roleid != null and srm_roleid != ''">
+	          and srm_roleid = #{srm_roleid}
+	         </if>
+		 	<if test="srm_menuid != null and srm_menuid != ''">
+	          and srm_menuid = #{srm_menuid}
+	         </if>
+		 	<if test="srm_state != null and srm_state != ''">
+	          and srm_state = #{srm_state}
+	         </if>
+		 	<if test="srm_dr != null and srm_dr != ''">
+	          and srm_dr = #{srm_dr}
+	         </if>
+		 	<if test="srm_addtime != null and srm_addtime != ''">
+	          and srm_addtime = #{srm_addtime}
+	         </if>
+		 	<if test="srm_updatetime != null and srm_updatetime != ''">
+	          and srm_updatetime = #{srm_updatetime}
+	         </if>
+		 	<if test="srm_ts != null and srm_ts != ''">
+	          and srm_ts = #{srm_ts}
+	         </if>
+	</sql>
+	
+	<insert id="insert" parameterType="com.demo.xianghuan.admin.sys.model.SysRoleMenu" keyProperty="srm_id" >
+        INSERT INTO sys_role_menu ( <include refid="Base_Column_List" /> )  VALUES (
+            <include refid="Base_Column_insert" /> 
+        )
+	</insert>
+	
+	<insert id="insertBatch" keyProperty="srm_id">
+		insert into sys_role_menu  ( <include refid="Base_Column_List" /> )   values
+		<foreach collection="array" item="item" index="index" separator=",">
+		   (
+        	#{item.srm_id,jdbcType=VARCHAR},
+        	#{item.srm_roleid,jdbcType=VARCHAR},
+        	#{item.srm_menuid,jdbcType=VARCHAR},
+        	#{item.srm_state,jdbcType=INTEGER},
+        	#{item.srm_dr,jdbcType=INTEGER},
+        	#{item.srm_addtime,jdbcType=VARCHAR},
+        	#{item.srm_updatetime,jdbcType=VARCHAR},
+        	#{item.srm_ts,jdbcType=VARCHAR}
+		   )
+        </foreach>
+	</insert>
+
+	<update id="update" parameterType="com.demo.xianghuan.admin.sys.model.SysRoleMenu" flushCache="true">
+        UPDATE sys_role_menu SET
+	        srm_roleid = #{srm_roleid,jdbcType=VARCHAR} ,
+	        srm_menuid = #{srm_menuid,jdbcType=VARCHAR} ,
+	        srm_state = #{srm_state,jdbcType=INTEGER} ,
+	        srm_dr = #{srm_dr,jdbcType=INTEGER} ,
+	        srm_addtime = #{srm_addtime,jdbcType=VARCHAR} ,
+	        srm_updatetime = #{srm_updatetime,jdbcType=VARCHAR} ,
+	        srm_ts = #{srm_ts,jdbcType=VARCHAR} 
+        WHERE 
+	        srm_id = #{srm_id,jdbcType=VARCHAR} 
+	</update> 
+	
+	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.sys.model.SysRoleMenu" flushCache="true">
+        UPDATE sys_role_menu SET
+	        	<if test=" srm_roleid != null  and srm_roleid != ''">
+	        		srm_roleid = #{srm_roleid,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" srm_menuid != null  and srm_menuid != ''">
+	        		srm_menuid = #{srm_menuid,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" srm_state != null  and srm_state != ''">
+	        		srm_state = #{srm_state,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" srm_dr != null  and srm_dr != ''">
+	        		srm_dr = #{srm_dr,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" srm_addtime != null  and srm_addtime != ''">
+	        		srm_addtime = #{srm_addtime,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" srm_updatetime != null  and srm_updatetime != ''">
+	        		srm_updatetime = #{srm_updatetime,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" srm_ts != null  and srm_ts != ''">
+	        		srm_ts = #{srm_ts,jdbcType=VARCHAR} 
+	        	</if>
+        WHERE 
+	        srm_id = #{srm_id,jdbcType=VARCHAR} 
+	</update>   
+	
+	<update id="updateBatch" flushCache="true">
+	    <foreach collection="array" item="item" open="" separator=";" close=";">
+		        UPDATE sys_role_menu SET
+			        srm_roleid = #{item.srm_roleid,jdbcType=VARCHAR} ,
+			        srm_menuid = #{item.srm_menuid,jdbcType=VARCHAR} ,
+			        srm_state = #{item.srm_state,jdbcType=INTEGER} ,
+			        srm_dr = #{item.srm_dr,jdbcType=INTEGER} ,
+			        srm_addtime = #{item.srm_addtime,jdbcType=VARCHAR} ,
+			        srm_updatetime = #{item.srm_updatetime,jdbcType=VARCHAR} ,
+			        srm_ts = #{item.srm_ts,jdbcType=VARCHAR} 
+		        WHERE 
+			        srm_id = #{item.srm_id,jdbcType=VARCHAR} 
+		</foreach>
+	</update>
+
+	<!-- <delete id="remove" parameterType="java.util.Map">
+	    update sys_role_menu set 1=1
+	    set dr = 0 
+	    where srm_id= #{srm_id}
+	</delete>
+	
+	<delete id="removeBatch">
+	    update sys_role_menu where srm_id in
+	    <foreach collection="array" item="item"  open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+	</delete> -->
+	
+	<select id="find" resultType="com.demo.xianghuan.admin.sys.model.SysRoleMenu" parameterType="String">
+		select
+		<include refid="Base_query_column" />
+		from sys_role_menu where srm_id= #{srm_id}
+	</select>
+
+	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.sys.model.SysRoleMenu" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from sys_role_menu where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="getRecordCount" resultType="int" parameterType="java.util.Map">
+		select count(1) from sys_role_menu where 1 = 1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="select" resultType="com.demo.xianghuan.admin.sys.model.SysRoleMenu" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from sys_role_menu where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+</mapper>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 不使用namespace的话sql搜索定位会比较方便 -->
+<mapper namespace="com.demo.xianghuan.admin.base.dao.IBaseAppVersionDao">
+	<sql id="Base_Column_List">
+		bv_id,bv_app_type,bv_version1,bv_down_url,bv_desc,bv_state,bv_dr,bv_addtime,bv_adduser,bv_upgrade,bv_source,bv_version_name
+	</sql>
+	<sql id="Base_Column_insert">
+        	#{bv_id,jdbcType=VARCHAR},
+        	#{bv_app_type,jdbcType=VARCHAR},
+        	#{bv_version1,jdbcType=VARCHAR},
+        	#{bv_down_url,jdbcType=VARCHAR},
+        	#{bv_desc,jdbcType=VARCHAR},
+        	#{bv_state,jdbcType=TINYINT},
+        	#{bv_dr,jdbcType=TINYINT},
+        	#{bv_addtime,jdbcType=VARCHAR},
+        	#{bv_adduser,jdbcType=INTEGER},
+        	#{bv_upgrade,jdbcType=INTEGER},
+        	#{bv_source,jdbcType=INTEGER},
+        	#{bv_version_name,jdbcType=VARCHAR}
+	</sql>
+	<sql id="Base_query_column">
+		bv_id,bv_app_type,bv_version1,bv_down_url,bv_desc,bv_state,bv_dr,bv_addtime,bv_adduser,bv_upgrade,bv_source,bv_version_name
+	</sql>
+	<sql id="Base_query_where">
+		 	<if test="bv_app_type != null and bv_app_type != ''">
+	          and bv_app_type = #{bv_app_type}
+	         </if>
+		 	<if test="bv_version1 != null and bv_version1 != ''">
+	          and bv_version1 = #{bv_version1}
+	         </if>
+		 	<if test="bv_down_url != null and bv_down_url != ''">
+	          and bv_down_url = #{bv_down_url}
+	         </if>
+		 	<if test="bv_desc != null and bv_desc != ''">
+	          and bv_desc = #{bv_desc}
+	         </if>
+		 	<if test="bv_state != null and bv_state != ''">
+	          and bv_state = #{bv_state}
+	         </if>
+		 	<if test="bv_dr != null and bv_dr != ''">
+	          and bv_dr = #{bv_dr}
+	         </if>
+		 	<if test="bv_addtime != null and bv_addtime != ''">
+	          and bv_addtime = #{bv_addtime}
+	         </if>
+		 	<if test="bv_adduser != null and bv_adduser != ''">
+	          and bv_adduser = #{bv_adduser}
+	         </if>
+		 	<if test="bv_upgrade != null and bv_upgrade != ''">
+	          and bv_upgrade = #{bv_upgrade}
+	         </if>
+		 	<if test="bv_source != null and bv_source != ''">
+	          and bv_source = #{bv_source}
+	         </if>
+		 	<if test="bv_version_name != null and bv_version_name != ''">
+	          and bv_version_name = #{bv_version_name}
+	         </if>
+	</sql>
+	
+	<insert id="insert" parameterType="com.demo.xianghuan.admin.base.model.BaseAppVersion" keyProperty="bv_id" >
+        INSERT INTO base_app_version ( <include refid="Base_Column_List" /> )  VALUES (
+            <include refid="Base_Column_insert" /> 
+        )
+	</insert>
+	
+	<insert id="insertBatch" keyProperty="bv_id">
+		insert into base_app_version  ( <include refid="Base_Column_List" /> )   values
+		<foreach collection="array" item="item" index="index" separator=",">
+		   (
+        	#{item.bv_id,jdbcType=VARCHAR},
+        	#{item.bv_app_type,jdbcType=VARCHAR},
+        	#{item.bv_version1,jdbcType=VARCHAR},
+        	#{item.bv_down_url,jdbcType=VARCHAR},
+        	#{item.bv_desc,jdbcType=VARCHAR},
+        	#{item.bv_state,jdbcType=TINYINT},
+        	#{item.bv_dr,jdbcType=TINYINT},
+        	#{item.bv_addtime,jdbcType=VARCHAR},
+        	#{item.bv_adduser,jdbcType=INTEGER},
+        	#{item.bv_upgrade,jdbcType=INTEGER},
+        	#{item.bv_source,jdbcType=INTEGER},
+        	#{item.bv_version_name,jdbcType=VARCHAR}
+		   )
+        </foreach>
+	</insert>
+
+	<update id="update" parameterType="com.demo.xianghuan.admin.base.model.BaseAppVersion" flushCache="true">
+        UPDATE base_app_version SET
+	        bv_app_type = #{bv_app_type,jdbcType=VARCHAR} ,
+	        bv_version1 = #{bv_version1,jdbcType=VARCHAR} ,
+	        bv_down_url = #{bv_down_url,jdbcType=VARCHAR} ,
+	        bv_desc = #{bv_desc,jdbcType=VARCHAR} ,
+	        bv_state = #{bv_state,jdbcType=TINYINT} ,
+	        bv_dr = #{bv_dr,jdbcType=TINYINT} ,
+	        bv_addtime = #{bv_addtime,jdbcType=VARCHAR} ,
+	        bv_adduser = #{bv_adduser,jdbcType=INTEGER} ,
+	        bv_upgrade = #{bv_upgrade,jdbcType=INTEGER} ,
+	        bv_source = #{bv_source,jdbcType=INTEGER} ,
+	        bv_version_name = #{bv_version_name,jdbcType=VARCHAR} 
+        WHERE 
+	        bv_id = #{bv_id,jdbcType=VARCHAR} 
+	</update> 
+	
+	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.base.model.BaseAppVersion" flushCache="true">
+        UPDATE base_app_version SET
+	        	<if test=" bv_app_type != null  and bv_app_type != ''">
+	        		bv_app_type = #{bv_app_type,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bv_version1 != null  and bv_version1 != ''">
+	        		bv_version1 = #{bv_version1,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bv_down_url != null  and bv_down_url != ''">
+	        		bv_down_url = #{bv_down_url,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bv_desc != null  and bv_desc != ''">
+	        		bv_desc = #{bv_desc,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bv_state != null  and bv_state != ''">
+	        		bv_state = #{bv_state,jdbcType=TINYINT} ,
+	        	</if>
+	        	<if test=" bv_dr != null  and bv_dr != ''">
+	        		bv_dr = #{bv_dr,jdbcType=TINYINT} ,
+	        	</if>
+	        	<if test=" bv_addtime != null  and bv_addtime != ''">
+	        		bv_addtime = #{bv_addtime,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bv_adduser != null  and bv_adduser != ''">
+	        		bv_adduser = #{bv_adduser,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" bv_upgrade != null  and bv_upgrade != ''">
+	        		bv_upgrade = #{bv_upgrade,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" bv_source != null  and bv_source != ''">
+	        		bv_source = #{bv_source,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" bv_version_name != null  and bv_version_name != ''">
+	        		bv_version_name = #{bv_version_name,jdbcType=VARCHAR} 
+	        	</if>
+        WHERE 
+	        bv_id = #{bv_id,jdbcType=VARCHAR} 
+	</update>   
+	
+	<update id="updateBatch" flushCache="true">
+	    <foreach collection="array" item="item" open="" separator=";" close=";">
+		        UPDATE base_app_version SET
+			        bv_app_type = #{item.bv_app_type,jdbcType=VARCHAR} ,
+			        bv_version1 = #{item.bv_version1,jdbcType=VARCHAR} ,
+			        bv_down_url = #{item.bv_down_url,jdbcType=VARCHAR} ,
+			        bv_desc = #{item.bv_desc,jdbcType=VARCHAR} ,
+			        bv_state = #{item.bv_state,jdbcType=TINYINT} ,
+			        bv_dr = #{item.bv_dr,jdbcType=TINYINT} ,
+			        bv_addtime = #{item.bv_addtime,jdbcType=VARCHAR} ,
+			        bv_adduser = #{item.bv_adduser,jdbcType=INTEGER} ,
+			        bv_upgrade = #{item.bv_upgrade,jdbcType=INTEGER} ,
+			        bv_source = #{item.bv_source,jdbcType=INTEGER} ,
+			        bv_version_name = #{item.bv_version_name,jdbcType=VARCHAR} 
+		        WHERE 
+			        bv_id = #{item.bv_id,jdbcType=VARCHAR} 
+		</foreach>
+	</update>
+
+	<!-- <delete id="remove" parameterType="java.util.Map">
+	    update base_app_version set 1=1
+	    set dr = 0 
+	    where bv_id= #{bv_id}
+	</delete>
+	
+	<delete id="removeBatch">
+	    update base_app_version where bv_id in
+	    <foreach collection="array" item="item"  open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+	</delete> -->
+	
+	<select id="find" resultType="com.demo.xianghuan.admin.base.model.BaseAppVersion" parameterType="String">
+		select
+		<include refid="Base_query_column" />
+		from base_app_version where bv_id= #{bv_id}
+	</select>
+
+	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.base.model.BaseAppVersion" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from base_app_version where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="getRecordCount" resultType="int" parameterType="java.util.Map">
+		select count(1) from base_app_version where 1 = 1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="select" resultType="com.demo.xianghuan.admin.base.model.BaseAppVersion" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from base_app_version where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+</mapper>

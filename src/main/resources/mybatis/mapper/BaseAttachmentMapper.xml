@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 不使用namespace的话sql搜索定位会比较方便 -->
+<mapper namespace="com.demo.xianghuan.admin.base.dao.IBaseAttachmentDao">
+	<sql id="Base_Column_List">
+		ba_id,ba_orgid,ba_tittle,ba_path,ba_type,ba_size,ba_file_name,ba_description,ba_state,ba_add_time,ba_adduserid,ba_dr
+	</sql>
+	<sql id="Base_Column_insert">
+        	#{ba_id,jdbcType=VARCHAR},
+        	#{ba_orgid,jdbcType=VARCHAR},
+        	#{ba_tittle,jdbcType=VARCHAR},
+        	#{ba_path,jdbcType=VARCHAR},
+        	#{ba_type,jdbcType=INTEGER},
+        	#{ba_size,jdbcType=INTEGER},
+        	#{ba_file_name,jdbcType=VARCHAR},
+        	#{ba_description,jdbcType=VARCHAR},
+        	#{ba_state,jdbcType=INTEGER},
+        	#{ba_add_time,jdbcType=VARCHAR},
+        	#{ba_adduserid,jdbcType=VARCHAR},
+        	#{ba_dr,jdbcType=INTEGER}
+	</sql>
+	<sql id="Base_query_column">
+		ba_id,ba_orgid,ba_tittle,ba_path,ba_type,ba_size,ba_file_name,ba_description,ba_state,ba_add_time,ba_adduserid,ba_dr
+	</sql>
+	<sql id="Base_query_where">
+		 	<if test="ba_orgid != null and ba_orgid != ''">
+	          and ba_orgid = #{ba_orgid}
+	         </if>
+		 	<if test="ba_tittle != null and ba_tittle != ''">
+	          and ba_tittle = #{ba_tittle}
+	         </if>
+		 	<if test="ba_path != null and ba_path != ''">
+	          and ba_path = #{ba_path}
+	         </if>
+		 	<if test="ba_type != null and ba_type != ''">
+	          and ba_type = #{ba_type}
+	         </if>
+		 	<if test="ba_size != null and ba_size != ''">
+	          and ba_size = #{ba_size}
+	         </if>
+		 	<if test="ba_file_name != null and ba_file_name != ''">
+	          and ba_file_name = #{ba_file_name}
+	         </if>
+		 	<if test="ba_description != null and ba_description != ''">
+	          and ba_description = #{ba_description}
+	         </if>
+		 	<if test="ba_state != null and ba_state != ''">
+	          and ba_state = #{ba_state}
+	         </if>
+		 	<if test="ba_add_time != null and ba_add_time != ''">
+	          and ba_add_time = #{ba_add_time}
+	         </if>
+		 	<if test="ba_adduserid != null and ba_adduserid != ''">
+	          and ba_adduserid = #{ba_adduserid}
+	         </if>
+		 	<if test="ba_dr != null and ba_dr != ''">
+	          and ba_dr = #{ba_dr}
+	         </if>
+	</sql>
+	
+	<insert id="insert" parameterType="com.demo.xianghuan.admin.base.model.BaseAttachment" keyProperty="ba_id" >
+        INSERT INTO base_attachment ( <include refid="Base_Column_List" /> )  VALUES (
+            <include refid="Base_Column_insert" /> 
+        )
+	</insert>
+	
+	<insert id="insertBatch" keyProperty="ba_id">
+		insert into base_attachment  ( <include refid="Base_Column_List" /> )   values
+		<foreach collection="array" item="item" index="index" separator=",">
+		   (
+        	#{item.ba_id,jdbcType=VARCHAR},
+        	#{item.ba_orgid,jdbcType=VARCHAR},
+        	#{item.ba_tittle,jdbcType=VARCHAR},
+        	#{item.ba_path,jdbcType=VARCHAR},
+        	#{item.ba_type,jdbcType=INTEGER},
+        	#{item.ba_size,jdbcType=INTEGER},
+        	#{item.ba_file_name,jdbcType=VARCHAR},
+        	#{item.ba_description,jdbcType=VARCHAR},
+        	#{item.ba_state,jdbcType=INTEGER},
+        	#{item.ba_add_time,jdbcType=VARCHAR},
+        	#{item.ba_adduserid,jdbcType=VARCHAR},
+        	#{item.ba_dr,jdbcType=INTEGER}
+		   )
+        </foreach>
+	</insert>
+
+	<update id="update" parameterType="com.demo.xianghuan.admin.base.model.BaseAttachment" flushCache="true">
+        UPDATE base_attachment SET
+	        ba_orgid = #{ba_orgid,jdbcType=VARCHAR} ,
+	        ba_tittle = #{ba_tittle,jdbcType=VARCHAR} ,
+	        ba_path = #{ba_path,jdbcType=VARCHAR} ,
+	        ba_type = #{ba_type,jdbcType=INTEGER} ,
+	        ba_size = #{ba_size,jdbcType=INTEGER} ,
+	        ba_file_name = #{ba_file_name,jdbcType=VARCHAR} ,
+	        ba_description = #{ba_description,jdbcType=VARCHAR} ,
+	        ba_state = #{ba_state,jdbcType=INTEGER} ,
+	        ba_add_time = #{ba_add_time,jdbcType=VARCHAR} ,
+	        ba_adduserid = #{ba_adduserid,jdbcType=VARCHAR} ,
+	        ba_dr = #{ba_dr,jdbcType=INTEGER} 
+        WHERE 
+	        ba_id = #{ba_id,jdbcType=VARCHAR} 
+	</update> 
+	
+	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.base.model.BaseAttachment" flushCache="true">
+        UPDATE base_attachment SET
+	        	<if test=" ba_orgid != null  and ba_orgid != ''">
+	        		ba_orgid = #{ba_orgid,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ba_tittle != null  and ba_tittle != ''">
+	        		ba_tittle = #{ba_tittle,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ba_path != null  and ba_path != ''">
+	        		ba_path = #{ba_path,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ba_type != null  and ba_type != ''">
+	        		ba_type = #{ba_type,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" ba_size != null  and ba_size != ''">
+	        		ba_size = #{ba_size,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" ba_file_name != null  and ba_file_name != ''">
+	        		ba_file_name = #{ba_file_name,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ba_description != null  and ba_description != ''">
+	        		ba_description = #{ba_description,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ba_state != null  and ba_state != ''">
+	        		ba_state = #{ba_state,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" ba_add_time != null  and ba_add_time != ''">
+	        		ba_add_time = #{ba_add_time,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ba_adduserid != null  and ba_adduserid != ''">
+	        		ba_adduserid = #{ba_adduserid,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" ba_dr != null  and ba_dr != ''">
+	        		ba_dr = #{ba_dr,jdbcType=INTEGER} 
+	        	</if>
+        WHERE 
+	        ba_id = #{ba_id,jdbcType=VARCHAR} 
+	</update>   
+	
+	<update id="updateBatch" flushCache="true">
+	    <foreach collection="array" item="item" open="" separator=";" close=";">
+		        UPDATE base_attachment SET
+			        ba_orgid = #{item.ba_orgid,jdbcType=VARCHAR} ,
+			        ba_tittle = #{item.ba_tittle,jdbcType=VARCHAR} ,
+			        ba_path = #{item.ba_path,jdbcType=VARCHAR} ,
+			        ba_type = #{item.ba_type,jdbcType=INTEGER} ,
+			        ba_size = #{item.ba_size,jdbcType=INTEGER} ,
+			        ba_file_name = #{item.ba_file_name,jdbcType=VARCHAR} ,
+			        ba_description = #{item.ba_description,jdbcType=VARCHAR} ,
+			        ba_state = #{item.ba_state,jdbcType=INTEGER} ,
+			        ba_add_time = #{item.ba_add_time,jdbcType=VARCHAR} ,
+			        ba_adduserid = #{item.ba_adduserid,jdbcType=VARCHAR} ,
+			        ba_dr = #{item.ba_dr,jdbcType=INTEGER} 
+		        WHERE 
+			        ba_id = #{item.ba_id,jdbcType=VARCHAR} 
+		</foreach>
+	</update>
+
+	<!-- <delete id="remove" parameterType="java.util.Map">
+	    update base_attachment set 1=1
+	    set dr = 0 
+	    where ba_id= #{ba_id}
+	</delete>
+	
+	<delete id="removeBatch">
+	    update base_attachment where ba_id in
+	    <foreach collection="array" item="item"  open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+	</delete> -->
+	
+	<select id="find" resultType="com.demo.xianghuan.admin.base.model.BaseAttachment" parameterType="String">
+		select
+		<include refid="Base_query_column" />
+		from base_attachment where ba_id= #{ba_id}
+	</select>
+
+	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.base.model.BaseAttachment" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from base_attachment where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="getRecordCount" resultType="int" parameterType="java.util.Map">
+		select count(1) from base_attachment where 1 = 1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="select" resultType="com.demo.xianghuan.admin.base.model.BaseAttachment" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from base_attachment where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+</mapper>

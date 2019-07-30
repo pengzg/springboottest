@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 不使用namespace的话sql搜索定位会比较方便 -->
+<mapper namespace="com.demo.xianghuan.admin.user.dao.IUserDao">
+	<sql id="Base_Column_List">
+		id,company_id,open_card_id,open_id,user_name,nickname,realname,avatar,mobile,email,is_check_email,birthday,gender,country,province,city,district,password,hash,intro,user_from,last_login_time,spread,spread_code,spread_time,user_type,type_id,follow_time,status,update_time,add_time,is_followed,unfollow_time,is_scan,extension,is_app,user_level,wx_open_id,qq_open_id,login_status,status1,start_efficient_time,end_efficient_time,temp_spread
+	</sql>
+	<sql id="Base_Column_insert">
+        	#{id,jdbcType=INTEGER},
+        	#{company_id,jdbcType=INTEGER},
+        	#{open_card_id,jdbcType=INTEGER},
+        	#{open_id,jdbcType=VARCHAR},
+        	#{user_name,jdbcType=VARCHAR},
+        	#{nickname,jdbcType=VARCHAR},
+        	#{realname,jdbcType=VARCHAR},
+        	#{avatar,jdbcType=VARCHAR},
+        	#{mobile,jdbcType=VARCHAR},
+        	#{email,jdbcType=VARCHAR},
+        	#{is_check_email,jdbcType=TINYINT},
+        	#{birthday,jdbcType=DATE},
+        	#{gender,jdbcType=BIT},
+        	#{country,jdbcType=VARCHAR},
+        	#{province,jdbcType=VARCHAR},
+        	#{city,jdbcType=VARCHAR},
+        	#{district,jdbcType=VARCHAR},
+        	#{password,jdbcType=VARCHAR},
+        	#{hash,jdbcType=VARCHAR},
+        	#{intro,jdbcType=VARCHAR},
+        	#{user_from,jdbcType=VARCHAR},
+        	#{last_login_time,jdbcType=TIMESTAMP},
+        	#{spread,jdbcType=VARCHAR},
+        	#{spread_code,jdbcType=VARCHAR},
+        	#{spread_time,jdbcType=VARCHAR},
+        	#{user_type,jdbcType=INTEGER},
+        	#{type_id,jdbcType=INTEGER},
+        	#{follow_time,jdbcType=TIMESTAMP},
+        	#{status,jdbcType=BIT},
+        	#{update_time,jdbcType=TIMESTAMP},
+        	#{add_time,jdbcType=TIMESTAMP},
+        	#{is_followed,jdbcType=TINYINT},
+        	#{unfollow_time,jdbcType=TIMESTAMP},
+        	#{is_scan,jdbcType=TINYINT},
+        	#{extension,jdbcType=VARCHAR},
+        	#{is_app,jdbcType=INTEGER},
+        	#{user_level,jdbcType=INTEGER},
+        	#{wx_open_id,jdbcType=VARCHAR},
+        	#{qq_open_id,jdbcType=VARCHAR},
+        	#{login_status,jdbcType=INTEGER},
+        	#{status1,jdbcType=TINYINT},
+        	#{start_efficient_time,jdbcType=TIMESTAMP},
+        	#{end_efficient_time,jdbcType=TIMESTAMP},
+        	#{temp_spread,jdbcType=INTEGER}
+	</sql>
+	<sql id="Base_query_column">
+		id,company_id,open_card_id,open_id,user_name,nickname,realname,avatar,mobile,email,is_check_email,birthday,gender,country,province,city,district,password,hash,intro,user_from,last_login_time,spread,spread_code,spread_time,user_type,type_id,follow_time,status,update_time,add_time,is_followed,unfollow_time,is_scan,extension,is_app,user_level,wx_open_id,qq_open_id,login_status,status1,start_efficient_time,end_efficient_time,temp_spread
+	</sql>
+	<sql id="Base_query_where">
+		 	<if test="company_id != null and company_id != ''">
+	          and company_id = #{company_id}
+	         </if>
+		 	<if test="open_card_id != null and open_card_id != ''">
+	          and open_card_id = #{open_card_id}
+	         </if>
+		 	<if test="open_id != null and open_id != ''">
+	          and open_id = #{open_id}
+	         </if>
+		 	<if test="user_name != null and user_name != ''">
+	          and user_name = #{user_name}
+	         </if>
+		 	<if test="nickname != null and nickname != ''">
+	          and nickname = #{nickname}
+	         </if>
+		 	<if test="realname != null and realname != ''">
+	          and realname = #{realname}
+	         </if>
+		 	<if test="avatar != null and avatar != ''">
+	          and avatar = #{avatar}
+	         </if>
+		 	<if test="mobile != null and mobile != ''">
+	          and mobile = #{mobile}
+	         </if>
+		 	<if test="email != null and email != ''">
+	          and email = #{email}
+	         </if>
+		 	<if test="is_check_email != null and is_check_email != ''">
+	          and is_check_email = #{is_check_email}
+	         </if>
+		 	<if test="birthday != null and birthday != ''">
+	          and birthday = #{birthday}
+	         </if>
+		 	<if test="gender != null and gender != ''">
+	          and gender = #{gender}
+	         </if>
+		 	<if test="country != null and country != ''">
+	          and country = #{country}
+	         </if>
+		 	<if test="province != null and province != ''">
+	          and province = #{province}
+	         </if>
+		 	<if test="city != null and city != ''">
+	          and city = #{city}
+	         </if>
+		 	<if test="district != null and district != ''">
+	          and district = #{district}
+	         </if>
+		 	<if test="password != null and password != ''">
+	          and password = #{password}
+	         </if>
+		 	<if test="hash != null and hash != ''">
+	          and hash = #{hash}
+	         </if>
+		 	<if test="intro != null and intro != ''">
+	          and intro = #{intro}
+	         </if>
+		 	<if test="user_from != null and user_from != ''">
+	          and user_from = #{user_from}
+	         </if>
+		 	<if test="last_login_time != null and last_login_time != ''">
+	          and last_login_time = #{last_login_time}
+	         </if>
+		 	<if test="spread != null and spread != ''">
+	          and spread = #{spread}
+	         </if>
+		 	<if test="spread_code != null and spread_code != ''">
+	          and spread_code = #{spread_code}
+	         </if>
+		 	<if test="spread_time != null and spread_time != ''">
+	          and spread_time = #{spread_time}
+	         </if>
+		 	<if test="user_type != null and user_type != ''">
+	          and user_type = #{user_type}
+	         </if>
+		 	<if test="type_id != null and type_id != ''">
+	          and type_id = #{type_id}
+	         </if>
+		 	<if test="follow_time != null and follow_time != ''">
+	          and follow_time = #{follow_time}
+	         </if>
+		 	<if test="status != null and status != ''">
+	          and status = #{status}
+	         </if>
+		 	<if test="update_time != null and update_time != ''">
+	          and update_time = #{update_time}
+	         </if>
+		 	<if test="add_time != null and add_time != ''">
+	          and add_time = #{add_time}
+	         </if>
+		 	<if test="is_followed != null and is_followed != ''">
+	          and is_followed = #{is_followed}
+	         </if>
+		 	<if test="unfollow_time != null and unfollow_time != ''">
+	          and unfollow_time = #{unfollow_time}
+	         </if>
+		 	<if test="is_scan != null and is_scan != ''">
+	          and is_scan = #{is_scan}
+	         </if>
+		 	<if test="extension != null and extension != ''">
+	          and extension = #{extension}
+	         </if>
+		 	<if test="is_app != null and is_app != ''">
+	          and is_app = #{is_app}
+	         </if>
+		 	<if test="user_level != null and user_level != ''">
+	          and user_level = #{user_level}
+	         </if>
+		 	<if test="wx_open_id != null and wx_open_id != ''">
+	          and wx_open_id = #{wx_open_id}
+	         </if>
+		 	<if test="qq_open_id != null and qq_open_id != ''">
+	          and qq_open_id = #{qq_open_id}
+	         </if>
+		 	<if test="login_status != null and login_status != ''">
+	          and login_status = #{login_status}
+	         </if>
+		 	<if test="status1 != null and status1 != ''">
+	          and status1 = #{status1}
+	         </if>
+		 	<if test="start_efficient_time != null and start_efficient_time != ''">
+	          and start_efficient_time = #{start_efficient_time}
+	         </if>
+		 	<if test="end_efficient_time != null and end_efficient_time != ''">
+	          and end_efficient_time = #{end_efficient_time}
+	         </if>
+		 	<if test="temp_spread != null and temp_spread != ''">
+	          and temp_spread = #{temp_spread}
+	         </if>
+	</sql>
+	
+	<insert id="insert" parameterType="com.demo.xianghuan.admin.user.model.User" keyProperty="id" useGeneratedKeys="true" >
+        INSERT INTO user ( <include refid="Base_Column_List" /> )  VALUES (
+            <include refid="Base_Column_insert" /> 
+        )
+	</insert>
+	
+	<insert id="insertBatch" keyProperty="id">
+		insert into user  ( <include refid="Base_Column_List" /> )   values
+		<foreach collection="array" item="item" index="index" separator=",">
+		   <include refid="Base_Column_insert" /> 
+        </foreach>
+	</insert>
+
+	<update id="update" parameterType="com.demo.xianghuan.admin.user.model.User" flushCache="true">
+        UPDATE user SET
+	        company_id = #{company_id,jdbcType=INTEGER} ,
+	        open_card_id = #{open_card_id,jdbcType=INTEGER} ,
+	        open_id = #{open_id,jdbcType=VARCHAR} ,
+	        user_name = #{user_name,jdbcType=VARCHAR} ,
+	        nickname = #{nickname,jdbcType=VARCHAR} ,
+	        realname = #{realname,jdbcType=VARCHAR} ,
+	        avatar = #{avatar,jdbcType=VARCHAR} ,
+	        mobile = #{mobile,jdbcType=VARCHAR} ,
+	        email = #{email,jdbcType=VARCHAR} ,
+	        is_check_email = #{is_check_email,jdbcType=TINYINT} ,
+	        birthday = #{birthday,jdbcType=DATE} ,
+	        gender = #{gender,jdbcType=BIT} ,
+	        country = #{country,jdbcType=VARCHAR} ,
+	        province = #{province,jdbcType=VARCHAR} ,
+	        city = #{city,jdbcType=VARCHAR} ,
+	        district = #{district,jdbcType=VARCHAR} ,
+	        password = #{password,jdbcType=VARCHAR} ,
+	        hash = #{hash,jdbcType=VARCHAR} ,
+	        intro = #{intro,jdbcType=VARCHAR} ,
+	        user_from = #{user_from,jdbcType=VARCHAR} ,
+	        last_login_time = #{last_login_time,jdbcType=TIMESTAMP} ,
+	        spread = #{spread,jdbcType=VARCHAR} ,
+	        spread_code = #{spread_code,jdbcType=VARCHAR} ,
+	        spread_time = #{spread_time,jdbcType=VARCHAR} ,
+	        user_type = #{user_type,jdbcType=INTEGER} ,
+	        type_id = #{type_id,jdbcType=INTEGER} ,
+	        follow_time = #{follow_time,jdbcType=TIMESTAMP} ,
+	        status = #{status,jdbcType=BIT} ,
+	        update_time = #{update_time,jdbcType=TIMESTAMP} ,
+	        add_time = #{add_time,jdbcType=TIMESTAMP} ,
+	        is_followed = #{is_followed,jdbcType=TINYINT} ,
+	        unfollow_time = #{unfollow_time,jdbcType=TIMESTAMP} ,
+	        is_scan = #{is_scan,jdbcType=TINYINT} ,
+	        extension = #{extension,jdbcType=VARCHAR} ,
+	        is_app = #{is_app,jdbcType=INTEGER} ,
+	        user_level = #{user_level,jdbcType=INTEGER} ,
+	        wx_open_id = #{wx_open_id,jdbcType=VARCHAR} ,
+	        qq_open_id = #{qq_open_id,jdbcType=VARCHAR} ,
+	        login_status = #{login_status,jdbcType=INTEGER} ,
+	        status1 = #{status1,jdbcType=TINYINT} ,
+	        start_efficient_time = #{start_efficient_time,jdbcType=TIMESTAMP} ,
+	        end_efficient_time = #{end_efficient_time,jdbcType=TIMESTAMP} ,
+	        temp_spread = #{temp_spread,jdbcType=INTEGER} 
+        WHERE 
+	        id = #{id,jdbcType=INTEGER} 
+	</update> 
+	
+	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.user.model.User" flushCache="true">
+        UPDATE user SET
+	        	<if test=" company_id != null  and company_id != ''">
+	        		company_id = #{company_id,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" open_card_id != null  and open_card_id != ''">
+	        		open_card_id = #{open_card_id,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" open_id != null  and open_id != ''">
+	        		open_id = #{open_id,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" user_name != null  and user_name != ''">
+	        		user_name = #{user_name,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" nickname != null  and nickname != ''">
+	        		nickname = #{nickname,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" realname != null  and realname != ''">
+	        		realname = #{realname,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" avatar != null  and avatar != ''">
+	        		avatar = #{avatar,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" mobile != null  and mobile != ''">
+	        		mobile = #{mobile,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" email != null  and email != ''">
+	        		email = #{email,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" is_check_email != null  and is_check_email != ''">
+	        		is_check_email = #{is_check_email,jdbcType=TINYINT} ,
+	        	</if>
+	        	<if test=" birthday != null  and birthday != ''">
+	        		birthday = #{birthday,jdbcType=DATE} ,
+	        	</if>
+	        	<if test=" gender != null  and gender != ''">
+	        		gender = #{gender,jdbcType=BIT} ,
+	        	</if>
+	        	<if test=" country != null  and country != ''">
+	        		country = #{country,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" province != null  and province != ''">
+	        		province = #{province,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" city != null  and city != ''">
+	        		city = #{city,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" district != null  and district != ''">
+	        		district = #{district,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" password != null  and password != ''">
+	        		password = #{password,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" hash != null  and hash != ''">
+	        		hash = #{hash,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" intro != null  and intro != ''">
+	        		intro = #{intro,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" user_from != null  and user_from != ''">
+	        		user_from = #{user_from,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" last_login_time != null  and last_login_time != ''">
+	        		last_login_time = #{last_login_time,jdbcType=TIMESTAMP} ,
+	        	</if>
+	        	<if test=" spread != null  and spread != ''">
+	        		spread = #{spread,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" spread_code != null  and spread_code != ''">
+	        		spread_code = #{spread_code,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" spread_time != null  and spread_time != ''">
+	        		spread_time = #{spread_time,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" user_type != null  and user_type != ''">
+	        		user_type = #{user_type,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" type_id != null  and type_id != ''">
+	        		type_id = #{type_id,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" follow_time != null  and follow_time != ''">
+	        		follow_time = #{follow_time,jdbcType=TIMESTAMP} ,
+	        	</if>
+	        	<if test=" status != null  and status != ''">
+	        		status = #{status,jdbcType=BIT} ,
+	        	</if>
+	        	<if test=" update_time != null  and update_time != ''">
+	        		update_time = #{update_time,jdbcType=TIMESTAMP} ,
+	        	</if>
+	        	<if test=" add_time != null  and add_time != ''">
+	        		add_time = #{add_time,jdbcType=TIMESTAMP} ,
+	        	</if>
+	        	<if test=" is_followed != null  and is_followed != ''">
+	        		is_followed = #{is_followed,jdbcType=TINYINT} ,
+	        	</if>
+	        	<if test=" unfollow_time != null  and unfollow_time != ''">
+	        		unfollow_time = #{unfollow_time,jdbcType=TIMESTAMP} ,
+	        	</if>
+	        	<if test=" is_scan != null  and is_scan != ''">
+	        		is_scan = #{is_scan,jdbcType=TINYINT} ,
+	        	</if>
+	        	<if test=" extension != null  and extension != ''">
+	        		extension = #{extension,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" is_app != null  and is_app != ''">
+	        		is_app = #{is_app,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" user_level != null  and user_level != ''">
+	        		user_level = #{user_level,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" wx_open_id != null  and wx_open_id != ''">
+	        		wx_open_id = #{wx_open_id,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" qq_open_id != null  and qq_open_id != ''">
+	        		qq_open_id = #{qq_open_id,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" login_status != null  and login_status != ''">
+	        		login_status = #{login_status,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" status1 != null  and status1 != ''">
+	        		status1 = #{status1,jdbcType=TINYINT} ,
+	        	</if>
+	        	<if test=" start_efficient_time != null  and start_efficient_time != ''">
+	        		start_efficient_time = #{start_efficient_time,jdbcType=TIMESTAMP} ,
+	        	</if>
+	        	<if test=" end_efficient_time != null  and end_efficient_time != ''">
+	        		end_efficient_time = #{end_efficient_time,jdbcType=TIMESTAMP} ,
+	        	</if>
+	        	<if test=" temp_spread != null  and temp_spread != ''">
+	        		temp_spread = #{temp_spread,jdbcType=INTEGER} 
+	        	</if>
+        WHERE 
+	        id = #{id,jdbcType=INTEGER} 
+	</update>   
+	
+	<update id="updateBatch" flushCache="true">
+	    <foreach collection="array" item="item" open="" separator=";" close=";">
+		          UPDATE user SET
+			        company_id = #{item.company_id,jdbcType=INTEGER} ,
+			        open_card_id = #{item.open_card_id,jdbcType=INTEGER} ,
+			        open_id = #{item.open_id,jdbcType=VARCHAR} ,
+			        user_name = #{item.user_name,jdbcType=VARCHAR} ,
+			        nickname = #{item.nickname,jdbcType=VARCHAR} ,
+			        realname = #{item.realname,jdbcType=VARCHAR} ,
+			        avatar = #{item.avatar,jdbcType=VARCHAR} ,
+			        mobile = #{item.mobile,jdbcType=VARCHAR} ,
+			        email = #{item.email,jdbcType=VARCHAR} ,
+			        is_check_email = #{item.is_check_email,jdbcType=TINYINT} ,
+			        birthday = #{item.birthday,jdbcType=DATE} ,
+			        gender = #{item.gender,jdbcType=BIT} ,
+			        country = #{item.country,jdbcType=VARCHAR} ,
+			        province = #{item.province,jdbcType=VARCHAR} ,
+			        city = #{item.city,jdbcType=VARCHAR} ,
+			        district = #{item.district,jdbcType=VARCHAR} ,
+			        password = #{item.password,jdbcType=VARCHAR} ,
+			        hash = #{item.hash,jdbcType=VARCHAR} ,
+			        intro = #{item.intro,jdbcType=VARCHAR} ,
+			        user_from = #{item.user_from,jdbcType=VARCHAR} ,
+			        last_login_time = #{item.last_login_time,jdbcType=TIMESTAMP} ,
+			        spread = #{item.spread,jdbcType=VARCHAR} ,
+			        spread_code = #{item.spread_code,jdbcType=VARCHAR} ,
+			        spread_time = #{item.spread_time,jdbcType=VARCHAR} ,
+			        user_type = #{item.user_type,jdbcType=INTEGER} ,
+			        type_id = #{item.type_id,jdbcType=INTEGER} ,
+			        follow_time = #{item.follow_time,jdbcType=TIMESTAMP} ,
+			        status = #{item.status,jdbcType=BIT} ,
+			        update_time = #{item.update_time,jdbcType=TIMESTAMP} ,
+			        add_time = #{item.add_time,jdbcType=TIMESTAMP} ,
+			        is_followed = #{item.is_followed,jdbcType=TINYINT} ,
+			        unfollow_time = #{item.unfollow_time,jdbcType=TIMESTAMP} ,
+			        is_scan = #{item.is_scan,jdbcType=TINYINT} ,
+			        extension = #{item.extension,jdbcType=VARCHAR} ,
+			        is_app = #{item.is_app,jdbcType=INTEGER} ,
+			        user_level = #{item.user_level,jdbcType=INTEGER} ,
+			        wx_open_id = #{item.wx_open_id,jdbcType=VARCHAR} ,
+			        qq_open_id = #{item.qq_open_id,jdbcType=VARCHAR} ,
+			        login_status = #{item.login_status,jdbcType=INTEGER} ,
+			        status1 = #{item.status1,jdbcType=TINYINT} ,
+			        start_efficient_time = #{item.start_efficient_time,jdbcType=TIMESTAMP} ,
+			        end_efficient_time = #{item.end_efficient_time,jdbcType=TIMESTAMP} ,
+			        temp_spread = #{item.temp_spread,jdbcType=INTEGER} 
+		        WHERE 
+			        id = #{item.id,jdbcType=INTEGER} 
+		</foreach>
+	</update>
+
+	<delete id="remove" parameterType="java.util.Map">
+	    update user set 1=1
+	    <!-- set dr = 0  -->
+	    where id= #{id}
+	</delete>
+	
+	<delete id="removeBatch">
+	    update user where id in
+	    <foreach collection="array" item="item"  open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+	</delete>
+	
+	<delete id="delete" parameterType="string">
+	    delete from user where id=#id
+	</delete>
+	
+	<delete id="deleteBatch">
+	    delete from user where id in
+	    <foreach collection="array" item="item"  open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+	</delete>
+	
+	<select id="find" resultType="com.demo.xianghuan.admin.user.model.User" parameterType="int">
+		select
+		<include refid="Base_query_column" />
+		from user where id= #{id,jdbcType=INTEGER}
+	</select>
+
+	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.user.model.User" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from user where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="getRecordCount" resultType="int" parameterType="java.util.Map">
+		select count(1) from user where 1 = 1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="select" resultType="com.demo.xianghuan.admin.user.model.User" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from user where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+</mapper>

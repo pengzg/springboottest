@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 不使用namespace的话sql搜索定位会比较方便 -->
+<mapper namespace="com.demo.xianghuan.admin.sys.dao.ISysMenuDao">
+	<sql id="Base_Column_List">
+		sm_id,sm_name,sm_url,sm_pid,sm_iconcls,sm_descript,sm_typeid,sm_sort,sm_target,sm_systemid,sm_state,sm_ts,sm_dr,sm_adduser,sm_adddate,sm_modifyuser,sm_modifydate,sm_deleteuser,sm_deletedate,sm_version,sm_level
+	</sql>
+	<sql id="Base_Column_insert">
+        	#{sm_id,jdbcType=VARCHAR},
+        	#{sm_name,jdbcType=VARCHAR},
+        	#{sm_url,jdbcType=VARCHAR},
+        	#{sm_pid,jdbcType=VARCHAR},
+        	#{sm_iconcls,jdbcType=VARCHAR},
+        	#{sm_descript,jdbcType=LONGVARCHAR},
+        	#{sm_typeid,jdbcType=VARCHAR},
+        	#{sm_sort,jdbcType=INTEGER},
+        	#{sm_target,jdbcType=VARCHAR},
+        	#{sm_systemid,jdbcType=VARCHAR},
+        	#{sm_state,jdbcType=INTEGER},
+        	#{sm_ts,jdbcType=VARCHAR},
+        	#{sm_dr,jdbcType=INTEGER},
+        	#{sm_adduser,jdbcType=VARCHAR},
+        	#{sm_adddate,jdbcType=VARCHAR},
+        	#{sm_modifyuser,jdbcType=VARCHAR},
+        	#{sm_modifydate,jdbcType=VARCHAR},
+        	#{sm_deleteuser,jdbcType=VARCHAR},
+        	#{sm_deletedate,jdbcType=VARCHAR},
+        	#{sm_version,jdbcType=INTEGER},
+        	#{sm_level,jdbcType=VARCHAR}
+	</sql>
+	<sql id="Base_query_column">
+		sm_id,sm_name,sm_url,sm_pid,sm_iconcls,sm_descript,sm_typeid,sm_sort,sm_target,sm_systemid,sm_state,sm_ts,sm_dr,sm_adduser,sm_adddate,sm_modifyuser,sm_modifydate,sm_deleteuser,sm_deletedate,sm_version,sm_level
+	</sql>
+	<sql id="Base_query_where">
+		 	<if test="sm_name != null and sm_name != ''">
+	          and sm_name = #{sm_name}
+	         </if>
+		 	<if test="sm_url != null and sm_url != ''">
+	          and sm_url = #{sm_url}
+	         </if>
+		 	<if test="sm_pid != null and sm_pid != ''">
+	          and sm_pid = #{sm_pid}
+	         </if>
+		 	<if test="sm_iconcls != null and sm_iconcls != ''">
+	          and sm_iconcls = #{sm_iconcls}
+	         </if>
+		 	<if test="sm_descript != null and sm_descript != ''">
+	          and sm_descript = #{sm_descript}
+	         </if>
+		 	<if test="sm_typeid != null and sm_typeid != ''">
+	          and sm_typeid = #{sm_typeid}
+	         </if>
+		 	<if test="sm_sort != null and sm_sort != ''">
+	          and sm_sort = #{sm_sort}
+	         </if>
+		 	<if test="sm_target != null and sm_target != ''">
+	          and sm_target = #{sm_target}
+	         </if>
+		 	<if test="sm_systemid != null and sm_systemid != ''">
+	          and sm_systemid = #{sm_systemid}
+	         </if>
+		 	<if test="sm_state != null and sm_state != ''">
+	          and sm_state = #{sm_state}
+	         </if>
+		 	<if test="sm_ts != null and sm_ts != ''">
+	          and sm_ts = #{sm_ts}
+	         </if>
+		 	<if test="sm_dr != null and sm_dr != ''">
+	          and sm_dr = #{sm_dr}
+	         </if>
+		 	<if test="sm_adduser != null and sm_adduser != ''">
+	          and sm_adduser = #{sm_adduser}
+	         </if>
+		 	<if test="sm_adddate != null and sm_adddate != ''">
+	          and sm_adddate = #{sm_adddate}
+	         </if>
+		 	<if test="sm_modifyuser != null and sm_modifyuser != ''">
+	          and sm_modifyuser = #{sm_modifyuser}
+	         </if>
+		 	<if test="sm_modifydate != null and sm_modifydate != ''">
+	          and sm_modifydate = #{sm_modifydate}
+	         </if>
+		 	<if test="sm_deleteuser != null and sm_deleteuser != ''">
+	          and sm_deleteuser = #{sm_deleteuser}
+	         </if>
+		 	<if test="sm_deletedate != null and sm_deletedate != ''">
+	          and sm_deletedate = #{sm_deletedate}
+	         </if>
+		 	<if test="sm_version != null and sm_version != ''">
+	          and sm_version = #{sm_version}
+	         </if>
+		 	<if test="sm_level != null and sm_level != ''">
+	          and sm_level = #{sm_level}
+	         </if>
+	</sql>
+	
+	<insert id="insert" parameterType="com.demo.xianghuan.admin.sys.model.SysMenu" keyProperty="sm_id" >
+        INSERT INTO sys_menu ( <include refid="Base_Column_List" /> )  VALUES (
+            <include refid="Base_Column_insert" /> 
+        )
+	</insert>
+	
+	<insert id="insertBatch" keyProperty="sm_id">
+		insert into sys_menu  ( <include refid="Base_Column_List" /> )   values
+		<foreach collection="array" item="item" index="index" separator=",">
+		   (
+        	#{item.sm_id,jdbcType=VARCHAR},
+        	#{item.sm_name,jdbcType=VARCHAR},
+        	#{item.sm_url,jdbcType=VARCHAR},
+        	#{item.sm_pid,jdbcType=VARCHAR},
+        	#{item.sm_iconcls,jdbcType=VARCHAR},
+        	#{item.sm_descript,jdbcType=LONGVARCHAR},
+        	#{item.sm_typeid,jdbcType=VARCHAR},
+        	#{item.sm_sort,jdbcType=INTEGER},
+        	#{item.sm_target,jdbcType=VARCHAR},
+        	#{item.sm_systemid,jdbcType=VARCHAR},
+        	#{item.sm_state,jdbcType=INTEGER},
+        	#{item.sm_ts,jdbcType=VARCHAR},
+        	#{item.sm_dr,jdbcType=INTEGER},
+        	#{item.sm_adduser,jdbcType=VARCHAR},
+        	#{item.sm_adddate,jdbcType=VARCHAR},
+        	#{item.sm_modifyuser,jdbcType=VARCHAR},
+        	#{item.sm_modifydate,jdbcType=VARCHAR},
+        	#{item.sm_deleteuser,jdbcType=VARCHAR},
+        	#{item.sm_deletedate,jdbcType=VARCHAR},
+        	#{item.sm_version,jdbcType=INTEGER},
+        	#{item.sm_level,jdbcType=VARCHAR}
+		   )
+        </foreach>
+	</insert>
+
+	<update id="update" parameterType="com.demo.xianghuan.admin.sys.model.SysMenu" flushCache="true">
+        UPDATE sys_menu SET
+	        sm_name = #{sm_name,jdbcType=VARCHAR} ,
+	        sm_url = #{sm_url,jdbcType=VARCHAR} ,
+	        sm_pid = #{sm_pid,jdbcType=VARCHAR} ,
+	        sm_iconcls = #{sm_iconcls,jdbcType=VARCHAR} ,
+	        sm_descript = #{sm_descript,jdbcType=LONGVARCHAR} ,
+	        sm_typeid = #{sm_typeid,jdbcType=VARCHAR} ,
+	        sm_sort = #{sm_sort,jdbcType=INTEGER} ,
+	        sm_target = #{sm_target,jdbcType=VARCHAR} ,
+	        sm_systemid = #{sm_systemid,jdbcType=VARCHAR} ,
+	        sm_state = #{sm_state,jdbcType=INTEGER} ,
+	        sm_ts = #{sm_ts,jdbcType=VARCHAR} ,
+	        sm_dr = #{sm_dr,jdbcType=INTEGER} ,
+	        sm_adduser = #{sm_adduser,jdbcType=VARCHAR} ,
+	        sm_adddate = #{sm_adddate,jdbcType=VARCHAR} ,
+	        sm_modifyuser = #{sm_modifyuser,jdbcType=VARCHAR} ,
+	        sm_modifydate = #{sm_modifydate,jdbcType=VARCHAR} ,
+	        sm_deleteuser = #{sm_deleteuser,jdbcType=VARCHAR} ,
+	        sm_deletedate = #{sm_deletedate,jdbcType=VARCHAR} ,
+	        sm_version = #{sm_version,jdbcType=INTEGER} ,
+	        sm_level = #{sm_level,jdbcType=VARCHAR} 
+        WHERE 
+	        sm_id = #{sm_id,jdbcType=VARCHAR} 
+	</update> 
+	
+	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.sys.model.SysMenu" flushCache="true">
+        UPDATE sys_menu SET
+	        	<if test=" sm_name != null  and sm_name != ''">
+	        		sm_name = #{sm_name,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sm_url != null  and sm_url != ''">
+	        		sm_url = #{sm_url,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sm_pid != null  and sm_pid != ''">
+	        		sm_pid = #{sm_pid,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sm_iconcls != null  and sm_iconcls != ''">
+	        		sm_iconcls = #{sm_iconcls,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sm_descript != null  and sm_descript != ''">
+	        		sm_descript = #{sm_descript,jdbcType=LONGVARCHAR} ,
+	        	</if>
+	        	<if test=" sm_typeid != null  and sm_typeid != ''">
+	        		sm_typeid = #{sm_typeid,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sm_sort != null  and sm_sort != ''">
+	        		sm_sort = #{sm_sort,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" sm_target != null  and sm_target != ''">
+	        		sm_target = #{sm_target,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sm_systemid != null  and sm_systemid != ''">
+	        		sm_systemid = #{sm_systemid,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sm_state != null  and sm_state != ''">
+	        		sm_state = #{sm_state,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" sm_ts != null  and sm_ts != ''">
+	        		sm_ts = #{sm_ts,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sm_dr != null  and sm_dr != ''">
+	        		sm_dr = #{sm_dr,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" sm_adduser != null  and sm_adduser != ''">
+	        		sm_adduser = #{sm_adduser,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sm_adddate != null  and sm_adddate != ''">
+	        		sm_adddate = #{sm_adddate,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sm_modifyuser != null  and sm_modifyuser != ''">
+	        		sm_modifyuser = #{sm_modifyuser,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sm_modifydate != null  and sm_modifydate != ''">
+	        		sm_modifydate = #{sm_modifydate,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sm_deleteuser != null  and sm_deleteuser != ''">
+	        		sm_deleteuser = #{sm_deleteuser,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sm_deletedate != null  and sm_deletedate != ''">
+	        		sm_deletedate = #{sm_deletedate,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sm_version != null  and sm_version != ''">
+	        		sm_version = #{sm_version,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" sm_level != null  and sm_level != ''">
+	        		sm_level = #{sm_level,jdbcType=VARCHAR} 
+	        	</if>
+        WHERE 
+	        sm_id = #{sm_id,jdbcType=VARCHAR} 
+	</update>   
+	
+	<update id="updateBatch" flushCache="true">
+	    <foreach collection="array" item="item" open="" separator=";" close=";">
+		        UPDATE sys_menu SET
+			        sm_name = #{item.sm_name,jdbcType=VARCHAR} ,
+			        sm_url = #{item.sm_url,jdbcType=VARCHAR} ,
+			        sm_pid = #{item.sm_pid,jdbcType=VARCHAR} ,
+			        sm_iconcls = #{item.sm_iconcls,jdbcType=VARCHAR} ,
+			        sm_descript = #{item.sm_descript,jdbcType=LONGVARCHAR} ,
+			        sm_typeid = #{item.sm_typeid,jdbcType=VARCHAR} ,
+			        sm_sort = #{item.sm_sort,jdbcType=INTEGER} ,
+			        sm_target = #{item.sm_target,jdbcType=VARCHAR} ,
+			        sm_systemid = #{item.sm_systemid,jdbcType=VARCHAR} ,
+			        sm_state = #{item.sm_state,jdbcType=INTEGER} ,
+			        sm_ts = #{item.sm_ts,jdbcType=VARCHAR} ,
+			        sm_dr = #{item.sm_dr,jdbcType=INTEGER} ,
+			        sm_adduser = #{item.sm_adduser,jdbcType=VARCHAR} ,
+			        sm_adddate = #{item.sm_adddate,jdbcType=VARCHAR} ,
+			        sm_modifyuser = #{item.sm_modifyuser,jdbcType=VARCHAR} ,
+			        sm_modifydate = #{item.sm_modifydate,jdbcType=VARCHAR} ,
+			        sm_deleteuser = #{item.sm_deleteuser,jdbcType=VARCHAR} ,
+			        sm_deletedate = #{item.sm_deletedate,jdbcType=VARCHAR} ,
+			        sm_version = #{item.sm_version,jdbcType=INTEGER} ,
+			        sm_level = #{item.sm_level,jdbcType=VARCHAR} 
+		        WHERE 
+			        sm_id = #{item.sm_id,jdbcType=VARCHAR} 
+		</foreach>
+	</update>
+
+	<!-- <delete id="remove" parameterType="java.util.Map">
+	    update sys_menu set 1=1
+	    set dr = 0 
+	    where sm_id= #{sm_id}
+	</delete>
+	
+	<delete id="removeBatch">
+	    update sys_menu where sm_id in
+	    <foreach collection="array" item="item"  open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+	</delete> -->
+	
+	<select id="find" resultType="com.demo.xianghuan.admin.sys.model.SysMenu" parameterType="String">
+		select
+		<include refid="Base_query_column" />
+		from sys_menu where sm_id= #{sm_id}
+	</select>
+
+	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.sys.model.SysMenu" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from sys_menu where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="getRecordCount" resultType="int" parameterType="java.util.Map">
+		select count(1) from sys_menu where 1 = 1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="select" resultType="com.demo.xianghuan.admin.sys.model.SysMenu" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from sys_menu where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+</mapper>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 不使用namespace的话sql搜索定位会比较方便 -->
+<mapper namespace="com.demo.xianghuan.admin.sys.dao.ISysLoginLogDao">
+	<sql id="Base_Column_List">
+		sll_id,sll_orgid,sll_logincode,sll_loginname,sll_logintime,sll_ip,sll_netaddress,sll_longitude,sll_latitude,sll_equipment,sll_source,sll_state,sll_dr,sll_msg,sll_version,sll_ts
+	</sql>
+	<sql id="Base_Column_insert">
+        	#{sll_id,jdbcType=VARCHAR},
+        	#{sll_orgid,jdbcType=VARCHAR},
+        	#{sll_logincode,jdbcType=VARCHAR},
+        	#{sll_loginname,jdbcType=VARCHAR},
+        	#{sll_logintime,jdbcType=VARCHAR},
+        	#{sll_ip,jdbcType=VARCHAR},
+        	#{sll_netaddress,jdbcType=VARCHAR},
+        	#{sll_longitude,jdbcType=VARCHAR},
+        	#{sll_latitude,jdbcType=VARCHAR},
+        	#{sll_equipment,jdbcType=VARCHAR},
+        	#{sll_source,jdbcType=VARCHAR},
+        	#{sll_state,jdbcType=INTEGER},
+        	#{sll_dr,jdbcType=INTEGER},
+        	#{sll_msg,jdbcType=VARCHAR},
+        	#{sll_version,jdbcType=INTEGER},
+        	#{sll_ts,jdbcType=VARCHAR}
+	</sql>
+	<sql id="Base_query_column">
+		sll_id,sll_orgid,sll_logincode,sll_loginname,sll_logintime,sll_ip,sll_netaddress,sll_longitude,sll_latitude,sll_equipment,sll_source,sll_state,sll_dr,sll_msg,sll_version,sll_ts
+	</sql>
+	<sql id="Base_query_where">
+		 	<if test="sll_orgid != null and sll_orgid != ''">
+	          and sll_orgid = #{sll_orgid}
+	         </if>
+		 	<if test="sll_logincode != null and sll_logincode != ''">
+	          and sll_logincode = #{sll_logincode}
+	         </if>
+		 	<if test="sll_loginname != null and sll_loginname != ''">
+	          and sll_loginname = #{sll_loginname}
+	         </if>
+		 	<if test="sll_logintime != null and sll_logintime != ''">
+	          and sll_logintime = #{sll_logintime}
+	         </if>
+		 	<if test="sll_ip != null and sll_ip != ''">
+	          and sll_ip = #{sll_ip}
+	         </if>
+		 	<if test="sll_netaddress != null and sll_netaddress != ''">
+	          and sll_netaddress = #{sll_netaddress}
+	         </if>
+		 	<if test="sll_longitude != null and sll_longitude != ''">
+	          and sll_longitude = #{sll_longitude}
+	         </if>
+		 	<if test="sll_latitude != null and sll_latitude != ''">
+	          and sll_latitude = #{sll_latitude}
+	         </if>
+		 	<if test="sll_equipment != null and sll_equipment != ''">
+	          and sll_equipment = #{sll_equipment}
+	         </if>
+		 	<if test="sll_source != null and sll_source != ''">
+	          and sll_source = #{sll_source}
+	         </if>
+		 	<if test="sll_state != null and sll_state != ''">
+	          and sll_state = #{sll_state}
+	         </if>
+		 	<if test="sll_dr != null and sll_dr != ''">
+	          and sll_dr = #{sll_dr}
+	         </if>
+		 	<if test="sll_msg != null and sll_msg != ''">
+	          and sll_msg = #{sll_msg}
+	         </if>
+		 	<if test="sll_version != null and sll_version != ''">
+	          and sll_version = #{sll_version}
+	         </if>
+		 	<if test="sll_ts != null and sll_ts != ''">
+	          and sll_ts = #{sll_ts}
+	         </if>
+	</sql>
+	
+	<insert id="insert" parameterType="com.demo.xianghuan.admin.sys.model.SysLoginLog" keyProperty="sll_id" >
+        INSERT INTO sys_login_log ( <include refid="Base_Column_List" /> )  VALUES (
+            <include refid="Base_Column_insert" /> 
+        )
+	</insert>
+	
+	<insert id="insertBatch" keyProperty="sll_id">
+		insert into sys_login_log  ( <include refid="Base_Column_List" /> )   values
+		<foreach collection="array" item="item" index="index" separator=",">
+		   (
+        	#{item.sll_id,jdbcType=VARCHAR},
+        	#{item.sll_orgid,jdbcType=VARCHAR},
+        	#{item.sll_logincode,jdbcType=VARCHAR},
+        	#{item.sll_loginname,jdbcType=VARCHAR},
+        	#{item.sll_logintime,jdbcType=VARCHAR},
+        	#{item.sll_ip,jdbcType=VARCHAR},
+        	#{item.sll_netaddress,jdbcType=VARCHAR},
+        	#{item.sll_longitude,jdbcType=VARCHAR},
+        	#{item.sll_latitude,jdbcType=VARCHAR},
+        	#{item.sll_equipment,jdbcType=VARCHAR},
+        	#{item.sll_source,jdbcType=VARCHAR},
+        	#{item.sll_state,jdbcType=INTEGER},
+        	#{item.sll_dr,jdbcType=INTEGER},
+        	#{item.sll_msg,jdbcType=VARCHAR},
+        	#{item.sll_version,jdbcType=INTEGER},
+        	#{item.sll_ts,jdbcType=VARCHAR}
+		   )
+        </foreach>
+	</insert>
+
+	<update id="update" parameterType="com.demo.xianghuan.admin.sys.model.SysLoginLog" flushCache="true">
+        UPDATE sys_login_log SET
+	        sll_orgid = #{sll_orgid,jdbcType=VARCHAR} ,
+	        sll_logincode = #{sll_logincode,jdbcType=VARCHAR} ,
+	        sll_loginname = #{sll_loginname,jdbcType=VARCHAR} ,
+	        sll_logintime = #{sll_logintime,jdbcType=VARCHAR} ,
+	        sll_ip = #{sll_ip,jdbcType=VARCHAR} ,
+	        sll_netaddress = #{sll_netaddress,jdbcType=VARCHAR} ,
+	        sll_longitude = #{sll_longitude,jdbcType=VARCHAR} ,
+	        sll_latitude = #{sll_latitude,jdbcType=VARCHAR} ,
+	        sll_equipment = #{sll_equipment,jdbcType=VARCHAR} ,
+	        sll_source = #{sll_source,jdbcType=VARCHAR} ,
+	        sll_state = #{sll_state,jdbcType=INTEGER} ,
+	        sll_dr = #{sll_dr,jdbcType=INTEGER} ,
+	        sll_msg = #{sll_msg,jdbcType=VARCHAR} ,
+	        sll_version = #{sll_version,jdbcType=INTEGER} ,
+	        sll_ts = #{sll_ts,jdbcType=VARCHAR} 
+        WHERE 
+	        sll_id = #{sll_id,jdbcType=VARCHAR} 
+	</update> 
+	
+	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.sys.model.SysLoginLog" flushCache="true">
+        UPDATE sys_login_log SET
+	        	<if test=" sll_orgid != null  and sll_orgid != ''">
+	        		sll_orgid = #{sll_orgid,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sll_logincode != null  and sll_logincode != ''">
+	        		sll_logincode = #{sll_logincode,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sll_loginname != null  and sll_loginname != ''">
+	        		sll_loginname = #{sll_loginname,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sll_logintime != null  and sll_logintime != ''">
+	        		sll_logintime = #{sll_logintime,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sll_ip != null  and sll_ip != ''">
+	        		sll_ip = #{sll_ip,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sll_netaddress != null  and sll_netaddress != ''">
+	        		sll_netaddress = #{sll_netaddress,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sll_longitude != null  and sll_longitude != ''">
+	        		sll_longitude = #{sll_longitude,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sll_latitude != null  and sll_latitude != ''">
+	        		sll_latitude = #{sll_latitude,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sll_equipment != null  and sll_equipment != ''">
+	        		sll_equipment = #{sll_equipment,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sll_source != null  and sll_source != ''">
+	        		sll_source = #{sll_source,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sll_state != null  and sll_state != ''">
+	        		sll_state = #{sll_state,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" sll_dr != null  and sll_dr != ''">
+	        		sll_dr = #{sll_dr,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" sll_msg != null  and sll_msg != ''">
+	        		sll_msg = #{sll_msg,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sll_version != null  and sll_version != ''">
+	        		sll_version = #{sll_version,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" sll_ts != null  and sll_ts != ''">
+	        		sll_ts = #{sll_ts,jdbcType=VARCHAR} 
+	        	</if>
+        WHERE 
+	        sll_id = #{sll_id,jdbcType=VARCHAR} 
+	</update>   
+	
+	<update id="updateBatch" flushCache="true">
+	    <foreach collection="array" item="item" open="" separator=";" close=";">
+		        UPDATE sys_login_log SET
+			        sll_orgid = #{item.sll_orgid,jdbcType=VARCHAR} ,
+			        sll_logincode = #{item.sll_logincode,jdbcType=VARCHAR} ,
+			        sll_loginname = #{item.sll_loginname,jdbcType=VARCHAR} ,
+			        sll_logintime = #{item.sll_logintime,jdbcType=VARCHAR} ,
+			        sll_ip = #{item.sll_ip,jdbcType=VARCHAR} ,
+			        sll_netaddress = #{item.sll_netaddress,jdbcType=VARCHAR} ,
+			        sll_longitude = #{item.sll_longitude,jdbcType=VARCHAR} ,
+			        sll_latitude = #{item.sll_latitude,jdbcType=VARCHAR} ,
+			        sll_equipment = #{item.sll_equipment,jdbcType=VARCHAR} ,
+			        sll_source = #{item.sll_source,jdbcType=VARCHAR} ,
+			        sll_state = #{item.sll_state,jdbcType=INTEGER} ,
+			        sll_dr = #{item.sll_dr,jdbcType=INTEGER} ,
+			        sll_msg = #{item.sll_msg,jdbcType=VARCHAR} ,
+			        sll_version = #{item.sll_version,jdbcType=INTEGER} ,
+			        sll_ts = #{item.sll_ts,jdbcType=VARCHAR} 
+		        WHERE 
+			        sll_id = #{item.sll_id,jdbcType=VARCHAR} 
+		</foreach>
+	</update>
+
+	<!-- <delete id="remove" parameterType="java.util.Map">
+	    update sys_login_log set 1=1
+	    set dr = 0 
+	    where sll_id= #{sll_id}
+	</delete>
+	
+	<delete id="removeBatch">
+	    update sys_login_log where sll_id in
+	    <foreach collection="array" item="item"  open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+	</delete> -->
+	
+	<select id="find" resultType="com.demo.xianghuan.admin.sys.model.SysLoginLog" parameterType="String">
+		select
+		<include refid="Base_query_column" />
+		from sys_login_log where sll_id= #{sll_id}
+	</select>
+
+	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.sys.model.SysLoginLog" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from sys_login_log where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="getRecordCount" resultType="int" parameterType="java.util.Map">
+		select count(1) from sys_login_log where 1 = 1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="select" resultType="com.demo.xianghuan.admin.sys.model.SysLoginLog" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from sys_login_log where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+</mapper>

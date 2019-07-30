@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 不使用namespace的话sql搜索定位会比较方便 -->
+<mapper namespace="com.demo.xianghuan.admin.sys.dao.ISysRoleDao">
+	<sql id="Base_Column_List">
+		sr_id,sr_name,sr_order,sr_pid,sr_state,sr_version,sr_dr,sr_ts,sr_code,sr_userid,sr_roletype,sr_addtime,sr_updatetime
+	</sql>
+	<sql id="Base_Column_insert">
+        	#{sr_id,jdbcType=VARCHAR},
+        	#{sr_name,jdbcType=VARCHAR},
+        	#{sr_order,jdbcType=INTEGER},
+        	#{sr_pid,jdbcType=VARCHAR},
+        	#{sr_state,jdbcType=INTEGER},
+        	#{sr_version,jdbcType=DECIMAL},
+        	#{sr_dr,jdbcType=INTEGER},
+        	#{sr_ts,jdbcType=VARCHAR},
+        	#{sr_code,jdbcType=VARCHAR},
+        	#{sr_userid,jdbcType=VARCHAR},
+        	#{sr_roletype,jdbcType=VARCHAR},
+        	#{sr_addtime,jdbcType=VARCHAR},
+        	#{sr_updatetime,jdbcType=VARCHAR}
+	</sql>
+	<sql id="Base_query_column">
+		sr_id,sr_name,sr_order,sr_pid,sr_state,sr_version,sr_dr,sr_ts,sr_code,sr_userid,sr_roletype,sr_addtime,sr_updatetime
+	</sql>
+	<sql id="Base_query_where">
+		 	<if test="sr_name != null and sr_name != ''">
+	          and sr_name = #{sr_name}
+	         </if>
+		 	<if test="sr_order != null and sr_order != ''">
+	          and sr_order = #{sr_order}
+	         </if>
+		 	<if test="sr_pid != null and sr_pid != ''">
+	          and sr_pid = #{sr_pid}
+	         </if>
+		 	<if test="sr_state != null and sr_state != ''">
+	          and sr_state = #{sr_state}
+	         </if>
+		 	<if test="sr_version != null and sr_version != ''">
+	          and sr_version = #{sr_version}
+	         </if>
+		 	<if test="sr_dr != null and sr_dr != ''">
+	          and sr_dr = #{sr_dr}
+	         </if>
+		 	<if test="sr_ts != null and sr_ts != ''">
+	          and sr_ts = #{sr_ts}
+	         </if>
+		 	<if test="sr_code != null and sr_code != ''">
+	          and sr_code = #{sr_code}
+	         </if>
+		 	<if test="sr_userid != null and sr_userid != ''">
+	          and sr_userid = #{sr_userid}
+	         </if>
+		 	<if test="sr_roletype != null and sr_roletype != ''">
+	          and sr_roletype = #{sr_roletype}
+	         </if>
+		 	<if test="sr_addtime != null and sr_addtime != ''">
+	          and sr_addtime = #{sr_addtime}
+	         </if>
+		 	<if test="sr_updatetime != null and sr_updatetime != ''">
+	          and sr_updatetime = #{sr_updatetime}
+	         </if>
+	</sql>
+	
+	<insert id="insert" parameterType="com.demo.xianghuan.admin.sys.model.SysRole" keyProperty="sr_id" >
+        INSERT INTO sys_role ( <include refid="Base_Column_List" /> )  VALUES (
+            <include refid="Base_Column_insert" /> 
+        )
+	</insert>
+	
+	<insert id="insertBatch" keyProperty="sr_id">
+		insert into sys_role  ( <include refid="Base_Column_List" /> )   values
+		<foreach collection="array" item="item" index="index" separator=",">
+		   (
+        	#{item.sr_id,jdbcType=VARCHAR},
+        	#{item.sr_name,jdbcType=VARCHAR},
+        	#{item.sr_order,jdbcType=INTEGER},
+        	#{item.sr_pid,jdbcType=VARCHAR},
+        	#{item.sr_state,jdbcType=INTEGER},
+        	#{item.sr_version,jdbcType=DECIMAL},
+        	#{item.sr_dr,jdbcType=INTEGER},
+        	#{item.sr_ts,jdbcType=VARCHAR},
+        	#{item.sr_code,jdbcType=VARCHAR},
+        	#{item.sr_userid,jdbcType=VARCHAR},
+        	#{item.sr_roletype,jdbcType=VARCHAR},
+        	#{item.sr_addtime,jdbcType=VARCHAR},
+        	#{item.sr_updatetime,jdbcType=VARCHAR}
+		   )
+        </foreach>
+	</insert>
+
+	<update id="update" parameterType="com.demo.xianghuan.admin.sys.model.SysRole" flushCache="true">
+        UPDATE sys_role SET
+	        sr_name = #{sr_name,jdbcType=VARCHAR} ,
+	        sr_order = #{sr_order,jdbcType=INTEGER} ,
+	        sr_pid = #{sr_pid,jdbcType=VARCHAR} ,
+	        sr_state = #{sr_state,jdbcType=INTEGER} ,
+	        sr_version = #{sr_version,jdbcType=DECIMAL} ,
+	        sr_dr = #{sr_dr,jdbcType=INTEGER} ,
+	        sr_ts = #{sr_ts,jdbcType=VARCHAR} ,
+	        sr_code = #{sr_code,jdbcType=VARCHAR} ,
+	        sr_userid = #{sr_userid,jdbcType=VARCHAR} ,
+	        sr_roletype = #{sr_roletype,jdbcType=VARCHAR} ,
+	        sr_addtime = #{sr_addtime,jdbcType=VARCHAR} ,
+	        sr_updatetime = #{sr_updatetime,jdbcType=VARCHAR} 
+        WHERE 
+	        sr_id = #{sr_id,jdbcType=VARCHAR} 
+	</update> 
+	
+	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.sys.model.SysRole" flushCache="true">
+        UPDATE sys_role SET
+	        	<if test=" sr_name != null  and sr_name != ''">
+	        		sr_name = #{sr_name,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sr_order != null  and sr_order != ''">
+	        		sr_order = #{sr_order,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" sr_pid != null  and sr_pid != ''">
+	        		sr_pid = #{sr_pid,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sr_state != null  and sr_state != ''">
+	        		sr_state = #{sr_state,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" sr_version != null  and sr_version != ''">
+	        		sr_version = #{sr_version,jdbcType=DECIMAL} ,
+	        	</if>
+	        	<if test=" sr_dr != null  and sr_dr != ''">
+	        		sr_dr = #{sr_dr,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" sr_ts != null  and sr_ts != ''">
+	        		sr_ts = #{sr_ts,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sr_code != null  and sr_code != ''">
+	        		sr_code = #{sr_code,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sr_userid != null  and sr_userid != ''">
+	        		sr_userid = #{sr_userid,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sr_roletype != null  and sr_roletype != ''">
+	        		sr_roletype = #{sr_roletype,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sr_addtime != null  and sr_addtime != ''">
+	        		sr_addtime = #{sr_addtime,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" sr_updatetime != null  and sr_updatetime != ''">
+	        		sr_updatetime = #{sr_updatetime,jdbcType=VARCHAR} 
+	        	</if>
+        WHERE 
+	        sr_id = #{sr_id,jdbcType=VARCHAR} 
+	</update>   
+	
+	<update id="updateBatch" flushCache="true">
+	    <foreach collection="array" item="item" open="" separator=";" close=";">
+		        UPDATE sys_role SET
+			        sr_name = #{item.sr_name,jdbcType=VARCHAR} ,
+			        sr_order = #{item.sr_order,jdbcType=INTEGER} ,
+			        sr_pid = #{item.sr_pid,jdbcType=VARCHAR} ,
+			        sr_state = #{item.sr_state,jdbcType=INTEGER} ,
+			        sr_version = #{item.sr_version,jdbcType=DECIMAL} ,
+			        sr_dr = #{item.sr_dr,jdbcType=INTEGER} ,
+			        sr_ts = #{item.sr_ts,jdbcType=VARCHAR} ,
+			        sr_code = #{item.sr_code,jdbcType=VARCHAR} ,
+			        sr_userid = #{item.sr_userid,jdbcType=VARCHAR} ,
+			        sr_roletype = #{item.sr_roletype,jdbcType=VARCHAR} ,
+			        sr_addtime = #{item.sr_addtime,jdbcType=VARCHAR} ,
+			        sr_updatetime = #{item.sr_updatetime,jdbcType=VARCHAR} 
+		        WHERE 
+			        sr_id = #{item.sr_id,jdbcType=VARCHAR} 
+		</foreach>
+	</update>
+
+	<!-- <delete id="remove" parameterType="java.util.Map">
+	    update sys_role set 1=1
+	    set dr = 0 
+	    where sr_id= #{sr_id}
+	</delete>
+	
+	<delete id="removeBatch">
+	    update sys_role where sr_id in
+	    <foreach collection="array" item="item"  open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+	</delete> -->
+	
+	<select id="find" resultType="com.demo.xianghuan.admin.sys.model.SysRole" parameterType="String">
+		select
+		<include refid="Base_query_column" />
+		from sys_role where sr_id= #{sr_id}
+	</select>
+
+	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.sys.model.SysRole" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from sys_role where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="getRecordCount" resultType="int" parameterType="java.util.Map">
+		select count(1) from sys_role where 1 = 1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="select" resultType="com.demo.xianghuan.admin.sys.model.SysRole" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from sys_role where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+</mapper>

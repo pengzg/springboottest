@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 不使用namespace的话sql搜索定位会比较方便 -->
+<mapper namespace="com.demo.xianghuan.admin.base.dao.IBaseIdDao">
+	<select id="createId" resultType="int" parameterType="java.util.Map">
+		select
+		count(1) from ${table_name} where ${org_id_name} = ${org_id_value}
+	</select>
+
+	<select id="getMaxId" resultType="string" parameterType="java.util.Map">
+		select
+		max(${id_name}) from ${table_name} where ${org_id_name} =
+		${org_id_value}
+	</select>
+
+	<select id="getRecordCount" resultType="int" parameterType="java.util.Map">
+		<![CDATA[
+            ${sql}
+          ]]>
+	</select>
+	
+	<select id="getObjectList"  resultType="java.util.LinkedHashMap" parameterType="java.util.Map">
+		 <![CDATA[
+            ${sql}
+          ]]>
+	</select>
+
+</mapper>

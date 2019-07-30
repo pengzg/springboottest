@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 不使用namespace的话sql搜索定位会比较方便 -->
+<mapper namespace="com.demo.xianghuan.admin.base.dao.IBaseDataDao">
+	<sql id="Base_Column_List">
+		bd_id,bd_code,bd_name,bd_order,bd_pid,bd_datatypeid,bd_org,bd_des,bd_state,bd_dr,bd_adduser,bd_adddate,bd_modifyuser,bd_modifydate,bd_deleteuser,bd_deletedate
+	</sql>
+	<sql id="Base_Column_insert">
+        	#{bd_id,jdbcType=VARCHAR},
+        	#{bd_code,jdbcType=VARCHAR},
+        	#{bd_name,jdbcType=VARCHAR},
+        	#{bd_order,jdbcType=INTEGER},
+        	#{bd_pid,jdbcType=VARCHAR},
+        	#{bd_datatypeid,jdbcType=VARCHAR},
+        	#{bd_org,jdbcType=VARCHAR},
+        	#{bd_des,jdbcType=VARCHAR},
+        	#{bd_state,jdbcType=INTEGER},
+        	#{bd_dr,jdbcType=INTEGER},
+        	#{bd_adduser,jdbcType=VARCHAR},
+        	#{bd_adddate,jdbcType=VARCHAR},
+        	#{bd_modifyuser,jdbcType=VARCHAR},
+        	#{bd_modifydate,jdbcType=VARCHAR},
+        	#{bd_deleteuser,jdbcType=VARCHAR},
+        	#{bd_deletedate,jdbcType=VARCHAR}
+	</sql>
+	<sql id="Base_query_column">
+		bd_id,bd_code,bd_name,bd_order,bd_pid,bd_datatypeid,bd_org,bd_des,bd_state,bd_dr,bd_adduser,bd_adddate,bd_modifyuser,bd_modifydate,bd_deleteuser,bd_deletedate
+	</sql>
+	<sql id="Base_query_where">
+		 	<if test="bd_code != null and bd_code != ''">
+	          and bd_code = #{bd_code}
+	         </if>
+		 	<if test="bd_name != null and bd_name != ''">
+	          and bd_name = #{bd_name}
+	         </if>
+		 	<if test="bd_order != null and bd_order != ''">
+	          and bd_order = #{bd_order}
+	         </if>
+		 	<if test="bd_pid != null and bd_pid != ''">
+	          and bd_pid = #{bd_pid}
+	         </if>
+		 	<if test="bd_datatypeid != null and bd_datatypeid != ''">
+	          and bd_datatypeid = #{bd_datatypeid}
+	         </if>
+		 	<if test="bd_org != null and bd_org != ''">
+	          and bd_org = #{bd_org}
+	         </if>
+		 	<if test="bd_des != null and bd_des != ''">
+	          and bd_des = #{bd_des}
+	         </if>
+		 	<if test="bd_state != null and bd_state != ''">
+	          and bd_state = #{bd_state}
+	         </if>
+		 	<if test="bd_dr != null and bd_dr != ''">
+	          and bd_dr = #{bd_dr}
+	         </if>
+		 	<if test="bd_adduser != null and bd_adduser != ''">
+	          and bd_adduser = #{bd_adduser}
+	         </if>
+		 	<if test="bd_adddate != null and bd_adddate != ''">
+	          and bd_adddate = #{bd_adddate}
+	         </if>
+		 	<if test="bd_modifyuser != null and bd_modifyuser != ''">
+	          and bd_modifyuser = #{bd_modifyuser}
+	         </if>
+		 	<if test="bd_modifydate != null and bd_modifydate != ''">
+	          and bd_modifydate = #{bd_modifydate}
+	         </if>
+		 	<if test="bd_deleteuser != null and bd_deleteuser != ''">
+	          and bd_deleteuser = #{bd_deleteuser}
+	         </if>
+		 	<if test="bd_deletedate != null and bd_deletedate != ''">
+	          and bd_deletedate = #{bd_deletedate}
+	         </if>
+	</sql>
+	
+	<insert id="insert" parameterType="com.demo.xianghuan.admin.base.model.BaseData" keyProperty="bd_id" >
+        INSERT INTO base_data ( <include refid="Base_Column_List" /> )  VALUES (
+            <include refid="Base_Column_insert" /> 
+        )
+	</insert>
+	
+	<insert id="insertBatch" keyProperty="bd_id">
+		insert into base_data  ( <include refid="Base_Column_List" /> )   values
+		<foreach collection="array" item="item" index="index" separator=",">
+		   (
+        	#{item.bd_id,jdbcType=VARCHAR},
+        	#{item.bd_code,jdbcType=VARCHAR},
+        	#{item.bd_name,jdbcType=VARCHAR},
+        	#{item.bd_order,jdbcType=INTEGER},
+        	#{item.bd_pid,jdbcType=VARCHAR},
+        	#{item.bd_datatypeid,jdbcType=VARCHAR},
+        	#{item.bd_org,jdbcType=VARCHAR},
+        	#{item.bd_des,jdbcType=VARCHAR},
+        	#{item.bd_state,jdbcType=INTEGER},
+        	#{item.bd_dr,jdbcType=INTEGER},
+        	#{item.bd_adduser,jdbcType=VARCHAR},
+        	#{item.bd_adddate,jdbcType=VARCHAR},
+        	#{item.bd_modifyuser,jdbcType=VARCHAR},
+        	#{item.bd_modifydate,jdbcType=VARCHAR},
+        	#{item.bd_deleteuser,jdbcType=VARCHAR},
+        	#{item.bd_deletedate,jdbcType=VARCHAR}
+		   )
+        </foreach>
+	</insert>
+
+	<update id="update" parameterType="com.demo.xianghuan.admin.base.model.BaseData" flushCache="true">
+        UPDATE base_data SET
+	        bd_code = #{bd_code,jdbcType=VARCHAR} ,
+	        bd_name = #{bd_name,jdbcType=VARCHAR} ,
+	        bd_order = #{bd_order,jdbcType=INTEGER} ,
+	        bd_pid = #{bd_pid,jdbcType=VARCHAR} ,
+	        bd_datatypeid = #{bd_datatypeid,jdbcType=VARCHAR} ,
+	        bd_org = #{bd_org,jdbcType=VARCHAR} ,
+	        bd_des = #{bd_des,jdbcType=VARCHAR} ,
+	        bd_state = #{bd_state,jdbcType=INTEGER} ,
+	        bd_dr = #{bd_dr,jdbcType=INTEGER} ,
+	        bd_adduser = #{bd_adduser,jdbcType=VARCHAR} ,
+	        bd_adddate = #{bd_adddate,jdbcType=VARCHAR} ,
+	        bd_modifyuser = #{bd_modifyuser,jdbcType=VARCHAR} ,
+	        bd_modifydate = #{bd_modifydate,jdbcType=VARCHAR} ,
+	        bd_deleteuser = #{bd_deleteuser,jdbcType=VARCHAR} ,
+	        bd_deletedate = #{bd_deletedate,jdbcType=VARCHAR} 
+        WHERE 
+	        bd_id = #{bd_id,jdbcType=VARCHAR} 
+	</update> 
+	
+	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.base.model.BaseData" flushCache="true">
+        UPDATE base_data SET
+	        	<if test=" bd_code != null  and bd_code != ''">
+	        		bd_code = #{bd_code,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bd_name != null  and bd_name != ''">
+	        		bd_name = #{bd_name,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bd_order != null  and bd_order != ''">
+	        		bd_order = #{bd_order,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" bd_pid != null  and bd_pid != ''">
+	        		bd_pid = #{bd_pid,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bd_datatypeid != null  and bd_datatypeid != ''">
+	        		bd_datatypeid = #{bd_datatypeid,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bd_org != null  and bd_org != ''">
+	        		bd_org = #{bd_org,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bd_des != null  and bd_des != ''">
+	        		bd_des = #{bd_des,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bd_state != null  and bd_state != ''">
+	        		bd_state = #{bd_state,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" bd_dr != null  and bd_dr != ''">
+	        		bd_dr = #{bd_dr,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" bd_adduser != null  and bd_adduser != ''">
+	        		bd_adduser = #{bd_adduser,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bd_adddate != null  and bd_adddate != ''">
+	        		bd_adddate = #{bd_adddate,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bd_modifyuser != null  and bd_modifyuser != ''">
+	        		bd_modifyuser = #{bd_modifyuser,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bd_modifydate != null  and bd_modifydate != ''">
+	        		bd_modifydate = #{bd_modifydate,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bd_deleteuser != null  and bd_deleteuser != ''">
+	        		bd_deleteuser = #{bd_deleteuser,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bd_deletedate != null  and bd_deletedate != ''">
+	        		bd_deletedate = #{bd_deletedate,jdbcType=VARCHAR} 
+	        	</if>
+        WHERE 
+	        bd_id = #{bd_id,jdbcType=VARCHAR} 
+	</update>   
+	
+	<update id="updateBatch" flushCache="true">
+	    <foreach collection="array" item="item" open="" separator=";" close=";">
+		        UPDATE base_data SET
+			        bd_code = #{item.bd_code,jdbcType=VARCHAR} ,
+			        bd_name = #{item.bd_name,jdbcType=VARCHAR} ,
+			        bd_order = #{item.bd_order,jdbcType=INTEGER} ,
+			        bd_pid = #{item.bd_pid,jdbcType=VARCHAR} ,
+			        bd_datatypeid = #{item.bd_datatypeid,jdbcType=VARCHAR} ,
+			        bd_org = #{item.bd_org,jdbcType=VARCHAR} ,
+			        bd_des = #{item.bd_des,jdbcType=VARCHAR} ,
+			        bd_state = #{item.bd_state,jdbcType=INTEGER} ,
+			        bd_dr = #{item.bd_dr,jdbcType=INTEGER} ,
+			        bd_adduser = #{item.bd_adduser,jdbcType=VARCHAR} ,
+			        bd_adddate = #{item.bd_adddate,jdbcType=VARCHAR} ,
+			        bd_modifyuser = #{item.bd_modifyuser,jdbcType=VARCHAR} ,
+			        bd_modifydate = #{item.bd_modifydate,jdbcType=VARCHAR} ,
+			        bd_deleteuser = #{item.bd_deleteuser,jdbcType=VARCHAR} ,
+			        bd_deletedate = #{item.bd_deletedate,jdbcType=VARCHAR} 
+		        WHERE 
+			        bd_id = #{item.bd_id,jdbcType=VARCHAR} 
+		</foreach>
+	</update>
+
+	<!-- <delete id="remove" parameterType="java.util.Map">
+	    update base_data set 1=1
+	    set dr = 0 
+	    where bd_id= #{bd_id}
+	</delete>
+	
+	<delete id="removeBatch">
+	    update base_data where bd_id in
+	    <foreach collection="array" item="item"  open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+	</delete> -->
+	
+	<select id="find" resultType="com.demo.xianghuan.admin.base.model.BaseData" parameterType="String">
+		select
+		<include refid="Base_query_column" />
+		from base_data where bd_id= #{bd_id}
+	</select>
+
+	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.base.model.BaseData" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from base_data where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="getRecordCount" resultType="int" parameterType="java.util.Map">
+		select count(1) from base_data where 1 = 1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="select" resultType="com.demo.xianghuan.admin.base.model.BaseData" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from base_data where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+</mapper>

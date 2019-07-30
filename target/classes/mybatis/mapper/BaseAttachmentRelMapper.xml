@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 不使用namespace的话sql搜索定位会比较方便 -->
+<mapper namespace="com.demo.xianghuan.admin.base.dao.IBaseAttachmentRelDao">
+	<sql id="Base_Column_List">
+		bar_id,bar_source,bar_source_id,bar_attament_id,bar_state,bar_dr,bar_add_time,bar_add_userid,bar_order
+	</sql>
+	<sql id="Base_Column_insert">
+        	#{bar_id,jdbcType=VARCHAR},
+        	#{bar_source,jdbcType=INTEGER},
+        	#{bar_source_id,jdbcType=VARCHAR},
+        	#{bar_attament_id,jdbcType=VARCHAR},
+        	#{bar_state,jdbcType=INTEGER},
+        	#{bar_dr,jdbcType=INTEGER},
+        	#{bar_add_time,jdbcType=VARCHAR},
+        	#{bar_add_userid,jdbcType=VARCHAR},
+        	#{bar_order,jdbcType=INTEGER}
+	</sql>
+	<sql id="Base_query_column">
+		bar_id,bar_source,bar_source_id,bar_attament_id,bar_state,bar_dr,bar_add_time,bar_add_userid,bar_order
+	</sql>
+	<sql id="Base_query_where">
+		 	<if test="bar_source != null and bar_source != ''">
+	          and bar_source = #{bar_source}
+	         </if>
+		 	<if test="bar_source_id != null and bar_source_id != ''">
+	          and bar_source_id = #{bar_source_id}
+	         </if>
+		 	<if test="bar_attament_id != null and bar_attament_id != ''">
+	          and bar_attament_id = #{bar_attament_id}
+	         </if>
+		 	<if test="bar_state != null and bar_state != ''">
+	          and bar_state = #{bar_state}
+	         </if>
+		 	<if test="bar_dr != null and bar_dr != ''">
+	          and bar_dr = #{bar_dr}
+	         </if>
+		 	<if test="bar_add_time != null and bar_add_time != ''">
+	          and bar_add_time = #{bar_add_time}
+	         </if>
+		 	<if test="bar_add_userid != null and bar_add_userid != ''">
+	          and bar_add_userid = #{bar_add_userid}
+	         </if>
+		 	<if test="bar_order != null and bar_order != ''">
+	          and bar_order = #{bar_order}
+	         </if>
+	</sql>
+	
+	<insert id="insert" parameterType="com.demo.xianghuan.admin.base.model.BaseAttachmentRel" keyProperty="bar_id" >
+        INSERT INTO base_attachment_rel ( <include refid="Base_Column_List" /> )  VALUES (
+            <include refid="Base_Column_insert" /> 
+        )
+	</insert>
+	
+	<insert id="insertBatch" keyProperty="bar_id">
+		insert into base_attachment_rel  ( <include refid="Base_Column_List" /> )   values
+		<foreach collection="array" item="item" index="index" separator=",">
+		   (
+        	#{item.bar_id,jdbcType=VARCHAR},
+        	#{item.bar_source,jdbcType=INTEGER},
+        	#{item.bar_source_id,jdbcType=VARCHAR},
+        	#{item.bar_attament_id,jdbcType=VARCHAR},
+        	#{item.bar_state,jdbcType=INTEGER},
+        	#{item.bar_dr,jdbcType=INTEGER},
+        	#{item.bar_add_time,jdbcType=VARCHAR},
+        	#{item.bar_add_userid,jdbcType=VARCHAR},
+        	#{item.bar_order,jdbcType=INTEGER}
+		   )
+        </foreach>
+	</insert>
+
+	<update id="update" parameterType="com.demo.xianghuan.admin.base.model.BaseAttachmentRel" flushCache="true">
+        UPDATE base_attachment_rel SET
+	        bar_source = #{bar_source,jdbcType=INTEGER} ,
+	        bar_source_id = #{bar_source_id,jdbcType=VARCHAR} ,
+	        bar_attament_id = #{bar_attament_id,jdbcType=VARCHAR} ,
+	        bar_state = #{bar_state,jdbcType=INTEGER} ,
+	        bar_dr = #{bar_dr,jdbcType=INTEGER} ,
+	        bar_add_time = #{bar_add_time,jdbcType=VARCHAR} ,
+	        bar_add_userid = #{bar_add_userid,jdbcType=VARCHAR} ,
+	        bar_order = #{bar_order,jdbcType=INTEGER} 
+        WHERE 
+	        bar_id = #{bar_id,jdbcType=VARCHAR} 
+	</update> 
+	
+	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.base.model.BaseAttachmentRel" flushCache="true">
+        UPDATE base_attachment_rel SET
+	        	<if test=" bar_source != null  and bar_source != ''">
+	        		bar_source = #{bar_source,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" bar_source_id != null  and bar_source_id != ''">
+	        		bar_source_id = #{bar_source_id,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bar_attament_id != null  and bar_attament_id != ''">
+	        		bar_attament_id = #{bar_attament_id,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bar_state != null  and bar_state != ''">
+	        		bar_state = #{bar_state,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" bar_dr != null  and bar_dr != ''">
+	        		bar_dr = #{bar_dr,jdbcType=INTEGER} ,
+	        	</if>
+	        	<if test=" bar_add_time != null  and bar_add_time != ''">
+	        		bar_add_time = #{bar_add_time,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bar_add_userid != null  and bar_add_userid != ''">
+	        		bar_add_userid = #{bar_add_userid,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bar_order != null  and bar_order != ''">
+	        		bar_order = #{bar_order,jdbcType=INTEGER} 
+	        	</if>
+        WHERE 
+	        bar_id = #{bar_id,jdbcType=VARCHAR} 
+	</update>   
+	
+	<update id="updateBatch" flushCache="true">
+	    <foreach collection="array" item="item" open="" separator=";" close=";">
+		        UPDATE base_attachment_rel SET
+			        bar_source = #{item.bar_source,jdbcType=INTEGER} ,
+			        bar_source_id = #{item.bar_source_id,jdbcType=VARCHAR} ,
+			        bar_attament_id = #{item.bar_attament_id,jdbcType=VARCHAR} ,
+			        bar_state = #{item.bar_state,jdbcType=INTEGER} ,
+			        bar_dr = #{item.bar_dr,jdbcType=INTEGER} ,
+			        bar_add_time = #{item.bar_add_time,jdbcType=VARCHAR} ,
+			        bar_add_userid = #{item.bar_add_userid,jdbcType=VARCHAR} ,
+			        bar_order = #{item.bar_order,jdbcType=INTEGER} 
+		        WHERE 
+			        bar_id = #{item.bar_id,jdbcType=VARCHAR} 
+		</foreach>
+	</update>
+
+	<!-- <delete id="remove" parameterType="java.util.Map">
+	    update base_attachment_rel set 1=1
+	    set dr = 0 
+	    where bar_id= #{bar_id}
+	</delete>
+	
+	<delete id="removeBatch">
+	    update base_attachment_rel where bar_id in
+	    <foreach collection="array" item="item"  open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+	</delete> -->
+	
+	<select id="find" resultType="com.demo.xianghuan.admin.base.model.BaseAttachmentRel" parameterType="String">
+		select
+		<include refid="Base_query_column" />
+		from base_attachment_rel where bar_id= #{bar_id}
+	</select>
+
+	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.base.model.BaseAttachmentRel" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from base_attachment_rel where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="getRecordCount" resultType="int" parameterType="java.util.Map">
+		select count(1) from base_attachment_rel where 1 = 1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="select" resultType="com.demo.xianghuan.admin.base.model.BaseAttachmentRel" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from base_attachment_rel where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+</mapper>

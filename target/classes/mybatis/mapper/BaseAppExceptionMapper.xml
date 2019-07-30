@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 不使用namespace的话sql搜索定位会比较方便 -->
+<mapper namespace="com.demo.xianghuan.admin.base.dao.IBaseAppExceptionDao">
+	<sql id="Base_Column_List">
+		bae_id,bae_orgid,bae_device_name,bae_device_type,bae_device_code,bae_sys_version,bae_page,bae_msg,bae_userid,bae_addtime
+	</sql>
+	<sql id="Base_Column_insert">
+        	#{bae_id,jdbcType=VARCHAR},
+        	#{bae_orgid,jdbcType=VARCHAR},
+        	#{bae_device_name,jdbcType=VARCHAR},
+        	#{bae_device_type,jdbcType=TINYINT},
+        	#{bae_device_code,jdbcType=VARCHAR},
+        	#{bae_sys_version,jdbcType=VARCHAR},
+        	#{bae_page,jdbcType=VARCHAR},
+        	#{bae_msg,jdbcType=LONGVARCHAR},
+        	#{bae_userid,jdbcType=VARCHAR},
+        	#{bae_addtime,jdbcType=VARCHAR}
+	</sql>
+	<sql id="Base_query_column">
+		bae_id,bae_orgid,bae_device_name,bae_device_type,bae_device_code,bae_sys_version,bae_page,bae_msg,bae_userid,bae_addtime
+	</sql>
+	<sql id="Base_query_where">
+		 	<if test="bae_orgid != null and bae_orgid != ''">
+	          and bae_orgid = #{bae_orgid}
+	         </if>
+		 	<if test="bae_device_name != null and bae_device_name != ''">
+	          and bae_device_name = #{bae_device_name}
+	         </if>
+		 	<if test="bae_device_type != null and bae_device_type != ''">
+	          and bae_device_type = #{bae_device_type}
+	         </if>
+		 	<if test="bae_device_code != null and bae_device_code != ''">
+	          and bae_device_code = #{bae_device_code}
+	         </if>
+		 	<if test="bae_sys_version != null and bae_sys_version != ''">
+	          and bae_sys_version = #{bae_sys_version}
+	         </if>
+		 	<if test="bae_page != null and bae_page != ''">
+	          and bae_page = #{bae_page}
+	         </if>
+		 	<if test="bae_msg != null and bae_msg != ''">
+	          and bae_msg = #{bae_msg}
+	         </if>
+		 	<if test="bae_userid != null and bae_userid != ''">
+	          and bae_userid = #{bae_userid}
+	         </if>
+		 	<if test="bae_addtime != null and bae_addtime != ''">
+	          and bae_addtime = #{bae_addtime}
+	         </if>
+	</sql>
+	
+	<insert id="insert" parameterType="com.demo.xianghuan.admin.base.model.BaseAppException" keyProperty="bae_id" >
+        INSERT INTO base_app_exception ( <include refid="Base_Column_List" /> )  VALUES (
+            <include refid="Base_Column_insert" /> 
+        )
+	</insert>
+	
+	<insert id="insertBatch" keyProperty="bae_id">
+		insert into base_app_exception  ( <include refid="Base_Column_List" /> )   values
+		<foreach collection="array" item="item" index="index" separator=",">
+		   (
+        	#{item.bae_id,jdbcType=VARCHAR},
+        	#{item.bae_orgid,jdbcType=VARCHAR},
+        	#{item.bae_device_name,jdbcType=VARCHAR},
+        	#{item.bae_device_type,jdbcType=TINYINT},
+        	#{item.bae_device_code,jdbcType=VARCHAR},
+        	#{item.bae_sys_version,jdbcType=VARCHAR},
+        	#{item.bae_page,jdbcType=VARCHAR},
+        	#{item.bae_msg,jdbcType=LONGVARCHAR},
+        	#{item.bae_userid,jdbcType=VARCHAR},
+        	#{item.bae_addtime,jdbcType=VARCHAR}
+		   )
+        </foreach>
+	</insert>
+
+	<update id="update" parameterType="com.demo.xianghuan.admin.base.model.BaseAppException" flushCache="true">
+        UPDATE base_app_exception SET
+	        bae_orgid = #{bae_orgid,jdbcType=VARCHAR} ,
+	        bae_device_name = #{bae_device_name,jdbcType=VARCHAR} ,
+	        bae_device_type = #{bae_device_type,jdbcType=TINYINT} ,
+	        bae_device_code = #{bae_device_code,jdbcType=VARCHAR} ,
+	        bae_sys_version = #{bae_sys_version,jdbcType=VARCHAR} ,
+	        bae_page = #{bae_page,jdbcType=VARCHAR} ,
+	        bae_msg = #{bae_msg,jdbcType=LONGVARCHAR} ,
+	        bae_userid = #{bae_userid,jdbcType=VARCHAR} ,
+	        bae_addtime = #{bae_addtime,jdbcType=VARCHAR} 
+        WHERE 
+	        bae_id = #{bae_id,jdbcType=VARCHAR} 
+	</update> 
+	
+	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.base.model.BaseAppException" flushCache="true">
+        UPDATE base_app_exception SET
+	        	<if test=" bae_orgid != null  and bae_orgid != ''">
+	        		bae_orgid = #{bae_orgid,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bae_device_name != null  and bae_device_name != ''">
+	        		bae_device_name = #{bae_device_name,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bae_device_type != null  and bae_device_type != ''">
+	        		bae_device_type = #{bae_device_type,jdbcType=TINYINT} ,
+	        	</if>
+	        	<if test=" bae_device_code != null  and bae_device_code != ''">
+	        		bae_device_code = #{bae_device_code,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bae_sys_version != null  and bae_sys_version != ''">
+	        		bae_sys_version = #{bae_sys_version,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bae_page != null  and bae_page != ''">
+	        		bae_page = #{bae_page,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bae_msg != null  and bae_msg != ''">
+	        		bae_msg = #{bae_msg,jdbcType=LONGVARCHAR} ,
+	        	</if>
+	        	<if test=" bae_userid != null  and bae_userid != ''">
+	        		bae_userid = #{bae_userid,jdbcType=VARCHAR} ,
+	        	</if>
+	        	<if test=" bae_addtime != null  and bae_addtime != ''">
+	        		bae_addtime = #{bae_addtime,jdbcType=VARCHAR} 
+	        	</if>
+        WHERE 
+	        bae_id = #{bae_id,jdbcType=VARCHAR} 
+	</update>   
+	
+	<update id="updateBatch" flushCache="true">
+	    <foreach collection="array" item="item" open="" separator=";" close=";">
+		        UPDATE base_app_exception SET
+			        bae_orgid = #{item.bae_orgid,jdbcType=VARCHAR} ,
+			        bae_device_name = #{item.bae_device_name,jdbcType=VARCHAR} ,
+			        bae_device_type = #{item.bae_device_type,jdbcType=TINYINT} ,
+			        bae_device_code = #{item.bae_device_code,jdbcType=VARCHAR} ,
+			        bae_sys_version = #{item.bae_sys_version,jdbcType=VARCHAR} ,
+			        bae_page = #{item.bae_page,jdbcType=VARCHAR} ,
+			        bae_msg = #{item.bae_msg,jdbcType=LONGVARCHAR} ,
+			        bae_userid = #{item.bae_userid,jdbcType=VARCHAR} ,
+			        bae_addtime = #{item.bae_addtime,jdbcType=VARCHAR} 
+		        WHERE 
+			        bae_id = #{item.bae_id,jdbcType=VARCHAR} 
+		</foreach>
+	</update>
+
+	<!-- <delete id="remove" parameterType="java.util.Map">
+	    update base_app_exception set 1=1
+	    set dr = 0 
+	    where bae_id= #{bae_id}
+	</delete>
+	
+	<delete id="removeBatch">
+	    update base_app_exception where bae_id in
+	    <foreach collection="array" item="item"  open="(" separator="," close=")">
+	        #{item}
+	    </foreach>
+	</delete> -->
+	
+	<select id="find" resultType="com.demo.xianghuan.admin.base.model.BaseAppException" parameterType="String">
+		select
+		<include refid="Base_query_column" />
+		from base_app_exception where bae_id= #{bae_id}
+	</select>
+
+	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.base.model.BaseAppException" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from base_app_exception where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="getRecordCount" resultType="int" parameterType="java.util.Map">
+		select count(1) from base_app_exception where 1 = 1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+	
+	<select id="select" resultType="com.demo.xianghuan.admin.base.model.BaseAppException" parameterType="java.util.Map">
+		select <include refid="Base_query_column" /> from base_app_exception where 1=1
+		<include refid="Base_query_where" />
+		<if test="sqlWhere != null">
+			 #{sqlWhere}
+		</if>
+	</select>
+</mapper>
