@@ -4,7 +4,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- 不使用namespace的话sql搜索定位会比较方便 -->
-<mapper namespace="com.demo.xianghuan.admin.sys.dao.ISysUserDao">
+<mapper namespace="com.demo.xianghuan.common.sys.dao.ISysUserDao">
 	<sql id="Base_Column_List">
 		su_id,su_img,su_loginname,su_name,su_querycode,su_pwd,su_orgid,su_startdate,su_enddate,su_usertype,su_role,su_state,su_lastlogin,su_addtime,su_updatetime,su_dr,su_ts,su_hash,su_unionid,su_mobile
 	</sql>
@@ -90,7 +90,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	         </if>
 	</sql>
 	
-	<insert id="insert" parameterType="com.demo.xianghuan.admin.sys.model.SysUser" keyProperty="su_id" >
+	<insert id="insert" parameterType="com.demo.xianghuan.common.sys.model.SysUser" keyProperty="su_id" >
         INSERT INTO sys_user ( <include refid="Base_Column_List" /> )  VALUES (
             <include refid="Base_Column_insert" /> 
         )
@@ -124,7 +124,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         </foreach>
 	</insert>
 
-	<update id="update" parameterType="com.demo.xianghuan.admin.sys.model.SysUser" flushCache="true">
+	<update id="update" parameterType="com.demo.xianghuan.common.sys.model.SysUser" flushCache="true">
         UPDATE sys_user SET
 	        su_img = #{su_img,jdbcType=VARCHAR} ,
 	        su_loginname = #{su_loginname,jdbcType=VARCHAR} ,
@@ -149,7 +149,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	        su_id = #{su_id,jdbcType=VARCHAR} 
 	</update> 
 	
-	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.sys.model.SysUser" flushCache="true">
+	<update id="updateSelect" parameterType="com.demo.xianghuan.common.sys.model.SysUser" flushCache="true">
         UPDATE sys_user SET
 	        	<if test=" su_img != null  and su_img != ''">
 	        		su_img = #{su_img,jdbcType=VARCHAR} ,
@@ -249,13 +249,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	    </foreach>
 	</delete> -->
 	
-	<select id="find" resultType="com.demo.xianghuan.admin.sys.model.SysUser" parameterType="String">
+	<select id="find" resultType="com.demo.xianghuan.common.sys.model.SysUser" parameterType="String">
 		select
 		<include refid="Base_query_column" />
 		from sys_user where su_id= #{su_id}
 	</select>
 
-	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.sys.model.SysUser" parameterType="java.util.Map">
+	<select id="queryByCondition" resultType="com.demo.xianghuan.common.sys.model.SysUser" parameterType="java.util.Map">
 		select <include refid="Base_query_column" /> from sys_user where 1=1
 		<include refid="Base_query_where" />
 		<if test="sqlWhere != null">
@@ -271,7 +271,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		</if>
 	</select>
 	
-	<select id="select" resultType="com.demo.xianghuan.admin.sys.model.SysUser" parameterType="java.util.Map">
+	<select id="select" resultType="com.demo.xianghuan.common.sys.model.SysUser" parameterType="java.util.Map">
 		select <include refid="Base_query_column" /> from sys_user where 1=1
 		<include refid="Base_query_where" />
 		<if test="sqlWhere != null">

@@ -4,7 +4,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- 不使用namespace的话sql搜索定位会比较方便 -->
-<mapper namespace="com.demo.xianghuan.admin.base.dao.IBaseAppVersionDao">
+<mapper namespace="com.demo.xianghuan.common.base.dao.IBaseAppVersionDao">
 	<sql id="Base_Column_List">
 		bv_id,bv_app_type,bv_version1,bv_down_url,bv_desc,bv_state,bv_dr,bv_addtime,bv_adduser,bv_upgrade,bv_source,bv_version_name
 	</sql>
@@ -61,7 +61,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	         </if>
 	</sql>
 	
-	<insert id="insert" parameterType="com.demo.xianghuan.admin.base.model.BaseAppVersion" keyProperty="bv_id" >
+	<insert id="insert" parameterType="com.demo.xianghuan.common.base.model.BaseAppVersion" keyProperty="bv_id" >
         INSERT INTO base_app_version ( <include refid="Base_Column_List" /> )  VALUES (
             <include refid="Base_Column_insert" /> 
         )
@@ -87,7 +87,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         </foreach>
 	</insert>
 
-	<update id="update" parameterType="com.demo.xianghuan.admin.base.model.BaseAppVersion" flushCache="true">
+	<update id="update" parameterType="com.demo.xianghuan.common.base.model.BaseAppVersion" flushCache="true">
         UPDATE base_app_version SET
 	        bv_app_type = #{bv_app_type,jdbcType=VARCHAR} ,
 	        bv_version1 = #{bv_version1,jdbcType=VARCHAR} ,
@@ -104,7 +104,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	        bv_id = #{bv_id,jdbcType=VARCHAR} 
 	</update> 
 	
-	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.base.model.BaseAppVersion" flushCache="true">
+	<update id="updateSelect" parameterType="com.demo.xianghuan.common.base.model.BaseAppVersion" flushCache="true">
         UPDATE base_app_version SET
 	        	<if test=" bv_app_type != null  and bv_app_type != ''">
 	        		bv_app_type = #{bv_app_type,jdbcType=VARCHAR} ,
@@ -175,13 +175,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	    </foreach>
 	</delete> -->
 	
-	<select id="find" resultType="com.demo.xianghuan.admin.base.model.BaseAppVersion" parameterType="String">
+	<select id="find" resultType="com.demo.xianghuan.common.base.model.BaseAppVersion" parameterType="String">
 		select
 		<include refid="Base_query_column" />
 		from base_app_version where bv_id= #{bv_id}
 	</select>
 
-	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.base.model.BaseAppVersion" parameterType="java.util.Map">
+	<select id="queryByCondition" resultType="com.demo.xianghuan.common.base.model.BaseAppVersion" parameterType="java.util.Map">
 		select <include refid="Base_query_column" /> from base_app_version where 1=1
 		<include refid="Base_query_where" />
 		<if test="sqlWhere != null">
@@ -197,7 +197,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		</if>
 	</select>
 	
-	<select id="select" resultType="com.demo.xianghuan.admin.base.model.BaseAppVersion" parameterType="java.util.Map">
+	<select id="select" resultType="com.demo.xianghuan.common.base.model.BaseAppVersion" parameterType="java.util.Map">
 		select <include refid="Base_query_column" /> from base_app_version where 1=1
 		<include refid="Base_query_where" />
 		<if test="sqlWhere != null">

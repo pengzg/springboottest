@@ -4,7 +4,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- 不使用namespace的话sql搜索定位会比较方便 -->
-<mapper namespace="com.demo.xianghuan.admin.sys.dao.ISysRoleDao">
+<mapper namespace="com.demo.xianghuan.common.sys.dao.ISysRoleDao">
 	<sql id="Base_Column_List">
 		sr_id,sr_name,sr_order,sr_pid,sr_state,sr_version,sr_dr,sr_ts,sr_code,sr_userid,sr_roletype,sr_addtime,sr_updatetime
 	</sql>
@@ -65,7 +65,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	         </if>
 	</sql>
 	
-	<insert id="insert" parameterType="com.demo.xianghuan.admin.sys.model.SysRole" keyProperty="sr_id" >
+	<insert id="insert" parameterType="com.demo.xianghuan.common.sys.model.SysRole" keyProperty="sr_id" >
         INSERT INTO sys_role ( <include refid="Base_Column_List" /> )  VALUES (
             <include refid="Base_Column_insert" /> 
         )
@@ -92,7 +92,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         </foreach>
 	</insert>
 
-	<update id="update" parameterType="com.demo.xianghuan.admin.sys.model.SysRole" flushCache="true">
+	<update id="update" parameterType="com.demo.xianghuan.common.sys.model.SysRole" flushCache="true">
         UPDATE sys_role SET
 	        sr_name = #{sr_name,jdbcType=VARCHAR} ,
 	        sr_order = #{sr_order,jdbcType=INTEGER} ,
@@ -110,7 +110,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	        sr_id = #{sr_id,jdbcType=VARCHAR} 
 	</update> 
 	
-	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.sys.model.SysRole" flushCache="true">
+	<update id="updateSelect" parameterType="com.demo.xianghuan.common.sys.model.SysRole" flushCache="true">
         UPDATE sys_role SET
 	        	<if test=" sr_name != null  and sr_name != ''">
 	        		sr_name = #{sr_name,jdbcType=VARCHAR} ,
@@ -185,13 +185,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	    </foreach>
 	</delete> -->
 	
-	<select id="find" resultType="com.demo.xianghuan.admin.sys.model.SysRole" parameterType="String">
+	<select id="find" resultType="com.demo.xianghuan.common.sys.model.SysRole" parameterType="String">
 		select
 		<include refid="Base_query_column" />
 		from sys_role where sr_id= #{sr_id}
 	</select>
 
-	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.sys.model.SysRole" parameterType="java.util.Map">
+	<select id="queryByCondition" resultType="com.demo.xianghuan.common.sys.model.SysRole" parameterType="java.util.Map">
 		select <include refid="Base_query_column" /> from sys_role where 1=1
 		<include refid="Base_query_where" />
 		<if test="sqlWhere != null">
@@ -207,7 +207,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		</if>
 	</select>
 	
-	<select id="select" resultType="com.demo.xianghuan.admin.sys.model.SysRole" parameterType="java.util.Map">
+	<select id="select" resultType="com.demo.xianghuan.common.sys.model.SysRole" parameterType="java.util.Map">
 		select <include refid="Base_query_column" /> from sys_role where 1=1
 		<include refid="Base_query_where" />
 		<if test="sqlWhere != null">

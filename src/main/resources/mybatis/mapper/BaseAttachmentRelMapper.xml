@@ -4,7 +4,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- 不使用namespace的话sql搜索定位会比较方便 -->
-<mapper namespace="com.demo.xianghuan.admin.base.dao.IBaseAttachmentRelDao">
+<mapper namespace="com.demo.xianghuan.common.base.dao.IBaseAttachmentRelDao">
 	<sql id="Base_Column_List">
 		bar_id,bar_source,bar_source_id,bar_attament_id,bar_state,bar_dr,bar_add_time,bar_add_userid,bar_order
 	</sql>
@@ -49,7 +49,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	         </if>
 	</sql>
 	
-	<insert id="insert" parameterType="com.demo.xianghuan.admin.base.model.BaseAttachmentRel" keyProperty="bar_id" >
+	<insert id="insert" parameterType="com.demo.xianghuan.common.base.model.BaseAttachmentRel" keyProperty="bar_id" >
         INSERT INTO base_attachment_rel ( <include refid="Base_Column_List" /> )  VALUES (
             <include refid="Base_Column_insert" /> 
         )
@@ -72,7 +72,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         </foreach>
 	</insert>
 
-	<update id="update" parameterType="com.demo.xianghuan.admin.base.model.BaseAttachmentRel" flushCache="true">
+	<update id="update" parameterType="com.demo.xianghuan.common.base.model.BaseAttachmentRel" flushCache="true">
         UPDATE base_attachment_rel SET
 	        bar_source = #{bar_source,jdbcType=INTEGER} ,
 	        bar_source_id = #{bar_source_id,jdbcType=VARCHAR} ,
@@ -86,7 +86,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	        bar_id = #{bar_id,jdbcType=VARCHAR} 
 	</update> 
 	
-	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.base.model.BaseAttachmentRel" flushCache="true">
+	<update id="updateSelect" parameterType="com.demo.xianghuan.common.base.model.BaseAttachmentRel" flushCache="true">
         UPDATE base_attachment_rel SET
 	        	<if test=" bar_source != null  and bar_source != ''">
 	        		bar_source = #{bar_source,jdbcType=INTEGER} ,
@@ -145,13 +145,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	    </foreach>
 	</delete> -->
 	
-	<select id="find" resultType="com.demo.xianghuan.admin.base.model.BaseAttachmentRel" parameterType="String">
+	<select id="find" resultType="com.demo.xianghuan.common.base.model.BaseAttachmentRel" parameterType="String">
 		select
 		<include refid="Base_query_column" />
 		from base_attachment_rel where bar_id= #{bar_id}
 	</select>
 
-	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.base.model.BaseAttachmentRel" parameterType="java.util.Map">
+	<select id="queryByCondition" resultType="com.demo.xianghuan.common.base.model.BaseAttachmentRel" parameterType="java.util.Map">
 		select <include refid="Base_query_column" /> from base_attachment_rel where 1=1
 		<include refid="Base_query_where" />
 		<if test="sqlWhere != null">
@@ -167,7 +167,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		</if>
 	</select>
 	
-	<select id="select" resultType="com.demo.xianghuan.admin.base.model.BaseAttachmentRel" parameterType="java.util.Map">
+	<select id="select" resultType="com.demo.xianghuan.common.base.model.BaseAttachmentRel" parameterType="java.util.Map">
 		select <include refid="Base_query_column" /> from base_attachment_rel where 1=1
 		<include refid="Base_query_where" />
 		<if test="sqlWhere != null">

@@ -18,7 +18,7 @@ public class FilterConfiguration {
         FilterRegistrationBean registration = new FilterRegistrationBean();
         registration.setFilter(new UrlFilter());
         List<String> urlList = new ArrayList<String>();
-        urlList.add("/base/user/*");
+        urlList.add("/*");
         registration.setUrlPatterns(urlList);
         registration.setName("UrlFilter");
         registration.setOrder(1);

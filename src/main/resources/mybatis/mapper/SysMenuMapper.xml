@@ -4,7 +4,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- 不使用namespace的话sql搜索定位会比较方便 -->
-<mapper namespace="com.demo.xianghuan.admin.sys.dao.ISysMenuDao">
+<mapper namespace="com.demo.xianghuan.common.sys.dao.ISysMenuDao">
 	<sql id="Base_Column_List">
 		sm_id,sm_name,sm_url,sm_pid,sm_iconcls,sm_descript,sm_typeid,sm_sort,sm_target,sm_systemid,sm_state,sm_ts,sm_dr,sm_adduser,sm_adddate,sm_modifyuser,sm_modifydate,sm_deleteuser,sm_deletedate,sm_version,sm_level
 	</sql>
@@ -97,7 +97,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	         </if>
 	</sql>
 	
-	<insert id="insert" parameterType="com.demo.xianghuan.admin.sys.model.SysMenu" keyProperty="sm_id" >
+	<insert id="insert" parameterType="com.demo.xianghuan.common.sys.model.SysMenu" keyProperty="sm_id" >
         INSERT INTO sys_menu ( <include refid="Base_Column_List" /> )  VALUES (
             <include refid="Base_Column_insert" /> 
         )
@@ -132,7 +132,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         </foreach>
 	</insert>
 
-	<update id="update" parameterType="com.demo.xianghuan.admin.sys.model.SysMenu" flushCache="true">
+	<update id="update" parameterType="com.demo.xianghuan.common.sys.model.SysMenu" flushCache="true">
         UPDATE sys_menu SET
 	        sm_name = #{sm_name,jdbcType=VARCHAR} ,
 	        sm_url = #{sm_url,jdbcType=VARCHAR} ,
@@ -158,7 +158,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	        sm_id = #{sm_id,jdbcType=VARCHAR} 
 	</update> 
 	
-	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.sys.model.SysMenu" flushCache="true">
+	<update id="updateSelect" parameterType="com.demo.xianghuan.common.sys.model.SysMenu" flushCache="true">
         UPDATE sys_menu SET
 	        	<if test=" sm_name != null  and sm_name != ''">
 	        		sm_name = #{sm_name,jdbcType=VARCHAR} ,
@@ -265,13 +265,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	    </foreach>
 	</delete> -->
 	
-	<select id="find" resultType="com.demo.xianghuan.admin.sys.model.SysMenu" parameterType="String">
+	<select id="find" resultType="com.demo.xianghuan.common.sys.model.SysMenu" parameterType="String">
 		select
 		<include refid="Base_query_column" />
 		from sys_menu where sm_id= #{sm_id}
 	</select>
 
-	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.sys.model.SysMenu" parameterType="java.util.Map">
+	<select id="queryByCondition" resultType="com.demo.xianghuan.common.sys.model.SysMenu" parameterType="java.util.Map">
 		select <include refid="Base_query_column" /> from sys_menu where 1=1
 		<include refid="Base_query_where" />
 		<if test="sqlWhere != null">
@@ -287,7 +287,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		</if>
 	</select>
 	
-	<select id="select" resultType="com.demo.xianghuan.admin.sys.model.SysMenu" parameterType="java.util.Map">
+	<select id="select" resultType="com.demo.xianghuan.common.sys.model.SysMenu" parameterType="java.util.Map">
 		select <include refid="Base_query_column" /> from sys_menu where 1=1
 		<include refid="Base_query_where" />
 		<if test="sqlWhere != null">

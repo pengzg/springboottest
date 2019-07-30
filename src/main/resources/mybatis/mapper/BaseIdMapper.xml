@@ -4,7 +4,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- 不使用namespace的话sql搜索定位会比较方便 -->
-<mapper namespace="com.demo.xianghuan.admin.base.dao.IBaseIdDao">
+<mapper namespace="com.demo.xianghuan.common.base.dao.IBaseIdDao">
 	<select id="createId" resultType="int" parameterType="java.util.Map">
 		select
 		count(1) from ${table_name} where ${org_id_name} = ${org_id_value}

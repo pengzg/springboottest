@@ -4,7 +4,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- 不使用namespace的话sql搜索定位会比较方便 -->
-<mapper namespace="com.demo.xianghuan.admin.base.dao.IBaseDataDao">
+<mapper namespace="com.demo.xianghuan.common.base.dao.IBaseDataDao">
 	<sql id="Base_Column_List">
 		bd_id,bd_code,bd_name,bd_order,bd_pid,bd_datatypeid,bd_org,bd_des,bd_state,bd_dr,bd_adduser,bd_adddate,bd_modifyuser,bd_modifydate,bd_deleteuser,bd_deletedate
 	</sql>
@@ -77,7 +77,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	         </if>
 	</sql>
 	
-	<insert id="insert" parameterType="com.demo.xianghuan.admin.base.model.BaseData" keyProperty="bd_id" >
+	<insert id="insert" parameterType="com.demo.xianghuan.common.base.model.BaseData" keyProperty="bd_id" >
         INSERT INTO base_data ( <include refid="Base_Column_List" /> )  VALUES (
             <include refid="Base_Column_insert" /> 
         )
@@ -107,7 +107,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         </foreach>
 	</insert>
 
-	<update id="update" parameterType="com.demo.xianghuan.admin.base.model.BaseData" flushCache="true">
+	<update id="update" parameterType="com.demo.xianghuan.common.base.model.BaseData" flushCache="true">
         UPDATE base_data SET
 	        bd_code = #{bd_code,jdbcType=VARCHAR} ,
 	        bd_name = #{bd_name,jdbcType=VARCHAR} ,
@@ -128,7 +128,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	        bd_id = #{bd_id,jdbcType=VARCHAR} 
 	</update> 
 	
-	<update id="updateSelect" parameterType="com.demo.xianghuan.admin.base.model.BaseData" flushCache="true">
+	<update id="updateSelect" parameterType="com.demo.xianghuan.common.base.model.BaseData" flushCache="true">
         UPDATE base_data SET
 	        	<if test=" bd_code != null  and bd_code != ''">
 	        		bd_code = #{bd_code,jdbcType=VARCHAR} ,
@@ -215,13 +215,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	    </foreach>
 	</delete> -->
 	
-	<select id="find" resultType="com.demo.xianghuan.admin.base.model.BaseData" parameterType="String">
+	<select id="find" resultType="com.demo.xianghuan.common.base.model.BaseData" parameterType="String">
 		select
 		<include refid="Base_query_column" />
 		from base_data where bd_id= #{bd_id}
 	</select>
 
-	<select id="queryByCondition" resultType="com.demo.xianghuan.admin.base.model.BaseData" parameterType="java.util.Map">
+	<select id="queryByCondition" resultType="com.demo.xianghuan.common.base.model.BaseData" parameterType="java.util.Map">
 		select <include refid="Base_query_column" /> from base_data where 1=1
 		<include refid="Base_query_where" />
 		<if test="sqlWhere != null">
@@ -237,7 +237,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		</if>
 	</select>
 	
-	<select id="select" resultType="com.demo.xianghuan.admin.base.model.BaseData" parameterType="java.util.Map">
+	<select id="select" resultType="com.demo.xianghuan.common.base.model.BaseData" parameterType="java.util.Map">
 		select <include refid="Base_query_column" /> from base_data where 1=1
 		<include refid="Base_query_where" />
 		<if test="sqlWhere != null">
