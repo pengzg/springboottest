@@ -2,223 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f0dda74-e29d-4f37-bb9a-4e991e02a37d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_unknown.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/XianghuanApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/XianghuanApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/cache/BaseDataDetailListCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/cache/BaseDataDetailListCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/cache/BaseDataDetailValueCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/cache/BaseDataDetailValueCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/cache/BaseParameterCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/cache/BaseParameterCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAppExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/controller/BaseAppExceptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAppVersionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/controller/BaseAppVersionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAttachmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/controller/BaseAttachmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseAttachmentRelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/controller/BaseAttachmentRelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/controller/BaseDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseDataTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/controller/BaseDataTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/controller/BaseParameterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/controller/BaseParameterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseAppExceptionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/dao/IBaseAppExceptionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseAppVersionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/dao/IBaseAppVersionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseAttachmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/dao/IBaseAttachmentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseAttachmentRelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/dao/IBaseAttachmentRelDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseDataDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/dao/IBaseDataDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseDataTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/dao/IBaseDataTypeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseIdDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/dao/IBaseIdDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/dao/IBaseParameterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/dao/IBaseParameterDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/model/BaseAppException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/model/BaseAppException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/model/BaseAppVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/model/BaseAppVersion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/model/BaseAttachment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/model/BaseAttachment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/model/BaseAttachmentRel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/model/BaseAttachmentRel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/model/BaseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/model/BaseData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/model/BaseDataType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/model/BaseDataType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/model/BaseParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/model/BaseParameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/IBaseAppExceptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/IBaseAppExceptionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/IBaseAppVersionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/IBaseAppVersionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/IBaseAttachmentRelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/IBaseAttachmentRelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/IBaseAttachmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/IBaseAttachmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/IBaseDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/IBaseDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/IBaseDataTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/IBaseDataTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/IBaseIdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/IBaseIdService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/IBaseParameterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/IBaseParameterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseAppExceptionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/impl/BaseAppExceptionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseAppVersionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/impl/BaseAppVersionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseAttachmentRelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/impl/BaseAttachmentRelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseAttachmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/impl/BaseAttachmentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/impl/BaseDataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseDataTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/impl/BaseDataTypeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseIdServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/impl/BaseIdServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/service/impl/BaseParameterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/impl/BaseParameterServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/vo/BaseAppExceptionVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/vo/BaseAppExceptionVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/vo/BaseAppVersionVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/vo/BaseAppVersionVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/vo/BaseAttachmentRelVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/vo/BaseAttachmentRelVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/vo/BaseAttachmentVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/vo/BaseAttachmentVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/vo/BaseDataTypeVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/vo/BaseDataTypeVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/vo/BaseDataVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/vo/BaseDataVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/base/vo/BaseParameterVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/vo/BaseParameterVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysLoginLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/controller/SysLoginLogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/controller/SysMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/controller/SysRoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysRoleMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/controller/SysRoleMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/controller/SysUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/controller/SysUserRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/controller/SysUserRoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysLoginLogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/dao/ISysLoginLogDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysMenuDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/dao/ISysMenuDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysRoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/dao/ISysRoleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysRoleMenuDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/dao/ISysRoleMenuDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysSmsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/dao/ISysSmsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/dao/ISysUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/dao/ISysUserRoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/dao/ISysUserRoleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/model/SysLoginLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/model/SysLoginLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/model/SysMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/model/SysMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/model/SysRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/model/SysRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/model/SysRoleMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/model/SysRoleMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/model/SysSms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/model/SysSms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/model/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/model/SysUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/model/SysUserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/model/SysUserRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/ISysLoginLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/service/ISysLoginLogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/ISysMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/service/ISysMenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/ISysRoleMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/service/ISysRoleMenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/ISysRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/service/ISysRoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/ISysSmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/service/ISysSmsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/ISysUserRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/service/ISysUserRoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/ISysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/service/ISysUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysLoginLogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/service/impl/SysLoginLogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysMenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/service/impl/SysMenuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysRoleMenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/service/impl/SysRoleMenuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/service/impl/SysRoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysSmsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/service/impl/SysSmsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysUserRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/service/impl/SysUserRoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/vo/MenusListVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/vo/MenusListVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/vo/SysLoginLogVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/vo/SysLoginLogVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/vo/SysMenuVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/vo/SysMenuVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/vo/SysRoleMenuVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/vo/SysRoleMenuVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/vo/SysRoleVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/vo/SysRoleVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/vo/SysSmsVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/vo/SysSmsVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/vo/SysUserRoleVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/vo/SysUserRoleVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/vo/SysUserVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/sys/vo/SysUserVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/configuration/FilterConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/configuration/FilterConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseAppExceptionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseAppExceptionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseAppVersionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseAppVersionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseAttachmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseAttachmentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseAttachmentRelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseAttachmentRelMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseDataMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseDataMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseDataTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseDataTypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseIdMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseIdMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseParameterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseParameterMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysLoginLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysLoginLogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysMenuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysRoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysRoleMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysRoleMenuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysSmsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysSmsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysUserRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysUserRoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/XianghuanApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/XianghuanApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/cache/BaseDataDetailListCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/cache/BaseDataDetailValueCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/cache/BaseParameterCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/controller/BaseAppExceptionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/controller/BaseAppVersionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/controller/BaseAttachmentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/controller/BaseAttachmentRelController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/controller/BaseDataController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/controller/BaseDataTypeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/controller/BaseParameterController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseAppExceptionDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseAppVersionDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseAttachmentDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseAttachmentRelDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseDataDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseDataTypeDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseIdDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/dao/IBaseParameterDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/model/BaseAppException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/model/BaseAppVersion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/model/BaseAttachment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/model/BaseAttachmentRel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/model/BaseData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/model/BaseDataType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/model/BaseParameter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseAppExceptionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseAppVersionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseAttachmentRelService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseAttachmentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseDataService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseDataTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseIdService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/IBaseParameterService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseAppExceptionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseAppVersionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseAttachmentRelServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseAttachmentServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseDataServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseDataTypeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseIdServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/service/impl/BaseParameterServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/vo/BaseAppExceptionVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/vo/BaseAppVersionVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/vo/BaseAttachmentRelVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/vo/BaseAttachmentVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/vo/BaseDataTypeVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/vo/BaseDataVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/base/vo/BaseParameterVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/controller/SysLoginLogController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/controller/SysMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/controller/SysRoleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/controller/SysRoleMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/controller/SysUserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/controller/SysUserRoleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/dao/ISysLoginLogDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/dao/ISysMenuDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/dao/ISysRoleDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/dao/ISysRoleMenuDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/dao/ISysSmsDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/dao/ISysUserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/dao/ISysUserRoleDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/model/SysLoginLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/model/SysMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/model/SysRole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/model/SysRoleMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/model/SysSms.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/model/SysUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/model/SysUserRole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/ISysLoginLogService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/ISysMenuService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/ISysRoleMenuService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/ISysRoleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/ISysSmsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/ISysUserRoleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/ISysUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/impl/SysLoginLogServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/impl/SysMenuServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/impl/SysRoleMenuServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/impl/SysRoleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/impl/SysSmsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/impl/SysUserRoleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/service/impl/SysUserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/MenusListVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/SysLoginLogVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/SysMenuVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/SysRoleMenuVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/SysRoleVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/SysSmsVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/SysUserRoleVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/xianghuan/admin/sys/vo/SysUserVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseAppExceptionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseAppExceptionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseAppVersionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseAppVersionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseAttachmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseAttachmentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseAttachmentRelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseAttachmentRelMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseDataMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseDataMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseDataTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseDataTypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseIdMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseIdMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseParameterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/BaseParameterMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/SysLoginLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/SysLoginLogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/SysMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/SysMenuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/SysRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/SysRoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/SysRoleMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/SysRoleMenuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/SysSmsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/SysSmsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/SysUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/SysUserRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/SysUserRoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.demo.xianghuan.XianghuanApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.demo.xianghuan.XianghuanApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.demo.xianghuan.XianghuanApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.demo.xianghuan.XianghuanApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xianghuan-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/xianghuan-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xianghuan-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/xianghuan-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -310,13 +104,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/controller/BaseAppExceptionController.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="664">
+              <caret line="98" column="73" selection-start-line="98" selection-start-column="73" selection-end-line="98" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -375,7 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/sys/service/impl/SysRoleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/HttpCode.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/Pager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/utils/Query.java" />
@@ -425,6 +215,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BaseParameterMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/XianghuanApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/xianghuan/configuration/FilterConfiguration.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
@@ -435,6 +226,11 @@
         <option name="mavenHome" value="$USER_HOME$/ProgramFiles/apache-maven-3.5.2" />
         <option name="userSettingsFile" value="$USER_HOME$/ProgramFiles/apache-maven-3.5.2/conf/settings.xml" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -731,12 +527,12 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4408867" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" weight="0.32928944" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32928944" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32928944" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Messages" weight="0.32928944" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.48526862" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.48526862" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -780,16 +576,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/common/base/service/impl/BaseParameterServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="141" column="13" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/xianghuan/admin/user/dao/IUserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1187,6 +973,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="98" column="73" selection-start-line="98" selection-start-column="73" selection-end-line="98" selection-end-column="73" />
         </state>
       </provider>
     </entry>
